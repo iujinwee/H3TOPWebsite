@@ -7,14 +7,14 @@ import Visa from './containers/Visa';
 import Team from './containers/Team';
 import Albums from './containers/Albums';
 import NavigationBar from './component/NavBar/NavBar';
-
+import { AnimatePresence } from 'framer-motion'
 
 function App() {
 
 
   return (
-    <div className='flex flex-col w-screen h-screen overflow-x-auto'>
-      <nav className="bg-main-bg bg-fixed bg-center bg-cover"> 
+    <AnimatePresence className='flex flex-col w-screen h-screen overflow-x-auto'>
+      <nav className="select-none bg-main-bg bg-fixed bg-center bg-auto lg:bg-auto lg:bg-center" id="home"> 
         <NavigationBar/>
         <Home/>
         <Story/>
@@ -23,7 +23,7 @@ function App() {
         <Team/> 
         <Albums/>
       </nav>
-    </div>
+    </AnimatePresence>
   );
 }
 

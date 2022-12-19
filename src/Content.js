@@ -5,7 +5,7 @@ const story = {
     Setup: "Game Start! ",
     StoryTwist: "Suddenly getting transported into an unknown universe, a mysterious man behind the screen traps players in his “games”. The players are given “visas” which last for a day, and in order to extend their visa and survive, they have to participate in the games.",
     Objective: "Objective",
-    ObjectiveContent: "The objective is to win games and escape this scary alternate reality. In the final stage, the teams need to collaborate with each other in order to get out safely.Throughout the games, they would also need to find out about the identity of the mysterious game master behind this digital screen."
+    ObjectiveContent: "The objective is to win games and escape this scary alternate reality. In the final stage, the teams need to collaborate with each other in order to get out safely. Throughout the games, they would also need to find out about the identity of the mysterious game master behind this digital screen."
 };
 
 const visa = {
