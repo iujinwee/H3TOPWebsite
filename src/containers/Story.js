@@ -5,7 +5,7 @@ import {story} from '../Content.js'
 
 const Story = () => {
   return (
-    <div className='p-5' id="story"> 
+    <div className='pt-80 lg:pt-16' id="story"> 
       <div className='text-2xl leading-10'>
         <Card>
           <div>

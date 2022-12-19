@@ -12,7 +12,7 @@ const Home = (props) => {
         <div>Transition Orientation Programme!</div>
       </Card>
       
-      <Card className='h-screen w-screen bg-transparent shadow-none mx-auto mt-0 p-0'>
+      <Card className='w-screen bg-transparent shadow-none mx-auto mt-0 p-0'>
         {/* <Card className='grid bg-transparent shadow-none p-0 mx-auto'> */}
           <Button>Begin</Button>
         {/* </Card> */}
