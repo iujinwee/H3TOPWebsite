@@ -2,6 +2,7 @@
   "name": "h3_top23_website",
   "version": "0.1.0",
   "private": true,
+  "homepage": "https://Ignitedgene.github.io/H3TOPWebsite",
   "dependencies": {
     "@craco/craco": "^7.0.0",
     "@fortawesome/fontawesome-svg-core": "^6.2.1",
