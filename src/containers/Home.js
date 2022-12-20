@@ -1,24 +1,8 @@
 import React from 'react'
 import Button from '../component/UI/Button/Button'
-import { motion } from 'framer-motion'
 import Fade from '../component/Animation/Fade'
 
 const Home = (props) => {
-
-
-  const buttonVariant = {
-    hidden: {
-      opacity:0 
-    },
-    visible: {
-      opacity: 1,
-      transition: {delay: 1.5, duration: 1, type: 'tween'}
-    },
-    exit: {
-      opacity:0,
-      transition: {duration: 0.5}
-    }
-  }
 
   return (
     <>
