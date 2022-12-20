@@ -4,6 +4,11 @@ import Navbar from 'react-bootstrap/Navbar';
 import Logo from '../../images/h3logo.png'
 import { SocialIcon } from 'react-social-icons';
 import styles from './NavBar.module.css'
+import {
+  Route,
+  NavLink,
+  HashRouter
+} from "react-router-dom";
 
 function NavigationBar() {
   
@@ -22,12 +27,12 @@ function NavigationBar() {
           
           <Navbar.Collapse id="responsive-navbar-nav">
             <Nav className="px-4 m-auto font-semibold">
-              <Nav.Link href="#home" className='ml-7'>Home</Nav.Link>
-              <Nav.Link href="#story" className='ml-7'>Story</Nav.Link>
-              <Nav.Link href="#clans" className='ml-7'>Clans</Nav.Link>
-              <Nav.Link href="#visa" className='ml-7'>Visa</Nav.Link>
-              <Nav.Link href="#team" className='ml-7'>Our Team</Nav.Link>
-              <Nav.Link href="#album" className='ml-7'>Albums</Nav.Link>
+              <NavLink to="/home" className='ml-7'>Home</NavLink>
+              <NavLink href="/story" className='ml-7'>Story</NavLink>
+              <NavLink href="/clans" className='ml-7'>Clans</NavLink>
+              <NavLink href="/visa" className='ml-7'>Visa</NavLink>
+              <NavLink href="/team" className='ml-7'>Our Team</NavLink>
+              <NavLink href="/album" className='ml-7'>Albums</NavLink>
             </Nav>
 
             <div>
