@@ -101,7 +101,6 @@ const Fade = (props) => {
 
         default:
             return defaultVariant;
-            break;
     }
 }
 
