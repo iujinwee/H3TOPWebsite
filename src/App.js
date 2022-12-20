@@ -5,23 +5,23 @@ import {
   HashRouter
 } from 'react-router-dom'
 import AnimatedNavBar from './component/NavBar/AnimatedNavBar';
+import { BrowserRouter } from 'react-router-dom';
 
 function App() {
 
 
   return (
-    <HashRouter>
+    <BrowserRouter>
         <div className="select-none bg-main-bg h-screen
                         bg-center bg-fixed bg-auto bg-no-repeat overflow-auto
                         lg:bg-fixed lg:bg-repeat">
-
           <nav id="home"> 
             <NavigationBar/>
             <AnimatedNavBar/>
           </nav>  
           
         </div>
-    </HashRouter>
+    </BrowserRouter>
   );
 }
 

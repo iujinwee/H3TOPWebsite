@@ -1,6 +1,5 @@
-import React from 'react'
+import React, { Suspense } from 'react'
 import Home from '../../containers/Home'
-import Story from '../../containers/Story'
 import Clans from '../../containers/Clans'
 import Visa from '../../containers/Visa'
 import Team from '../../containers/Team'
@@ -14,17 +13,21 @@ import {
 
 const AnimatedNavBar = () => {
     const location = useLocation();
+
+    const Story = React.lazy(() => import('../../containers/Story'));
     
     return (
         <AnimatePresence exitBeforeEnter>
-            <Routes location={location} key={location.pathname}>    
-                <Route path='/' element={<Home/>}/>
-                <Route path='/story' element={<Story/>}/>
-                <Route path='/clans' element={<Clans/>}/>
-                <Route path='/visa' element={<Visa/>}/>
-                <Route path='/team' element={<Team/>}/>
-                <Route path='/albums' element={<Albums/>}/>
-            </Routes> 
+            <Suspense fallback={<p>Loading</p>}>
+                <Routes location={location} key={location.pathname}>    
+                    <Route path='/' element={<Home/>}/>
+                    <Route path='/story' element={<Story/>}/>
+                    <Route path='/clans' element={<Clans/>}/>
+                    <Route path='/visa' element={<Visa/>}/>
+                    <Route path='/team' element={<Team/>}/>
+                    <Route path='/albums' element={<Albums/>}/>
+                </Routes> 
+            </Suspense>
         </AnimatePresence>
     )
 }
