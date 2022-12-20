@@ -14,7 +14,7 @@ function App() {
 
   return (
     <AnimatePresence className='flex flex-col w-screen h-screen overflow-x-auto'>
-      <nav className="select-none bg-main-bg bg-no-repeat bg-fixed bg-center bg-auto" id="home"> 
+      <nav className="select-none bg-main-bg bg-fixed bg-center bg-auto" id="home"> 
         <NavigationBar/>
         <Home/>
         <Story/>
