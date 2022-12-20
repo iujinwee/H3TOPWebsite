@@ -1,11 +1,14 @@
 import { motion } from 'framer-motion';
 import React from 'react'
+import { useNavigate } from 'react-router-dom';
 
 
 const Button = () => {
 
+    const navigate= useNavigate();
+
     const clickHandler = () => {
-        window.location.href="#story";
+        navigate("/story")
     }
 
     return (

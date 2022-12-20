@@ -1,32 +1,27 @@
 import React from 'react'
 import 'bootstrap/dist/css/bootstrap.min.css';
-import Home from './containers/Home';
-import Story from './containers/Story';
-import Clans from './containers/Clans';
-import Visa from './containers/Visa';
-import Team from './containers/Team';
-import Albums from './containers/Albums';
 import NavigationBar from './component/NavBar/NavBar';
-import { AnimatePresence } from 'framer-motion'
+import { 
+  BrowserRouter as Router
+} from 'react-router-dom'
+import AnimatedNavBar from './component/NavBar/AnimatedNavBar';
 
 function App() {
 
 
   return (
-    <AnimatePresence className='flex flex-col w-screen h-screen overflow-x-auto'>
-      <nav className="select-none bg-main-bg 
-                      bg-center bg-fixed bg-auto bg-no-repeat
-                      lg:bg-fixed lg:bg-auto lg:bg-repeat" 
-                      id="home"> 
-        <NavigationBar/>
-        <Home/>
-        <Story/>
-        <Clans/>
-        <Visa/> 
-        <Team/> 
-        <Albums/>
-      </nav>
-    </AnimatePresence>
+    <Router>
+        <div className="select-none bg-main-bg h-screen
+                        bg-center bg-fixed bg-auto bg-no-repeat overflow-auto
+                        lg:bg-fixed lg:bg-repeat">
+
+          <nav id="home"> 
+            <NavigationBar/>
+            <AnimatedNavBar/>
+          </nav>  
+          
+        </div>
+    </Router>
   );
 }
 
