@@ -1,15 +1,15 @@
 import { motion } from 'framer-motion';
 import React from 'react'
-import { useNavigate } from 'react-router-dom';
-
 
 const Button = () => {
 
-    const navigate= useNavigate();
-
     const clickHandler = () => {
-        navigate("/story")
-    }
+        const element = document.getElementById('story');
+        if (element) {
+          // 👇 Will scroll smoothly to the top of the next section
+          element.scrollIntoView({ behavior: 'smooth' });
+        }
+      };
 
     return (
 

@@ -1,11 +1,51 @@
-import {React} from 'react'
+import {React, useEffect} from 'react'
 import CharacterCard from '../component/UI/Characters/CharacterCard'
 import doku from '../images/doku.jpg'
 import Card from '../component/UI/Card/Card'
-import { ogcard } from '../Content'
+import { clans } from '../Content'
 import Fade from '../component/Animation/Fade'
+import { motion, useAnimation } from 'framer-motion'
+import { useInView } from "react-intersection-observer";
 
 const Clans = (props) => {
+
+  const control = useAnimation()
+  const [ref, inView] = useInView()
+
+  const variant = {
+    hidden: {
+      opacity: 0,
+    },
+    show: {
+      opacity:1, 
+      transition: {
+        staggerChildren: 0.8,
+        delayChildren: 0.3
+      }
+    }
+  }
+
+  const delay = {
+    hidden: {
+      opacity: 0,
+      x:-100
+    }, 
+    show: {
+      opacity: 1,
+      x:0, 
+      transition: {
+        duration: 0.8
+      }
+    }
+  }
+
+  useEffect(() => {
+    if (inView) {
+      control.start("show");
+    } else{
+      control.start("hidden")
+    }
+  }, [control, inView]);
 
   return (  
     <div className="pt-20 lg:pt-16" id="clans">
@@ -17,25 +57,50 @@ const Clans = (props) => {
             speed="1.5"
             delay="0.2"
             className='font-bold text-5xl text-center
-                          mb-4'>Our Clans</Fade>
-
+                          mb-4'>
+            {clans.opening}                  
+          </Fade>
+            
           <Fade 
             direction="bottom"
             speed="1.2"
             delay="0.5"
             className='font-bold text-xl text-center mb-5'>
-              Hover over the cards to view their quirk; Click to find out more about their origins!
+              {clans.clanCards}
           </Fade>
+        
+          <motion.ul 
+            ref = {ref}
+            variants={variant}
+            initial="hidden"
+            animate={control}
+            className='list-none pl-0 flex flex-wrap m-auto justify-center'>
 
-          <ul className='list-none pl-0 flex flex-wrap m-auto '>
-            <CharacterCard delay="1" image={doku} name="Akari" tag={ogcard.Akari}/>
-            <CharacterCard delay="1.5" image={doku} name="Bankai" tag={ogcard.Bankai}/>
-            <CharacterCard delay="2" image={doku} name="Chakra" tag={ogcard.Chakra}/>
-            <CharacterCard delay="2.5" image={doku} name="Doku" tag={ogcard.Doku}/>
-            <CharacterCard delay="3" image={doku} name="Enji" tag={ogcard.Enji}/>
-          </ul>
+              <motion.li variants={delay}> 
+                <CharacterCard image={doku} name={clans.Akari.name} tag={clans.Akari.quirk}/>
+              </motion.li>
+
+              <motion.li variants={delay}> 
+                <CharacterCard image={doku} name={clans.Bankai.name} tag={clans.Bankai.quirk}/> 
+              </motion.li>
+              
+              <motion.li variants={delay}> 
+                <CharacterCard image={doku} name={clans.Chakra.name} tag={clans.Chakra.quirk}/>
+              </motion.li>
+
+              <motion.li variants={delay}> 
+                <CharacterCard image={doku} name={clans.Doku.name} tag={clans.Doku.quirk}/>
+              </motion.li>
+
+              <motion.li variants={delay}> 
+                <CharacterCard image={doku} name={clans.Enji.name} tag={clans.Enji.quirk}/>
+              </motion.li>
+             
+          </motion.ul>
+          
         </ul>
       </Card>
+
     </div>
   )
 }

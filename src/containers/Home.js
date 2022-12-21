@@ -8,8 +8,8 @@ const Home = (props) => {
     <>
       <div
         className='flex flex-col items-center bg-transparent shadow-none m-auto
-                             font-bold whitespace-nowrap text-2xl md:text-3xl lg:text-4xl text-black
-                             pt-20 md:pt-16 lg:pt-12'>
+                    font-bold whitespace-nowrap text-2xl md:text-3xl lg:text-4xl text-black
+                    pt-20 md:pt-16 lg:pt-12'>
         <Fade 
           direction="left" 
           speed = "1.5"
@@ -38,8 +38,10 @@ const Home = (props) => {
         direction="none"
         speed = "1.5"
         delay = "2">
-          <Button style={{ transform: 'rotate(var(--rotate))' }}>Begin</Button>
+          <Button>Begin</Button>
       </Fade>
+      
+      <div className='h-screen'/> 
     </>
   )
 }

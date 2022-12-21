@@ -1,7 +1,20 @@
-import React from 'react'
-import { motion } from 'framer-motion'
+import React, { useEffect } from 'react'
+import { motion, useAnimation} from 'framer-motion'
+import { useInView } from "react-intersection-observer";
+
 
 const Fade = (props) => {
+
+    const control = useAnimation()
+    const [ref, inView] = useInView()
+
+    useEffect(() => {
+      if (inView) {
+        control.start("visible");
+      } else{
+        control.start("hidden")
+      }
+    }, [control, inView]);
 
     const topVariant = {
         hidden: {
@@ -107,12 +120,13 @@ const Fade = (props) => {
 const Variant = VariantSelector(props.direction);
 
   return (
-    <motion.div id="story"
-                className={props.className}
-                variants={Variant}
-                initial="hidden"
-                animate="visible"
-                exit="exit">
+    <motion.div 
+      className={props.className}
+      ref = {ref}
+      variants={Variant}
+      initial="hidden"
+      animate= {control}
+      exit="exit">
         {props.children}
     </motion.div>
   )

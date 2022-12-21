@@ -2,6 +2,7 @@ import React from 'react'
 import Card from '../component/UI/Card/Card'
 import CountdownTimer from '../component/UI/Countdown/CountdownTimer'
 import {visa} from '../Content'
+import Fade from '../component/Animation/Fade'
 
 import '../component/UI/Countdown/CountdownTimer.css';
 
@@ -14,12 +15,16 @@ const Visa = (props) => {
   
   return (
 
-    <div>
-      <div
+    <>
+      <Fade
+        direction="left"
+        speed="2"
+        delay="0.5"
         className='flex flex-auto justify-center align-middle
+                   text-gray-200
                    pt-16 md:pt-20 lg:pt-20
                    text-3xl font-extrabold
-                   md:text-4xl lg:text-5xl'>{visa.message}</div>
+                   md:text-4xl lg:text-5xl'>{visa.message}</Fade>
 
       {/* // Control size of timer box */}
       <div 
@@ -33,7 +38,7 @@ const Visa = (props) => {
             <CountdownTimer targetDate={dateTimeAfterThreeDays}/>
         </Card>
       </div>
-    </div>
+    </>
   )
 }
 
