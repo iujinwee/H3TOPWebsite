@@ -47,7 +47,9 @@ const Team = (props) => {
   }, [control, inView]);
 
   return (  
-    <div className="pt-20 lg:pt-16" id="team">
+
+    <div className="opacity-0" id="team">
+
       <Card className='overflow-hidden'>
         <ul className='list-none px-0 md:px-16 lg:px-32'>
 
@@ -56,7 +58,7 @@ const Team = (props) => {
             speed="1.5"
             delay="0.2"
             className='font-bold text-5xl text-center
-                          mb-4'>
+                       bg-transparent mb-4'>
             {team.title}                
           </Fade>
 
