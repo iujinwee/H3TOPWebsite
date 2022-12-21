@@ -1,7 +1,7 @@
 import {React, useState} from 'react';
 import { Container } from 'react-bootstrap';
 import ReactCardFlip from 'react-card-flip';
-import Fade from '../../Animation/Fade';
+import { motion } from 'framer-motion';
 
 const CharacterCard = (props) => {
   const [hover, setHovering] = useState(false);
@@ -20,11 +20,9 @@ const CharacterCard = (props) => {
 
     //  ${classes.card} ${props.className} > If want to inherit card 
 
-    <Fade 
-      direction = "left"
-      speed="1"
-      delay={props.delay}
-      className={`flex flex-col object-contain m-auto p-3`}>
+    // Adjusting padding between cards
+    <div className="flex flex-col
+                    lg:py-5 lg:px-7 px-3 py-2 ">
     
         <ReactCardFlip isFlipped={hover} flipDirection="horizontal">
           {/* Front of Card */}
@@ -43,8 +41,7 @@ const CharacterCard = (props) => {
 
         </ReactCardFlip>
 
-        
-    </Fade>
+    </div>
   );
 };
 
