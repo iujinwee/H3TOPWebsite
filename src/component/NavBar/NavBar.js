@@ -18,11 +18,11 @@ function NavigationBar() {
         collapseOnSelect
         expand="lg"
         variant="dark"
-        className="sticky-top bg-dark container-fluid"
+        className="sticky-top bg-dark w-screen"
         id="nav-bar"
       >
         <Container className="m-auto p-0">
-          <Navbar.Brand href="/" className="w-max">
+          <Navbar.Brand href="/" className="ml-5">
             <img
               className="inline-block align-middle"
               src={Logo}
@@ -33,53 +33,53 @@ function NavigationBar() {
             <span className="font-semibold align-middle ">H3 TOP'23</span>
           </Navbar.Brand>
 
-          <Navbar.Toggle aria-controls="responsive-navbar-nav" />
+          <Navbar.Toggle aria-controls="responsive-navbar-nav" className="mr-10"/>
 
           <Navbar.Collapse id="responsive-navbar-nav">
             <Nav
-              className="px-4 m-auto font-bold text-gray-400"
+              className="justify-center items-center m-auto font-bold text-gray-400"
             >
-              <NavItem className={`ml-10 hover:text-gray-500 ${router.hash === "#home" ? "text-gray-200" : "text-inherit"}`}>
+              <NavItem className={`py-1 px-4 hover:text-gray-500 ${router.hash === "#home" ? "text-gray-200" : "text-inherit"}`}>
                 <Link to='#home' smooth style={{color: 'inherit', textDecoration: 'inherit'}}>
                   Home
                 </Link>
               </NavItem>
 
-              <NavItem className={`ml-10 hover:text-gray-500 ${router.hash === "#story" ? "text-gray-300" : "text-inherit"}`}>
+              <NavItem className={`py-1 px-4 hover:text-gray-500 ${router.hash === "#story" ? "text-gray-300" : "text-inherit"}`}>
                 <Link to='#story' smooth style={{color: 'inherit', textDecoration: 'inherit'}}>
                     Story
                 </Link>
               </NavItem>
 
-              <NavItem className={`ml-10 hover:text-gray-500 ${router.hash === "#clans" ? "text-gray-300" : "text-inherit"}`}>
+              <NavItem className={`py-1 px-4 hover:text-gray-500 ${router.hash === "#clans" ? "text-gray-300" : "text-inherit"}`}>
                 <Link to='#clans' smooth style={{color: 'inherit', textDecoration: 'inherit'}}>
                     Clans
                 </Link>
               </NavItem>
 
-              <NavItem className={`ml-10 hover:text-gray-500 ${router.hash === "#visa" ? "text-gray-300" : "text-inherit"}`}>
+              <NavItem className={`py-1 px-4 hover:text-gray-500 ${router.hash === "#visa" ? "text-gray-300" : "text-inherit"}`}>
                 <Link to='#visa' smooth style={{color: 'inherit', textDecoration: 'inherit'}}>
                     Visa
                 </Link>
               </NavItem>
 
-              <NavItem className={`ml-10 hover:text-gray-500 ${router.hash === "#team" ? "text-gray-300" : "text-inherit"}`}>
+              <NavItem className={`py-1 px-4 hover:text-gray-500 ${router.hash === "#team" ? "text-gray-300" : "text-inherit"}`}>
                 <Link to='#team' smooth style={{color: 'inherit', textDecoration: 'inherit'}}>
                     Our Team
                 </Link>
               </NavItem>
 
-              <NavItem className={`ml-10 hover:text-gray-500 ${router.hash === "#albums" ? "text-gray-300" : "text-inherit"}`}>
+              <NavItem className={`py-1 px-4 hover:text-gray-500 ${router.hash === "#albums" ? "text-gray-300" : "text-inherit"}`}>
                 <Link to='#albums' smooth style={{color: 'inherit', textDecoration: 'inherit'}}>
                     Albums
                 </Link>
               </NavItem>
             </Nav>
 
-            <div>
+            <div className="flex flex-row justify-end">
               <span
-                className="font-semibold text-slate-200
-                               ml-4 align-middle"
+                className="font-semibold text-slate-200 
+                           flex items-center justify-center"
               >
                 Join Us!
               </span>

@@ -1,9 +1,8 @@
 import React from 'react'
 import 'bootstrap/dist/css/bootstrap.min.css';
-import NavigationBar from './component/NavBar/NavBar';
-
-import AnimatedNavBar from './component/NavBar/AnimatedNavBar';
+import Layout from './component/NavBar/Layout';
 import { BrowserRouter } from 'react-router-dom';
+import NavBar from './component/NavBar/NavBar'
 
 function App() {
 
@@ -11,14 +10,14 @@ function App() {
   return (
     <BrowserRouter>
       <div className="select-none bg-main-bg h-screen
-                      bg-center bg-fixed bg-auto bg-no-repeat overflow-auto
+                      bg-center bg-fixed bg-auto bg-no-repeat overflow-x-hidden
                       lg:bg-fixed lg:bg-repeat">
 
         {/* Navigate to top */}
         <div className='p-0 m-0' id='home'/> 
 
-        <NavigationBar/>
-        <AnimatedNavBar/> 
+        <NavBar/>
+        <Layout/> 
             
       </div>
     </BrowserRouter>

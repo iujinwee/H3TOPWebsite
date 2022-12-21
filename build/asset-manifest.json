@@ -1,0 +1,16 @@
+{
+  "files": {
+    "main.css": "/H3TOPWebsite/static/css/main.c1e42b36.css",
+    "main.js": "/H3TOPWebsite/static/js/main.75a4e6be.js",
+    "static/media/doku.jpg": "/H3TOPWebsite/static/media/doku.25dbc70a40d90d33a884.jpg",
+    "static/media/retro.jpg": "/H3TOPWebsite/static/media/retro.f980eb5b0f42710b14ed.jpg",
+    "static/media/h3logo.png": "/H3TOPWebsite/static/media/h3logo.2c8d2d6a259684fe4e01.png",
+    "index.html": "/H3TOPWebsite/index.html",
+    "main.c1e42b36.css.map": "/H3TOPWebsite/static/css/main.c1e42b36.css.map",
+    "main.75a4e6be.js.map": "/H3TOPWebsite/static/js/main.75a4e6be.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.c1e42b36.css",
+    "static/js/main.75a4e6be.js"
+  ]
+}

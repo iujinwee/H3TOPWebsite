@@ -1,7 +1,6 @@
 import {React, useState} from 'react';
 import { Container } from 'react-bootstrap';
 import ReactCardFlip from 'react-card-flip';
-import { motion } from 'framer-motion';
 
 const CharacterCard = (props) => {
   const [hover, setHovering] = useState(false);
@@ -22,7 +21,7 @@ const CharacterCard = (props) => {
 
     // Adjusting padding between cards
     <div className="flex flex-col
-                    lg:py-5 lg:px-7 px-3 py-2 ">
+                    px-6 pb-5 ">
     
         <ReactCardFlip isFlipped={hover} flipDirection="horizontal">
           {/* Front of Card */}

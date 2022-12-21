@@ -8,7 +8,7 @@ import { AnimatePresence } from 'framer-motion'
 
 import Story from '../../containers/Story'
 
-const AnimatedNavBar = () => {
+const Layout = () => {
     
     return (
         <AnimatePresence>
@@ -22,4 +22,4 @@ const AnimatedNavBar = () => {
     )
 }
 
-export default AnimatedNavBar
+export default Layout
