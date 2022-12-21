@@ -1,7 +1,7 @@
 module.exports = {
   mode: 'jit',
   purge: ["./src/**/*.{html,js}"],
-  darkMode: false, // or 'media' or 'class'
+  // darkMode: false, // or 'media' or 'class'
   theme: {
     backgroundImage: {
       'main-bg': "url('images/retro.jpg')",
