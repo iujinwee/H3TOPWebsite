@@ -10,7 +10,7 @@ function App() {
 
 
   return (
-    <HashRouter>
+    <HashRouter basename='/'>
       <div className="select-none bg-main-bg h-screen
                       bg-center bg-fixed bg-auto bg-no-repeat overflow-auto
                       lg:bg-fixed lg:bg-repeat">

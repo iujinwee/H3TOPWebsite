@@ -24,7 +24,7 @@ function NavigationBar() {
           <Navbar.Collapse id="responsive-navbar-nav">
             <Nav className="px-4 m-auto font-semibold">
               <Nav.Link href="/" className='ml-7'>Home</Nav.Link>
-              <Nav.Link href="#/story" className='ml-7'>Story</Nav.Link>
+              <Nav.Link href="#story" className='ml-7'>Story</Nav.Link>
               <Nav.Link href="#/clans" className='ml-7'>Clans</Nav.Link>
               <Nav.Link href="#/visa" className='ml-7'>Visa</Nav.Link>
               <Nav.Link href="#/team" className='ml-7'>Our Team</Nav.Link>

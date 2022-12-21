@@ -13,11 +13,11 @@ import {
 
 const AnimatedNavBar = () => {
     const location = useLocation();
-
+    console.log(location);
     const Story = React.lazy(() => import('../../containers/Story'));
     
     return (
-        <AnimatePresence exitBeforeEnter>
+        <AnimatePresence exitBeforeEnter>   
             <Suspense fallback={<p>Loading</p>}>
                 <Routes location={location} key={location.pathname}>    
                     <Route path='/' element={<Home/>}/>
