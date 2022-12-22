@@ -15,8 +15,8 @@ const ClansDescriptions = () => {
                 desc={clans.Akari.quirkdesc}
                 story={clans.Akari.story}
                 image={doku}
-                color1="text-sky-300"
-                color2="text-sky-200"
+                color1="text-rose-300"
+                color2="text-rose-200"
             />
         </Card>
 
@@ -27,8 +27,8 @@ const ClansDescriptions = () => {
                 desc={clans.Bankai.quirkdesc}
                 story={clans.Bankai.story}
                 image={doku}
-                color1="text-sky-300"
-                color2="text-sky-200"
+                color1="text-emerald-300"
+                color2="text-emerald-200"
             />
         </Card>
 
@@ -51,8 +51,8 @@ const ClansDescriptions = () => {
                 desc={clans.Doku.quirkdesc}
                 story={clans.Doku.story}
                 image={doku}
-                color1="text-sky-300"
-                color2="text-sky-200"
+                color1="text-gray-400"
+                color2="text-gray-300"
             />
         </Card>
 
@@ -63,8 +63,8 @@ const ClansDescriptions = () => {
                 desc={clans.Enji.quirkdesc}
                 story={clans.Enji.story}
                 image={doku}
-                color1="text-sky-300"
-                color2="text-sky-200"
+                color1="text-gray-900"
+                color2="text-gray-700"
             />
         </Card>
     </div>

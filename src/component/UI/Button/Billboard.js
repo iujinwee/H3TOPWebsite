@@ -15,8 +15,8 @@ const Billboard = (props) => {
             
             <Fade
                 direction="none"
-                speed="1"
-                delay="1.5"
+                speed="0.6"
+                delay="0.8"
                 className='select-none bg-opacity-80 bg-black 
                             mx-auto mt-8 px-3 py-2  
                             rounded-2xl border-solid border-4
