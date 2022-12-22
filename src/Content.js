@@ -1,8 +1,16 @@
+const intro = {
+    title1: "Welcome to",
+    title2: "Hall of Residence 3",
+    title3: "Transition Orientation Programme!", 
+    Begin: "Let's Begin"
+}
+
 const story = {
     display: true,
+    Start: "Start",
     Header: "Storyline",
     MainStory: "One thunderous stormy night causes a blackout across the city, which has never happened before. Five civilians wake up from their slumber and are horrified by the absolute darkness and silence that suddenly enveloped their once vibrant city. They realise that their electronic devices no longer work and are extremely confused. They explore their individual streets with flashlights and realise that other homes are deserted and there are no other civilians. The 5 of them eventually find each other at the centre of the city as there is a giant, neon billboard flashing an eerie announcement:",
-    MainStoryCont: " “The Games are about to begin!” ",
+    MainStoryCont: " “The Game is about to begin!” ",
     Setup: "Game Start! ",
     StoryTwist: "Suddenly getting transported into an unknown universe, a mysterious man behind the screen traps players in his “games”. The players are given “visas” which last for a day, and in order to extend their visa and survive, they have to participate in the games.",
     Objective: "Objective",
@@ -12,6 +20,7 @@ const story = {
 const visa = {
     display: true,
     message: "Hurry... Your Visa is expiring!",
+    clans: "Join a clan!"
 };
 
 const team = {
@@ -91,6 +100,7 @@ const clans = {
 
 
 export {
+    intro,
     story,
     visa, 
     clans,

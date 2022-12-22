@@ -1,11 +1,14 @@
 import {React, useEffect} from 'react'
-import doku from '../images/doku.jpg'
-import Card from '../component/UI/Card/Card'
-import { team } from '../Content'
-import Fade from '../component/Animation/Fade'
-import { motion, useAnimation } from 'framer-motion'
 import { useInView } from "react-intersection-observer";
+import { motion, useAnimation } from 'framer-motion'
+
+import Card from '../component/UI/Card/Card'
+import Fade from '../component/Animation/Fade'
 import ExcoCard from '../component/UI/ExcoCard/ExcoCard'
+import { team } from '../Content'
+
+import doku from '../images/doku.jpg'
+
 
 const Team = (props) => {
 

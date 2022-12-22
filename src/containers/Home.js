@@ -2,6 +2,8 @@ import React from 'react'
 import Button from '../component/UI/Button/Button'
 import Fade from '../component/Animation/Fade'
 
+import { intro } from '../Content'
+
 const Home = (props) => {
 
   return (
@@ -16,21 +18,21 @@ const Home = (props) => {
           speed = "1.5"
           delay = "0"
           className="text-3xl md:text-4xl lg:text-5xl">
-            Welcome to
+            {intro.title1}
         </Fade> 
 
         <Fade 
           direction="right" 
           speed = "1.5"
           delay = "0.5">
-            Hall of Residence 3
+            {intro.title2}
         </Fade>
         
         <Fade 
           direction="left" 
           speed = "1.5"
           delay = "1">
-            Transition Orientation Programme!
+            {intro.title3}
         </Fade>
       </div>
       
@@ -39,7 +41,14 @@ const Home = (props) => {
         direction="none"
         speed = "1.5"
         delay = "2">
-          <Button>Begin</Button>
+          <Button
+            id="story"
+            className='select-none bg-purple-700 bg-opacity-80 
+                      rounded-2xl border-solid border-purple-300 border-2 
+                      hover:border-double hover:border-purple-500
+                      text-xl font-semibold 
+                      h-16 w-40 mx-auto mt-32'
+            message={intro.Begin}/>
       </Fade>
       
       <div className='h-screen'/> 

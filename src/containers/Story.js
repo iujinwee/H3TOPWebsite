@@ -1,14 +1,19 @@
-import React, { useState } from 'react'
+import React from 'react'
 import Card from '../component/UI/Card/Card'
 import { story } from '../Content.js'
 import Fade from '../component/Animation/Fade'
+import Billboard from '../component/UI/Button/Billboard'
 
 const Story = () => {
 
-  const [startGame, setStartGame] = useState(false);
 
   const startHandler = () => {
-    setStartGame(true);
+    
+    const element = document.getElementById('instructions');
+    if (element) {
+      // 👇 Will scroll smoothly to the top of the next section
+      element.scrollIntoView({ behavior: 'smooth' });
+    }
   }
 
   return (
@@ -25,23 +30,11 @@ const Story = () => {
             <div>
               <h1 className='text-amber-50 text-3xl font-bold mb-2'>{story.Header}</h1>
               <p>{story.MainStory}</p>
-              <button className='flex flex-col items-center justify-center mx-auto mt-5
-                               text-red-200 text-4xl font-bold'
-                      onClick={startHandler}>{story.MainStoryCont}</button>
+              <Billboard 
+                  message={story.MainStoryCont}
+                  onClick={startHandler}/>
             </div>
           </Card>
-
-          {startGame && <Fade
-            direction="bottom"
-            speed="1"
-            delay="0">
-              <Card className="flex flex-col" id="objective">
-                <h1 className='text-amber-200 text-3xl font-bold mb-2 '>{story.Setup}</h1>
-                <p className='mb-20'>{story.StoryTwist}</p> 
-                <h1 className='text-lime-300 text-3xl font-bold mb-2 '>{story.Objective}</h1>
-                <p>{story.ObjectiveContent}</p> 
-              </Card>
-            </Fade>}
 
         </Fade>
     </>

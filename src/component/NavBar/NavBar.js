@@ -33,7 +33,7 @@ function NavigationBar() {
             <span className="font-semibold align-middle ">H3 TOP'23</span>
           </Navbar.Brand>
 
-          <Navbar.Toggle aria-controls="responsive-navbar-nav" className="mr-10"/>
+          <Navbar.Toggle aria-controls="responsive-navbar-nav" className="mr-6"/>
 
           <Navbar.Collapse id="responsive-navbar-nav">
             <Nav
@@ -50,16 +50,16 @@ function NavigationBar() {
                     Story
                 </Link>
               </NavItem>
+              
+              <NavItem className={`py-1 px-4 hover:text-gray-500 ${router.hash === "#visa" ? "text-gray-300" : "text-inherit"}`}>
+                <Link to='#visa' smooth style={{color: 'inherit', textDecoration: 'inherit'}}>
+                    Visa
+                </Link>
+              </NavItem>
 
               <NavItem className={`py-1 px-4 hover:text-gray-500 ${router.hash === "#clans" ? "text-gray-300" : "text-inherit"}`}>
                 <Link to='#clans' smooth style={{color: 'inherit', textDecoration: 'inherit'}}>
                     Clans
-                </Link>
-              </NavItem>
-
-              <NavItem className={`py-1 px-4 hover:text-gray-500 ${router.hash === "#visa" ? "text-gray-300" : "text-inherit"}`}>
-                <Link to='#visa' smooth style={{color: 'inherit', textDecoration: 'inherit'}}>
-                    Visa
                 </Link>
               </NavItem>
 

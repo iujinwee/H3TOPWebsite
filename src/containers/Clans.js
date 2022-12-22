@@ -1,11 +1,13 @@
 import {React, useEffect} from 'react'
-import CharacterCard from '../component/UI/Characters/CharacterCard'
-import doku from '../images/doku.jpg'
-import Card from '../component/UI/Card/Card'
-import { clans } from '../Content'
-import Fade from '../component/Animation/Fade'
 import { motion, useAnimation } from 'framer-motion'
 import { useInView } from "react-intersection-observer";
+
+import Fade from '../component/Animation/Fade'
+import Card from '../component/UI/Card/Card'
+import CharacterCard from '../component/UI/Characters/CharacterCard'
+import { clans } from '../Content'
+
+import doku from '../images/doku.jpg'
 
 const Clans = (props) => {
 
