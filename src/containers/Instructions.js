@@ -41,6 +41,8 @@ const Instructions = (props) => {
                   message={story.Start}/> */}
             </Card>  
         </Fade>
+
+        <div className='h-1/4'/>
     </>
   )
 }

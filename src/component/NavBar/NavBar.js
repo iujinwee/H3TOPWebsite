@@ -1,16 +1,17 @@
+import { useState } from "react";
 import Container from "react-bootstrap/Container";
 import Nav from "react-bootstrap/Nav";
 import Navbar from "react-bootstrap/Navbar";
 import Logo from "../../images/h3logo.png";
 import { SocialIcon } from "react-social-icons";
 import styles from "./NavBar.module.css";
-import { HashLink as Link } from 'react-router-hash-link'
+import { HashLink as Link } from "react-router-hash-link";
 import { NavItem } from "react-bootstrap";
 import { useLocation } from "react-router-dom";
 
 function NavigationBar() {
-
   const router = useLocation();
+  const [Expanded, setExpanded] = useState(false);
 
   return (
     <>
@@ -20,6 +21,7 @@ function NavigationBar() {
         variant="dark"
         className="sticky-top bg-dark w-screen"
         id="nav-bar"
+        expanded={Expanded}
       >
         <Container className="m-auto p-0">
           <Navbar.Brand href="/" className="ml-5">
@@ -33,45 +35,102 @@ function NavigationBar() {
             <span className="font-semibold align-middle ">H3 TOP'23</span>
           </Navbar.Brand>
 
-          <Navbar.Toggle aria-controls="responsive-navbar-nav" className="mr-6"/>
+          <Navbar.Toggle
+            aria-controls="responsive-navbar-nav"
+            className="mr-6"
+            onClick={() => {setExpanded(Expanded?false:"expanded")}}
+          />
 
           <Navbar.Collapse id="responsive-navbar-nav">
-            <Nav
-              className="justify-center items-center m-auto font-bold text-gray-400"
-            >
-              <NavItem className={`py-1 px-4 hover:text-gray-500 ${router.hash === "#home" ? "text-gray-200" : "text-inherit"}`}>
-                <Link to='#home' smooth style={{color: 'inherit', textDecoration: 'inherit'}}>
+            <Nav className="justify-center items-center m-auto font-bold text-gray-400">
+              <NavItem
+                className={`py-1 px-4 hover:text-gray-500 ${
+                  router.hash === "#home" ? "text-gray-200" : "text-inherit"
+                }`}
+              >
+                <Link
+                  to="#home"
+                  smooth
+                  style={{ color: "inherit", textDecoration: "inherit" }}
+                  
+                  onClick={() => setExpanded(false)}
+                >
                   Home
                 </Link>
               </NavItem>
 
-              <NavItem className={`py-1 px-4 hover:text-gray-500 ${router.hash === "#story" ? "text-gray-300" : "text-inherit"}`}>
-                <Link to='#story' smooth style={{color: 'inherit', textDecoration: 'inherit'}}>
-                    Story
-                </Link>
-              </NavItem>
-              
-              <NavItem className={`py-1 px-4 hover:text-gray-500 ${router.hash === "#visa" ? "text-gray-300" : "text-inherit"}`}>
-                <Link to='#visa' smooth style={{color: 'inherit', textDecoration: 'inherit'}}>
-                    Visa
-                </Link>
-              </NavItem>
-
-              <NavItem className={`py-1 px-4 hover:text-gray-500 ${router.hash === "#clans" ? "text-gray-300" : "text-inherit"}`}>
-                <Link to='#clans' smooth style={{color: 'inherit', textDecoration: 'inherit'}}>
-                    Clans
+              <NavItem
+                className={`py-1 px-4 hover:text-gray-500 ${
+                  router.hash === "#story" ? "text-gray-300" : "text-inherit"
+                }`}
+              >
+                <Link
+                  to="#story"
+                  smooth
+                  style={{ color: "inherit", textDecoration: "inherit" }}
+                  onClick={() => setExpanded(false)}
+                >
+                  Story
                 </Link>
               </NavItem>
 
-              <NavItem className={`py-1 px-4 hover:text-gray-500 ${router.hash === "#team" ? "text-gray-300" : "text-inherit"}`}>
-                <Link to='#team' smooth style={{color: 'inherit', textDecoration: 'inherit'}}>
-                    Our Team
+              <NavItem
+                className={`py-1 px-4 hover:text-gray-500 ${
+                  router.hash === "#visa" ? "text-gray-300" : "text-inherit"
+                }`}
+              >
+                <Link
+                  to="#visa"
+                  smooth
+                  style={{ color: "inherit", textDecoration: "inherit" }}
+                  onClick={() => setExpanded(false)}
+                >
+                  Visa
                 </Link>
               </NavItem>
 
-              <NavItem className={`py-1 px-4 hover:text-gray-500 ${router.hash === "#albums" ? "text-gray-300" : "text-inherit"}`}>
-                <Link to='#albums' smooth style={{color: 'inherit', textDecoration: 'inherit'}}>
-                    Albums
+              <NavItem
+                className={`py-1 px-4 hover:text-gray-500 ${
+                  router.hash === "#clans" ? "text-gray-300" : "text-inherit"
+                }`}
+              >
+                <Link
+                  to="#clans"
+                  smooth
+                  style={{ color: "inherit", textDecoration: "inherit"}}
+                  onClick={() => {setExpanded(false);}}
+                >
+                  Clans
+                </Link>
+              </NavItem>
+
+              <NavItem
+                className={`py-1 px-4 hover:text-gray-500 ${
+                  router.hash === "#team" ? "text-gray-300" : "text-inherit"
+                }`}
+              >
+                <Link
+                  to="#team"
+                  smooth
+                  style={{ color: "inherit", textDecoration: "inherit" }}
+                  onClick={() => setExpanded(false)}
+                >
+                  Our Team
+                </Link>
+              </NavItem>
+
+              <NavItem
+                className={`py-1 px-4 hover:text-gray-500 ${
+                  router.hash === "#albums" ? "text-gray-300" : "text-inherit"
+                }`}
+              >
+                <Link
+                  to="#albums"
+                  smooth
+                  style={{ color: "inherit", textDecoration: "inherit" }}
+                  onClick={() => setExpanded(false)}
+                >
+                  Albums
                 </Link>
               </NavItem>
             </Nav>

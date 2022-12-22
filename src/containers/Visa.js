@@ -56,6 +56,8 @@ const Visa = (props) => {
                     px-4 py-4'
           />
       </div>  
+
+      <div className="h-1/4"/>
     </>
   );
 };
