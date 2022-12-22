@@ -49,9 +49,11 @@ const Visa = (props) => {
         <Button
           id="clans"
           message= {visa.clans}
-          className="text-gray-50 text-3xl font-bold
-                     bg-purple-400
-                       h-16 w-40"
+          className='select-none bg-gray-800 bg-opacity-70 
+                    rounded-2xl border-solid border-purple-300 border-2 
+                    hover:border-double hover:border-purple-500
+                    text-sky-50 text-3xl font-bold 
+                    px-4 py-4'
           />
       </div>  
     </>

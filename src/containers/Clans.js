@@ -75,7 +75,8 @@ const Clans = (props) => {
             variants={variant}
             initial="hidden"
             animate={control}
-            className='list-none pl-0 flex flex-wrap m-auto justify-center'>
+            className='list-none pl-0 flex flex-wrap mx-auto lg:w-11/12 justify-center'>
+              {/* Control width */}
 
               <motion.li variants={delay}> 
                 <CharacterCard image={doku} name={clans.Akari.name} tag={clans.Akari.quirk}/>

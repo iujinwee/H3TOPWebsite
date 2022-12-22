@@ -6,6 +6,7 @@ import Team from '../../containers/Team'
 import Albums from '../../containers/Albums'
 import Instructions from '../../containers/Instructions'
 import { AnimatePresence } from 'framer-motion'
+import ClansDescriptions from '../../containers/ClansDescriptions'
 
 import Story from '../../containers/Story'
 
@@ -18,6 +19,7 @@ const Layout = () => {
             <Instructions/>
             <Visa/>
             <Clans/>
+            <ClansDescriptions/>
             <Team/> 
             <Albums/>
         </AnimatePresence>
