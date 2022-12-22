@@ -10,7 +10,7 @@ const Home = (props) => {
     const element = document.getElementById('story');
     if (element) {
       // 👇 Will scroll smoothly to the top of the next section
-      element.scrollIntoView({ behavior: 'smooth' });
+      element.scrollIntoView({ behavior: 'smooth', block: 'start'});
     }
   }
 

@@ -120,7 +120,8 @@ const Fade = (props) => {
 const Variant = VariantSelector(props.direction);
 
   return (
-    <motion.div 
+    <motion.div
+      id={props.id} 
       className={props.className}
       ref = {ref}
       variants={Variant}

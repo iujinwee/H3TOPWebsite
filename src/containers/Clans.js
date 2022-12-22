@@ -44,9 +44,7 @@ const Clans = (props) => {
   useEffect(() => {
     if (inView) {
       control.start("show");
-    } else{
-      control.start("hidden")
-    }
+    } 
   }, [control, inView]);
 
   return (  

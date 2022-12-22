@@ -31,11 +31,11 @@ const Team = (props) => {
   const delay = {
     hidden: {
       opacity: 0,
-      x:-100
+      y:100
     }, 
     show: {
       opacity: 1,
-      x:0, 
+      y:0, 
       transition: {
         duration: 0.8
       }
@@ -45,9 +45,10 @@ const Team = (props) => {
   useEffect(() => {
     if (inView) {
       control.start("show");
-    } else{
-      control.start("hidden")
     }
+    // } else{
+    //   control.start("hidden")
+    // }
   }, [control, inView]);
 
   return (  

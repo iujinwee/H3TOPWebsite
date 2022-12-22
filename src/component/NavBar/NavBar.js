@@ -98,7 +98,7 @@ function NavigationBar() {
                   to="#clans"
                   smooth
                   style={{ color: "inherit", textDecoration: "inherit"}}
-                  onClick={() => {setExpanded(false);}}
+                  onClick={() => {setExpanded(false); }}
                 >
                   Clans
                 </Link>
