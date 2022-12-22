@@ -31,7 +31,7 @@ const Visa = (props) => {
 
       {/* // Control size of timer box */}
       <div
-        className="pt-0 px-0 
+        className="pt-0 px-0
                    md:px-20
                    lg:pt-20 lg:px-48"
       >

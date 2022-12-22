@@ -69,6 +69,7 @@ const clans = {
     Akari: {
         name: "Akari",
         quirk: "Prideful Curryman",
+        quirkdesc: "test",
         story: "Ever since young, Akari has absolutely slayed everything he does. He was the first to finish every single level of candy crush. He has an IQ higher than stephen hawking and albert einstein combined. He can win Connect 4 in 3 moves. He has never lost a scissors-paper-stone match. And of course, he is most proud of his ability to make the best curry (a-kari, get it?) in the world that can get anyone to fall in love with him."
     },
 

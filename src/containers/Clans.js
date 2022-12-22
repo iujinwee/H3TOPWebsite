@@ -79,23 +79,23 @@ const Clans = (props) => {
               {/* Control width */}
 
               <motion.li variants={delay}> 
-                <CharacterCard image={doku} name={clans.Akari.name} tag={clans.Akari.quirk}/>
+                <CharacterCard image={doku} name={clans.Akari.name} tag={clans.Akari.quirk} id={clans.Akari.name}/>
               </motion.li>
 
               <motion.li variants={delay}> 
-                <CharacterCard image={doku} name={clans.Bankai.name} tag={clans.Bankai.quirk}/> 
+                <CharacterCard image={doku} name={clans.Bankai.name} tag={clans.Bankai.quirk} id={clans.Bankai.name}/> 
               </motion.li>
               
               <motion.li variants={delay}> 
-                <CharacterCard image={doku} name={clans.Chakra.name} tag={clans.Chakra.quirk}/>
+                <CharacterCard image={doku} name={clans.Chakra.name} tag={clans.Chakra.quirk} id={clans.Chakra.name}/>
               </motion.li>
 
               <motion.li variants={delay}> 
-                <CharacterCard image={doku} name={clans.Doku.name} tag={clans.Doku.quirk}/>
+                <CharacterCard image={doku} name={clans.Doku.name} tag={clans.Doku.quirk} id={clans.Doku.name}/>
               </motion.li>
 
               <motion.li variants={delay}> 
-                <CharacterCard image={doku} name={clans.Enji.name} tag={clans.Enji.quirk}/>
+                <CharacterCard image={doku} name={clans.Enji.name} tag={clans.Enji.quirk} id={clans.Enji.name}/>
               </motion.li>
              
           </motion.ul>
