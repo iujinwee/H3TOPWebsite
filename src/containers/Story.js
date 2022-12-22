@@ -31,7 +31,6 @@ const Story = () => {
               <h1 className='text-amber-50 text-3xl font-bold mb-2'>{story.Header}</h1>
               <p>{story.MainStory}</p>
               <Billboard 
-                  message={story.MainStoryCont}
                   onClick={startHandler}/>
             </div>
           </Card>

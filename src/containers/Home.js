@@ -1,10 +1,19 @@
 import React from 'react'
-import Button from '../component/UI/Button/Button'
+import Begin from '../component/UI/Button/Begin'
 import Fade from '../component/Animation/Fade'
 
 import { intro } from '../Content'
 
 const Home = (props) => {
+
+  const startHandler = () => {
+    const element = document.getElementById('story');
+    if (element) {
+      // 👇 Will scroll smoothly to the top of the next section
+      element.scrollIntoView({ behavior: 'smooth' });
+    }
+  }
+
 
   return (
     <>
@@ -42,14 +51,8 @@ const Home = (props) => {
         direction="none"
         speed = "1.5"
         delay = "2">
-          <Button
-            id="story"
-            className='select-none bg-purple-700 bg-opacity-80 
-                      rounded-2xl border-solid border-purple-300 border-2 
-                      hover:border-double hover:border-purple-500
-                      text-xl font-semibold 
-                      h-16 w-40 mx-auto mt-32'
-            message={intro.Begin}/>
+          <Begin
+            onClick={startHandler}/>
       </Fade>
       
       <div className='h-screen'/> 
