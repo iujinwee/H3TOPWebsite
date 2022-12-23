@@ -55,7 +55,7 @@ const Home = (props) => {
             onClick={startHandler}/>
       </Fade>
       
-      <div className='h-screen'/> 
+      <div className='h-1/2'/> 
     </>
   )
 }

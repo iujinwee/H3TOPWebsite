@@ -15,6 +15,8 @@ function NavigationBar() {
 
   return (
     <>
+
+      {/* Control Background of navbar */}
       <Navbar
         collapseOnSelect
         expand="lg"
@@ -23,7 +25,8 @@ function NavigationBar() {
         id="nav-bar"
         expanded={Expanded}
       >
-        <Container className="m-auto p-0">
+        {/* Control height of navbar */}
+        <Container className="m-auto p-0 py-2">
           <Navbar.Brand href="/" className="ml-5">
             <img
               className="inline-block align-middle"

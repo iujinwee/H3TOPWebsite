@@ -26,10 +26,12 @@ const Instructions = (props) => {
             className ='pt-20 md:pt-20 lg:pt-16
                         text-2xl leading-10'>
             <Card className="flex flex-col">
+
                 <h1 className='text-amber-200 text-3xl font-bold mb-2 '>{story.Setup}</h1>
-                <p className='mb-16'>{story.StoryTwist}</p> 
+                <p className='mb-16 tracking-tighter lg:tracking-normal'>{story.StoryTwist}</p> 
+
                 <h1 className='text-lime-300 text-3xl font-bold mb-2 '>{story.Objective}</h1>
-                <p>{story.ObjectiveContent}</p> 
+                <p className='tracking-tighter lg:tracking-normal'>{story.ObjectiveContent}</p> 
 
                 <Start 
                   onClick={startHandler}/>

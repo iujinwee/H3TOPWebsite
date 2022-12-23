@@ -60,6 +60,7 @@ const Team = (props) => {
             direction = "bottom"
             speed="1.5"
             delay="0.2"
+            hidden="true"
             className='font-bold text-5xl text-center mb-4'>
             {team.title}                  
           </Fade>
@@ -68,6 +69,7 @@ const Team = (props) => {
             direction="bottom"
             speed="1.2"
             delay="0.5"
+            hidden="true"
             className='font-bold text-xl text-center mb-5'>
               {team.opening}
           </Fade>
