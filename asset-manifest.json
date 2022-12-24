@@ -1,16 +1,16 @@
 {
   "files": {
-    "main.css": "/H3TOPWebsite/static/css/main.333a4377.css",
-    "main.js": "/H3TOPWebsite/static/js/main.74abdf8a.js",
+    "main.css": "/H3TOPWebsite/static/css/main.25020501.css",
+    "main.js": "/H3TOPWebsite/static/js/main.2c844deb.js",
     "static/media/doku.jpg": "/H3TOPWebsite/static/media/doku.25dbc70a40d90d33a884.jpg",
     "static/media/retro.jpg": "/H3TOPWebsite/static/media/retro.f980eb5b0f42710b14ed.jpg",
     "static/media/h3logo.png": "/H3TOPWebsite/static/media/h3logo.2c8d2d6a259684fe4e01.png",
     "index.html": "/H3TOPWebsite/index.html",
-    "main.333a4377.css.map": "/H3TOPWebsite/static/css/main.333a4377.css.map",
-    "main.74abdf8a.js.map": "/H3TOPWebsite/static/js/main.74abdf8a.js.map"
+    "main.25020501.css.map": "/H3TOPWebsite/static/css/main.25020501.css.map",
+    "main.2c844deb.js.map": "/H3TOPWebsite/static/js/main.2c844deb.js.map"
   },
   "entrypoints": [
-    "static/css/main.333a4377.css",
-    "static/js/main.74abdf8a.js"
+    "static/css/main.25020501.css",
+    "static/js/main.2c844deb.js"
   ]
 }
