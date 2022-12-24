@@ -21,12 +21,13 @@ const Home = (props) => {
         className='flex flex-col items-center bg-transparent shadow-none m-auto
                     font-extrabold whitespace-nowrap 
                     text-xl md:text-2xl lg:text-3xl text-black
-                    pt-20 md:pt-16 lg:pt-12'>
+                    pt-20 md:pt-16 lg:pt-12
+                    font-blackopsone'>
         <Fade 
           direction="left" 
           speed = "1.5"
           delay = "0"
-          className="text-3xl md:text-4xl lg:text-5xl">
+          className="text-3xl md:text-4xl lg:text-5xl font-sans">
             {intro.title1}
         </Fade> 
 

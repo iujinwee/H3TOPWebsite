@@ -61,7 +61,7 @@ const Team = (props) => {
             speed="1.5"
             delay="0.2"
             hidden="true"
-            className='font-bold text-5xl text-center mb-4'>
+            className='font-bold text-5xl text-center mb-4 font-outline-1'>
             {team.title}                  
           </Fade>
             
@@ -70,7 +70,7 @@ const Team = (props) => {
             speed="1.2"
             delay="0.5"
             hidden="true"
-            className='font-bold text-xl text-center mb-5'>
+            className='font-bold text-2xl text-center mb-5 font-outline-0-5'>
               {team.opening}
           </Fade>
         

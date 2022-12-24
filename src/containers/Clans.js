@@ -56,7 +56,7 @@ const Clans = (props) => {
             direction = "bottom"
             speed="1.5"
             delay="0.2"
-            className='font-bold text-5xl text-center mb-4'>
+            className='font-bold text-5xl text-center mb-4 font-outline-1'>
             {clans.opening}                  
           </Fade>
             
@@ -64,7 +64,7 @@ const Clans = (props) => {
             direction="bottom"
             speed="1.2"
             delay="0.5"
-            className='font-bold text-xl text-center mb-5'>
+            className='font-bold text-xl text-center mb-5 font-outline-0-5'>
               {clans.clanCards}
           </Fade>
         

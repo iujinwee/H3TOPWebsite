@@ -12,8 +12,10 @@ module.exports = {
       }
     },
     fontFamily: {
-      sans: ['Roboto', 'sans-serif'],
-      heading: ['Poppins', 'sans-serif']
+      'blackopsone': ['Black Ops One', 'sans-serif'],
+      'audiowide': ['Audiowide', 'sans-serif'],
+      'orbitron': ['Orbitron', 'sans-serif'],
+
     }
   },
   variants: {

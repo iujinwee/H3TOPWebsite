@@ -54,8 +54,8 @@ const Story = () => {
               speed="1.6"
               delay="0.5"
             >
-              <h1 ref = {ref} className="text-amber-50 text-4xl font-extrabold 
-                                            mb-3 tracking-wider">
+              <h1 ref = {ref} className="text-amber-50 text-5xl font-extrabold
+                                            mb-3 tracking-wider font-outline-1">
                 {story.Header}
               </h1>
             </Fade>
@@ -73,11 +73,12 @@ const Story = () => {
                 cursor=" " 
                 displayTextRenderer={(text, i) => {
                   return (
-                    <p className="tracking-tighter lg:tracking-normal">
+                    <p className="tracking-tighter lg:tracking-wider   
+                                  text-xl lg:text-2xl font-outline-0-5">
                       {text.split('').map((char, i) => {
                         const key = `${i}`;
                         return (
-                          <span
+                          <span className="lg:leading-relaxed leading-loose"
                             key={key}
                           >{char}</span>
                         );

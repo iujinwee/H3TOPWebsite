@@ -21,10 +21,10 @@ const Visa = (props) => {
         speed="2"
         delay="0.5"
         className="flex flex-auto justify-center align-middle
-                   text-gray-200 text-center
                    pt-16 md:pt-20 lg:pt-20
-                   text-3xl font-extrabold
-                   md:text-4xl lg:text-5xl"
+                   text-gray-200 text-center
+                   text-3xl md:text-4xl lg:text-5xl
+                   font-extrabold font-outline-1"
       >
         {visa.message}
       </Fade>

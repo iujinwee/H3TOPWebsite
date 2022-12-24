@@ -7,7 +7,7 @@ const ClanCard = (props) => {
     <div
       id={props.id}
       className="container m-auto grid  
-                lg:container lg:m-auto lg:grid lg:grid-cols-4"
+                lg:container lg:m-auto lg:grid lg:grid-cols-4 font-outline-0-5"
     >
       {/* Control size of image */}
       <img className="w-60 h-96 object-cover rounded-3xl
@@ -29,19 +29,20 @@ const ClanCard = (props) => {
           className="font-semibold text-xl md:text-2xl lg:text-2xl
                      mt-4"
         >
-          <span className={`font-bold ${props.color2}`} >Quirk: </span>
-          <span>{props.quirk}</span>
+          <span className={`font-bold ${props.color2}`}>Quirk: </span>
+          <span className="font-outline-0">{props.quirk}</span>
         </div>
 
         <div
           className="font-semibold text-xl md:text-2xl lg:text-2xl"
         >
           <span className={`font-bold ${props.color2}`}>Description: </span>
-          <span>{props.desc}</span>
+          <span className="font-semibold text-base md:text-lg lg:text-xl 
+                           font-outline-0">{props.desc}</span>
         </div>
 
         <div
-          className="text-lg md:text-xl lg:text-2xl
+          className="text-base md:text-lg lg:text-xl
                      mt-4 mb-0"
         >
           <h1 className="font-bold">Origins</h1>

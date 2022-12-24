@@ -8,7 +8,7 @@ const Billboard = (props) => {
 
     return (
         <motion.button 
-                className='flex flex-col items-center justify-center m-auto '
+                className='flex flex-col items-center justify-center m-auto font-blackopsone'
                 onClick={()=>{props.onClick(true)}}
                 whileHover={{scale: 1.1}}
                 whileTap={{scale: 1}}>  
