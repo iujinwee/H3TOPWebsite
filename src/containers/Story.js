@@ -68,7 +68,7 @@ const Story = () => {
 
             {typing && <ReactTypingEffect 
                 text={story.MainStory}
-                speed="35"
+                speed="32"
                 eraseDelay={10000000}
                 cursor=" " 
                 displayTextRenderer={(text, i) => {

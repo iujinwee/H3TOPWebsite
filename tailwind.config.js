@@ -3,6 +3,9 @@ module.exports = {
   purge: ["./src/**/*.{html,js}"],
   // darkMode: false, // or 'media' or 'class'
   theme: {
+    screen:{
+      "xs":'300px'
+    },
     backgroundImage: {
       'main-bg': "url('images/retro.jpg')",
     },

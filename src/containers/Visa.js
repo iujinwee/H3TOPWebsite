@@ -31,11 +31,13 @@ const Visa = (props) => {
 
       {/* // Control size of timer box */}
       <div
-        className="pt-0 px-0
-                   md:px-20
-                   lg:pt-20 lg:px-48"
+        className="xs:pt-0 xs:px-10
+                   sm:pt-0 sm:px-0
+                   md:pt-0 md:px-16
+                   lg:pt-0 lg:px-32"
       >
         <Card
+          id="none"
           className="bg-contain border-zinc-900 border-8 
                      flex flex-auto justify-center align-middle"
         >

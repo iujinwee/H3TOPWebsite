@@ -18,16 +18,18 @@ const Home = (props) => {
   return (
     <>
       <div
-        className='flex flex-col items-center bg-transparent shadow-none m-auto
-                    font-extrabold whitespace-nowrap 
-                    text-xl md:text-2xl lg:text-3xl text-black
+        className='flex flex-col items-center bg-transparent shadow-none mx-auto
+                    font-extrabold justify-center text-center
+                    text-2xl md:text-2xl lg:text-3xl text-black
                     pt-20 md:pt-16 lg:pt-12
                     font-blackopsone'>
         <Fade 
           direction="left" 
           speed = "1.5"
           delay = "0"
-          className="text-3xl md:text-4xl lg:text-5xl font-sans">
+          className="text-4xl md:text-4xl lg:text-5xl 
+                     font-sans
+                     pb-2">
             {intro.title1}
         </Fade> 
 
@@ -35,7 +37,8 @@ const Home = (props) => {
           direction="right" 
           speed = "1.5"
           delay = "0.5"
-          className="text-2xl md:text-3xl lg:text-4xl">
+          className="text-3xl md:text-3xl lg:text-4xl
+                     pb-2">
             {intro.title2}
         </Fade>
         
