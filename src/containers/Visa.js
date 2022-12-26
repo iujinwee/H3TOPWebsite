@@ -15,7 +15,7 @@ const Visa = (props) => {
 
   return (
     <>
-      <div className="pt-5 m-0" id="visa" />
+      <div className="pt-5 m-0" id="visa" key="visa"/>
       <Fade
         direction="left"
         speed="2"

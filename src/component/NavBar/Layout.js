@@ -9,6 +9,7 @@ import { AnimatePresence } from 'framer-motion'
 import ClansDescriptions from '../../containers/ClansDescriptions'
 
 import Story from '../../containers/Story'
+import Login from '../UI/Login/Login'
 
 const Layout = () => {
         
@@ -17,6 +18,7 @@ const Layout = () => {
             <Home/>
             <Story/>
             <Instructions/>
+            <Login/>
             <Visa/>
             <Clans/>
             <ClansDescriptions/>

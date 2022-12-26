@@ -8,7 +8,7 @@ import { story } from '../Content'
 const Instructions = (props) => {
 
   const startHandler = () => {
-    const element = document.getElementById('visa');
+    const element = document.getElementById('login');
     if (element) {
       // 👇 Will scroll smoothly to the top of the next section
       element.scrollIntoView({ behavior: 'smooth' });
@@ -18,7 +18,7 @@ const Instructions = (props) => {
 
   return (
     <>
-        <div className='p-0 m-0' id="instructions"/>
+        <div className='p-0 m-0' id="instructions" key="instructions"/>
         <Fade
             direction="bottom"
             speed="1"

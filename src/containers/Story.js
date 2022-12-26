@@ -39,7 +39,7 @@ const Story = () => {
 
   return (
     <>
-      <div className="p-0 m-0" id="story"/>
+      <div className="p-0 m-0" id="story" key="story"/>
       <Fade
         direction="bottom"
         speed="1"

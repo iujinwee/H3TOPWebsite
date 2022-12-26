@@ -7,7 +7,7 @@ import doku from '../images/doku.jpg'
 
 const ClansDescriptions = () => {
   return (
-    <div>
+    <div key="clan_desc" id="clan_desc">
         <Card id={clans.Akari.name}>
             <ClanCard  
                 name={clans.Akari.name}
