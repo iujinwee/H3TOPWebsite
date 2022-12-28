@@ -20,7 +20,10 @@ const story = {
 const visa = {
     display: true,
     message: "Hurry... Your Visa is expiring!",
-    clans: "Learn about your Clan!"
+    clans: "Learn about your Clan!",
+    login_title1: "Warning!",
+    login_title2: "Player Authentication Required.",
+    login_prompt: "Login to proceed"
 };
 
 const team = {

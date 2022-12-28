@@ -21,9 +21,8 @@ const Billboard = (props) => {
                             mt-8 px-3 py-2  
                             rounded-2xl border-solid border-4
                             border-r-amber-300 border-x-lime-300 border-teal-200 border-b-red-300
-                         
                             hover:border-double hover:border-purple-500
-                            text-red-200 font-bold 
+                            text-red-200 font-medium 
                             text-2xl lg:text-4xl'>
                 <div className="logo">
                     <b>

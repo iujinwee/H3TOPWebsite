@@ -83,7 +83,7 @@ function NavigationBar() {
                 }`}
               >
                 <Link
-                  to="#visa"
+                  to="#login"
                   smooth
                   style={{ color: "inherit", textDecoration: "inherit" }}
                   onClick={() => setExpanded(false)}

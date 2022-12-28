@@ -39,16 +39,15 @@ const Story = () => {
 
   return (
     <>
-      <div className="p-0 m-0" id="story" key="story"/>
+      <div className="pt-20 m-0" id="story" key="story"/>
       <Fade
         direction="bottom"
         speed="1"
         delay="0"
-        className="pt-20 md:pt-20 lg:pt-16
-                    text-2xl leading-10 h-screen"
+        className="text-2xl leading-10 h-screen"
       >
         <Card className="flex flex-col mx-auto">
-          <div className="items-center justify-center mx-auto">
+          <div className="items-center justify-center m-auto">
             <Fade 
               direction="right"
               speed="1.6"
@@ -68,7 +67,7 @@ const Story = () => {
 
             {typing && <ReactTypingEffect 
                 text={story.MainStory}
-                speed="32"
+                speed="30"
                 eraseDelay={10000000}
                 cursor=" " 
                 displayTextRenderer={(text, i) => {
@@ -95,7 +94,7 @@ const Story = () => {
         </Card>
       </Fade>
 
-      <div className="h-screen"/>
+      <div className="sm:min-h-[60vh] lg:h-0"/>
     </>
   );
 };

@@ -28,8 +28,7 @@ const CharacterCard = (props) => {
 
     // Adjusting padding between cards
     <div
-      className="flex flex-col
-                    px-6 pb-5 "
+      className="flex flex-col px-6 pb-5"
     >
       <ReactCardFlip isFlipped={hover} flipDirection="horizontal">
         {/* Front of Card */}

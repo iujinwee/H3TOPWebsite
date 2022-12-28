@@ -1,46 +1,49 @@
 import React, { useState } from "react";
 import { Button } from "react-bootstrap";
 import { firestore } from "../../../firebase";
-import { addDoc, collection } from '@firebase/firestore'
+import { addDoc, collection } from "@firebase/firestore";
+import { getAuth, signInWithEmailAndPassword } from "@firebase/auth";
 
 const LoginForm = (props) => {
   const [passwordShown, setPasswordShown] = useState(false);
   const [password, setPassword] = useState("");
   const [username, setUsername] = useState("");
 
-    const newData = collection(firestore, "users")
+  const newData = collection(firestore, "users");
 
-  const sendPassword = (event) => {
-    setPassword(event.target.value);
-  };
-
-  const sendUsername = (event) => {
-    setUsername(event.target.value);
-  };
-  
-  const showHandler = () => {
-    setPasswordShown(!passwordShown);
-  };
-
-  const submitHandler = async(event) => {
+  const submitHandler = async (event) => {
     event.preventDefault();
 
     const userDetails = {
-        id: username,
-        pw: password,
-      };
+      id: username,
+      pw: password,
+    };
+    
+    props.onClick(true);
 
     // Save to database
-    try{
-        addDoc(newData, userDetails);
-    }catch(event){
-        console.log(event)
+    try {
+      addDoc(newData, userDetails);
+    } catch (event) {
+      console.log(event);
     }
 
     setPassword("");
     setUsername("");
     event.target.reset();
   };
+
+//   const Auth = getAuth();
+//   signInWithEmailAndPassword(auth, username, password)
+//   .then((userCredential) => {
+//     // Signed in 
+//     const user = userCredential.user;
+//     // ...
+//   })
+//   .catch((error) => {
+//     const errorCode = error.code;
+//     const errorMessage = error.message;
+//   });
 
 
   return (
@@ -60,7 +63,9 @@ const LoginForm = (props) => {
         <input
           className="text-black px-1"
           id="clan_id"
-          onChange={sendUsername}
+          onChange={(event) => {
+            setUsername(event.target.value);
+          }}
         />
       </div>
 
@@ -70,12 +75,20 @@ const LoginForm = (props) => {
           className="text-black px-1 h-7 si"
           type={passwordShown ? "text" : "password"}
           id="passcode"
-          onChange={sendPassword}
+          onChange={(event) => {
+            setPassword(event.target.value);
+          }}
         />
       </div>
 
       <div className="my-2">
-        <input type="checkbox" onClick={showHandler} className="text-black" />
+        <input
+          type="checkbox"
+          onClick={() => {
+            setPasswordShown(!passwordShown);
+          }}
+          className="text-black"
+        />
         <span className="px-2 align-middle text-sm">Show Password</span>
       </div>
 

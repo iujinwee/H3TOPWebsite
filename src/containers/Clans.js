@@ -48,7 +48,7 @@ const Clans = (props) => {
   }, [control, inView]);
 
   return (  
-    <div className="pt-20 lg:pt-16" id="clans" keys="clans">
+    <div className="pt-20 lg:pt-24" id="clans" keys="clans">
       <Card className='overflow-hidden'>
         <ul className='list-none px-0 md:px-16 lg:px-32'>
 

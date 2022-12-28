@@ -15,13 +15,12 @@ const Visa = (props) => {
 
   return (
     <>
-      <div className="pt-5 m-0" id="visa" key="visa"/>
+      <div className="sm:pt-20 lg:pt-5 m-0" id="visa" key="visa"/>
       <Fade
         direction="left"
         speed="2"
         delay="0.5"
         className="flex flex-auto justify-center align-middle
-                   pt-16 md:pt-20 lg:pt-20
                    text-gray-200 text-center
                    text-3xl md:text-4xl lg:text-5xl
                    font-extrabold font-outline-1"
@@ -59,7 +58,7 @@ const Visa = (props) => {
           />
       </div>  
 
-      <div className="h-1/4"/>
+      {/* <div className="h-1/4"/> */}
     </>
   );
 };

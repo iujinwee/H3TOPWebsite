@@ -18,12 +18,12 @@ const Instructions = (props) => {
 
   return (
     <>
-        <div className='p-0 m-0' id="instructions" key="instructions"/>
+        <div className='p-10 m-0' id="instructions" key="instructions"/>
         <Fade
             direction="bottom"
             speed="1"
             delay="0"
-            className ='pt-20 md:pt-20 lg:pt-16
+            className ='
                         text-2xl leading-10'>
             <Card className="flex flex-col">
 
@@ -47,7 +47,6 @@ const Instructions = (props) => {
             </Card>  
         </Fade>
 
-        <div className='h-1/4'/>
     </>
   )
 }
