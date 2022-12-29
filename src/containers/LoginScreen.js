@@ -31,18 +31,18 @@ const LoginScreen = (props) => {
     <div
       id="loginscreen"
       ref={ref}
-      className="h-screen flex flex-auto justify-center"
+      className="h-screen flex flex-auto justify-center 
+                 sm:px-48 md:px-72 lg:px-96"
     >
       <div className="text-center text-red-50 
-                      text-4xl md:text-5xl lg:text-5xl">
-        <div className="">
+                      text-4xl md:text-5xl lg:text-6xl">
           <Fade
             direction="none"
             speed="0.6"
             delay="0.4"
             className="select-none bg-opacity-80 bg-black
                         py-2 mb-12 
-                        mx-10 md:mx-6 lg:mx-5
+                        sm:px-8 md:px-12 lg:px-28
                         rounded-2xl border-double border-8
                         border-red-400 border-opacity-70
                         text-red-400 font-extralight">
@@ -52,28 +52,25 @@ const LoginScreen = (props) => {
               </b>
             </div>
           </Fade>
-        </div>
 
         <motion.div
           variants={variant}
           initial="hidden"
           animate={control}
-          className=""
-        >
+          className="sm:h-64 md:h-48 lg:h-52">
           {typing && (
             <ReactTypingEffect
               text={visa.login_title2}
               speed="80"
               eraseSpeed="70"
-              eraseDelay={1000000}
+              eraseDelay={10000000}
               cursor=" "
               displayTextRenderer={(text, i) => {
                 return (
                   <p
                     className="tracking-tighter lg:tracking-wider   
-                                font-outline-1 
-                                sm:max-w-sm md:max-w-xl lg:max-w-3xl
-                                sm:h-60 md:h-64 lg:h-64">
+                                font-outline-1
+                                lg:text-5xl md:text-4xl sm:3xl">
                     {text.split("").map((char, i) => {
                       const key = `${i}`;
                       return (
@@ -92,16 +89,14 @@ const LoginScreen = (props) => {
           )}
         </motion.div>
 
-        {/* <div className="py-4">{visa.login_title2}</div> */}
-
         <Fade
           direction="none"
           speed="1"
-          delay="8">
+          delay="5">
           <button
             type="button"
             className="bg-black p-3 
-                         text-2xl
+                         text-3xl
                          border-4 border-white rounded-3xl hover:scale-110
                          transition ease-in duration-200"
             onClick={() => {props.onClick("login")}}

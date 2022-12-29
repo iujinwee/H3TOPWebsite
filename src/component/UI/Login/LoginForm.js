@@ -47,11 +47,13 @@ const LoginForm = (props) => {
 
 
   return (
-    <form
-      className="m-auto px-10 py-16
-                    bg-slate-800 opacity-80
-                    border-2 border-black rounded-3xl
-                    text-white"
+    <form   
+      className="m-auto w-80
+                sm:px-8 md:px-9 lg:px-10 
+                sm:py-11 md:py-12 lg:py-16 
+                bg-slate-800 opacity-80
+                border-2 border-black rounded-3xl
+                text-white"
       onSubmit={submitHandler}
     >
       <div className="text-center pb-3 text-2xl">

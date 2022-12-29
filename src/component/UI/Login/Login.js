@@ -4,6 +4,7 @@ import LoginScreen from "../../../containers/LoginScreen";
 import Visa from "../../../containers/Visa";
 import Fade from "../../Animation/Fade";
 import LoginForm from "./LoginForm";
+import useScrollLock from "../../Hooks/ScrollLock/useScrollLock";
 
 const Login = (props) => {
   const [page, setPage] = useState("loginscreen");
@@ -26,14 +27,15 @@ const Login = (props) => {
   };
 
   return (
-    <div className="pt-32 h-screen" id="login">
-      <motion.div variants={variant} initial="hidden" animate="show">
+    <div className={`pt-32 h-screen ${page==="loginform"? "backdrop-blur-xl" : "backdrop-blur-none"}`} id="login">
+      <motion.div variants={variant} initial="hidden" animate="show" >
         {page === "loginscreen" && <LoginScreen onClick={clickHandler} />}
         {page === "loginform" && (
           <Fade
             direction="none"
-            speed="0.3"
-            delay="0">
+            speed="0.01"
+            delay="0"
+            className="">
             <LoginForm onClick={submitHandler} />
           </Fade>
         )}
