@@ -2,6 +2,7 @@ import { motion } from "framer-motion";
 import React, { useState } from "react";
 import LoginScreen from "../../../containers/LoginScreen";
 import Visa from "../../../containers/Visa";
+import Fade from "../../Animation/Fade";
 import LoginForm from "./LoginForm";
 
 const Login = (props) => {
@@ -28,7 +29,14 @@ const Login = (props) => {
     <div className="pt-32 h-screen" id="login">
       <motion.div variants={variant} initial="hidden" animate="show">
         {page === "loginscreen" && <LoginScreen onClick={clickHandler} />}
-        {page === "loginform" && <LoginForm onClick={submitHandler} />}
+        {page === "loginform" && (
+          <Fade
+            direction="none"
+            speed="0.3"
+            delay="0">
+            <LoginForm onClick={submitHandler} />
+          </Fade>
+        )}
         {page === "visa" && <Visa />}
       </motion.div>
     </div>

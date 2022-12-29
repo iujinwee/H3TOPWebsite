@@ -10,6 +10,7 @@ const LoginScreen = (props) => {
   const [typing, setTyping] = useState(false);
   const [ref, inView] = useInView();
 
+
   const variant = {
     hidden: {
       opacity: 1,
@@ -32,19 +33,19 @@ const LoginScreen = (props) => {
       ref={ref}
       className="h-screen flex flex-auto justify-center"
     >
-      <div className="text-center text-red-50 text-4xl lg:text-5xl">
-        <div className="mx-10 md:mx-64 lg:mx-80">
+      <div className="text-center text-red-50 
+                      text-4xl md:text-5xl lg:text-5xl">
+        <div className="">
           <Fade
             direction="none"
             speed="0.6"
-            delay="0.5"
+            delay="0.4"
             className="select-none bg-opacity-80 bg-black
-                                py-2 mb-12
-                                rounded-2xl border-double border-8
-                                border-red-400 border-opacity-70
-                                text-red-400 font-extralight 
-                                text-3xl lg:text-5xl"
-          >
+                        py-2 mb-12 
+                        mx-10 md:mx-6 lg:mx-5
+                        rounded-2xl border-double border-8
+                        border-red-400 border-opacity-70
+                        text-red-400 font-extralight">
             <div className="logo">
               <b>
                 W<span>A</span>RN<span>I</span>NG.
@@ -64,14 +65,15 @@ const LoginScreen = (props) => {
               text={visa.login_title2}
               speed="80"
               eraseSpeed="70"
-              eraseDelay={1000}
+              eraseDelay={1000000}
               cursor=" "
               displayTextRenderer={(text, i) => {
                 return (
                   <p
                     className="tracking-tighter lg:tracking-wider   
-                                 font-outline-1 w-screen h-72"
-                  >
+                                font-outline-1 
+                                sm:max-w-sm md:max-w-xl lg:max-w-3xl
+                                sm:h-60 md:h-64 lg:h-64">
                     {text.split("").map((char, i) => {
                       const key = `${i}`;
                       return (
