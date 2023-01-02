@@ -32,7 +32,7 @@ const LoginScreen = (props) => {
       id="loginscreen"
       ref={ref}
       className="h-screen flex flex-auto justify-center 
-                 sm:px-48 md:px-72 lg:px-96"
+                 sm:px-36 md:px-72 lg:px-96"
     >
       <div className="text-center text-red-50 
                       text-4xl md:text-5xl lg:text-6xl">

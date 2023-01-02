@@ -94,7 +94,7 @@ const Story = () => {
         </Card>
       </Fade>
 
-      <div className="sm:min-h-[60vh] lg:h-0"/>
+      <div className="min-h-[80vh] lg:h-0"/>
     </>
   );
 };

@@ -6,26 +6,31 @@ const ClanCard = (props) => {
   return (
     // Control Entire Card
     <div>
-      <div className="py-4" id={props.id}/>
+      <div className="py-4" id={props.id} key={props.id} />
       <Card>
         <div
           className="container grid lg:grid-cols-4
                     font-outline-0-5"
         >
-          
           {/* Control size of image */}
-          <img className="w-60 h-96 object-cover rounded-3xl
+          <img
+            className="w-60 h-96 object-cover rounded-3xl
                           flex flex-auto justify-center items-center m-auto 
                           rows-start-1 
-                          lg:col-start-1" src={props.image} alt={props.name}/>
+                          lg:col-start-1"
+            src={props.image}
+            alt={props.name}
+          />
 
-            {/* Control Description */}
-            <div className="rows-start-2 pt-3
-                            lg:col-start-2 lg:col-span-3 lg:pl-8">
-              <div
-                className="font-bold text-4xl md:text-5xl lg:text-6xl
+          {/* Control Description */}
+          <div
+            className="rows-start-2 pt-3
+                            lg:col-start-2 lg:col-span-3 lg:pl-8"
+          >
+            <div
+              className="font-bold text-4xl md:text-5xl lg:text-6xl
                                   my-1"
-              >
+            >
               <span className={`${props.color1}`}>{props.name}</span>
             </div>
 
@@ -37,12 +42,14 @@ const ClanCard = (props) => {
               <span className="font-outline-0">{props.quirk}</span>
             </div>
 
-            <div
-              className="font-semibold text-xl md:text-2xl lg:text-2xl"
-            >
+            <div className="font-semibold text-xl md:text-2xl lg:text-2xl">
               <span className={`font-bold ${props.color2}`}>Description: </span>
-              <span className="font-semibold text-base md:text-lg lg:text-xl 
-                              font-outline-0">{props.desc}</span>
+              <span
+                className="font-semibold text-base md:text-lg lg:text-xl 
+                              font-outline-0"
+              >
+                {props.desc}
+              </span>
             </div>
 
             <div

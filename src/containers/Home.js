@@ -18,7 +18,6 @@ const Home = (props) => {
   return (
     <>
       <div
-        key="home"
         className='flex flex-col items-center bg-transparent shadow-none mx-auto
                     font-extrabold justify-center text-center
                     text-2xl md:text-2xl lg:text-3xl text-black

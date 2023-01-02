@@ -1,10 +1,12 @@
 import React, { useState } from "react";
 import { Button } from "react-bootstrap";
-import { getAuth, signInWithEmailAndPassword } from "firebase/auth";
+import { createUserWithEmailAndPassword, getAuth } from "firebase/auth";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { solid } from "@fortawesome/fontawesome-svg-core/import.macro"; // <-- import styles to be used
+import { doc, setDoc } from "firebase/firestore";
+import { firestore } from "../../../firebase";
 
-const LoginForm = (props) => {
+const NewUser = (props) => {
   const [passwordShown, setPasswordShown] = useState(false);
   const [password, setPassword] = useState("");
   const [username, setUsername] = useState("");
@@ -14,12 +16,21 @@ const LoginForm = (props) => {
     event.preventDefault();
 
     const auth = getAuth();
-    signInWithEmailAndPassword(auth, username, password)
-      .then((userCredentials) => {        
+    createUserWithEmailAndPassword(auth, username, password)
+      .then((userCredentials) => {
+        const user = userCredentials.user;
+
+        setDoc(doc(firestore, "VisaTimer", user.uid), {
+          init_duration: 86400000,
+          bonus_time: 0,
+        });
+        
+        alert("New Account Created");
       })
       .catch((err) => {
         // Error Handling
-        props.onErr(err.code);
+        const errMsg = err.code;
+        props.onErr(errMsg);
       });
 
     event.target.reset();
@@ -45,11 +56,11 @@ const LoginForm = (props) => {
                      pl-20 hover:pl-10 pb-2
                      text-gray-300 h-5 w-5"
         />
-      </div>  
+      </div>
 
       {/* LOGIN FORM */}
       <div className="text-center pb-3 text-2xl">
-        <span>LOGIN</span>
+        <span>NEW ACCOUNT</span>
       </div>
 
       <div className="my-2">
@@ -89,10 +100,10 @@ const LoginForm = (props) => {
       </div>
 
       <Button className="my-2" type="submit">
-        Login
+        Create
       </Button>
     </form>
   );
 };
 
-export default LoginForm;
+export default NewUser;

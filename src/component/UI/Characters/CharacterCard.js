@@ -19,7 +19,7 @@ const CharacterCard = (props) => {
     const element = document.getElementById(props.id);
     if (element) {
       // 👇 Will scroll smoothly to the top of the next section
-      element.scrollIntoView({ behavior: 'smooth' });
+      element.scrollIntoView({ behavior: "smooth" });
     }
   };
 
@@ -27,9 +27,7 @@ const CharacterCard = (props) => {
     //  ${classes.card} ${props.className} > If want to inherit card
 
     // Adjusting padding between cards
-    <div
-      className="flex flex-col px-6 pb-5"
-    >
+    <div className="flex flex-col px-6 pb-5" key={props.id}>
       <ReactCardFlip isFlipped={hover} flipDirection="horizontal">
         {/* Front of Card */}
         <img

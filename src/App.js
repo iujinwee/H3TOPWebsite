@@ -10,7 +10,7 @@ function App() {
 
   return (
     <BrowserRouter>
-      <div className="select-none bg-main-bg h-screen
+      <div className="select-none bg-main-bg h-screen over
                       bg-center bg-fixed bg-auto bg-no-repeat overflow-x-hidden
                       lg:bg-fixed lg:bg-repeat font-audiowide">
 

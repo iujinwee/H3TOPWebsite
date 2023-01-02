@@ -26,8 +26,8 @@ function NavigationBar() {
         expanded={Expanded}
       >
         {/* Control height of navbar */}
-        <Container className="m-auto p-0 py-2">
-          <Navbar.Brand href="/" className="ml-5">
+        <Container className="m-auto px-0 py-2 container">
+          <Navbar.Brand href="/" className="ml-3">
             <img
               className="inline-block align-middle"
               src={Logo}
@@ -45,9 +45,10 @@ function NavigationBar() {
           />
 
           <Navbar.Collapse id="responsive-navbar-nav">
-            <Nav className="justify-center items-center m-auto font-bold text-gray-400">
+            <Nav className="justify-center items-center m-auto
+                            font-bold text-gray-400 text-sm">
               <NavItem
-                className={`py-1 px-4 hover:text-gray-500 ${
+                className={`py-1 lg:px-4 hover:text-gray-500 ${
                   router.hash === "#home" ? "text-gray-200" : "text-inherit"
                 }`}
               >
