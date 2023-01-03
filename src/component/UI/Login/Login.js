@@ -44,6 +44,7 @@ const Login = (props) => {
       })
       .catch((error) => {
         // An error happened.
+        setErr(error)
       });
   };
 

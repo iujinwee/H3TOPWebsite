@@ -15,21 +15,21 @@ const Visa = (props) => {
   const userID = props.userdata.uid;
   const docRef = doc(firestore, "VisaTimer", userID);
 
-  // Visa 
+  // Visa
   const clansClickHandler = () => {
     const element = document.getElementById("clans");
     if (element) {
       // 👇 Will scroll smoothly to the top of the next section
-      element.scrollIntoView({ behavior: 'smooth' });
+      element.scrollIntoView({ behavior: "smooth" });
     }
   };
 
   // Save Timer Data
   const [resultTimer, setResultTimer] = useState(-1);
 
-  // Refresh Timer 
-  const refreshTimer = useCallback(() => {
-    const TARGET_DATE = new Date("1/4/2023").getTime(); // DD/MM/YYYY FORMAT
+  // Refresh Timer
+  function refreshTimer () {
+    const TARGET_DATE = new Date("1/5/2023").getTime(); // DD/MM/YYYY FORMAT
 
     getDoc(docRef).then((res) => {
       const init_duration = res.data().init_duration; // BEGIN WITH 1 HR
@@ -37,20 +37,23 @@ const Visa = (props) => {
 
       setResultTimer(TARGET_DATE - init_duration + bonus_time);
     });
-  }, [docRef]);
+  };
 
   // Add Time Handler
   const addTimerHandler = useCallback(() => {
     updateDoc(docRef, {
       bonus_time: increment(60 * 1000),
     });
-    refreshTimer()
-  }, [docRef, refreshTimer])
+    // refreshTimer();
+  }, [docRef]);
 
   // Refresh whenever time is added or timer is refreshed
   useEffect(() => {
-    refreshTimer()  
-  }, [resultTimer, setResultTimer, refreshTimer, addTimerHandler]);
+    const timerID = setInterval(refreshTimer, 1000);
+    return function cleanup(){
+      clearInterval(timerID)
+    }
+  });
 
   return (
     <>

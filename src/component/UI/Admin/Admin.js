@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import AddTimer from "./AddTimer";
 import AdminPage from "./AdminPage";
+import DeleteUser from "./DeleteUser";
 import NewUser from "./NewUser";
 
 const Admin = (props) => {
@@ -14,6 +15,9 @@ const Admin = (props) => {
           newUser={() => {
             setPage("newuser");
           }}
+          deleteUser={()=>{
+            setPage("deleteuser")
+          }}
           addTimer={() => {
             setPage("addTimer");
           }}
@@ -22,7 +26,10 @@ const Admin = (props) => {
       )}
 
       {/* ADD USER */}
-      {page === "newuser" && <NewUser onErr={props.onErr} onCancel={() => {setPage("adminpage")}}/>}
+      {page === "newuser" && <NewUser onErr={props.onErr} onCancel={() =>{setPage("adminpage")}}/>}
+          
+      {/* DELETE USER */}
+      {page === "deleteuser" && <DeleteUser onErr={props.onErr} onCancel={() => {setPage("adminpage")}} onDelete={props.onLogout}/>}
 
       {/* ADD TIMER */}
       {page === "addTimer" && <AddTimer onCancel={() => {setPage("adminpage")}}/>}

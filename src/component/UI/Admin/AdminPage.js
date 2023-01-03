@@ -24,6 +24,19 @@ const AdminPage = (props) => {
           />
         </li>
 
+        {/* DELETE USER */}
+        <li>
+          <Button
+            id=""
+            onClick={props.deleteUser}
+            className="my-3 mx-3 h-20 w-64 
+                     bg-violet-700 text-white
+                       border-2 border-black rounded-3xl
+                       text-xl font-bold"
+            message="Delete User"
+          />
+        </li>
+
         {/* ADD TIME */}
         <li>
           <Button

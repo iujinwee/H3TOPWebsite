@@ -1,34 +1,48 @@
 import React, { useState } from "react";
 import { Button } from "react-bootstrap";
-import { createUserWithEmailAndPassword, getAuth } from "firebase/auth";
+import { getAuth, signInWithEmailAndPassword } from "firebase/auth";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { solid } from "@fortawesome/fontawesome-svg-core/import.macro"; // <-- import styles to be used
-import { doc, setDoc } from "firebase/firestore";
+import { deleteDoc, doc } from "firebase/firestore";
 import { firestore } from "../../../firebase";
 
-const NewUser = (props) => {
+const DeleteUser = (props) => {
   const [passwordShown, setPasswordShown] = useState(false);
   const [password, setPassword] = useState("");
   const [username, setUsername] = useState("");
 
-  // Check Sign in for user
+  // SIGN IN & DELETE ACCOUNT
   const submitHandler = async (event) => {
     event.preventDefault();
 
     const auth = getAuth();
 
-    createUserWithEmailAndPassword(auth, username, password)
+    signInWithEmailAndPassword(auth, username, password)
       .then((userCredentials) => {
         const user = userCredentials.user;
-
-        // Create document for new user
-        setDoc(doc(firestore, "VisaTimer", user.uid), {
-          name: user.email,
-          init_duration: 86400000,
-          bonus_time: 0,
-        });
-
-        alert("New Account Created");
+        if(user !== 'undefined'){
+          if (user.uid !== "52f1E0I76SgcE8jg0ZT1ukOGPdx2") {
+          
+            // Delete user document from firestore
+            deleteDoc(doc(firestore, "VisaTimer", user.uid));
+            
+            // Delete user from Auth
+            user
+              .delete()
+              .then(function () {
+                alert("User Deleted.");
+                props.onDelete();
+              })
+              .catch((err) => {
+                const errMsg = err.code;
+                props.onErr(errMsg);
+              });
+  
+          } else {
+            alert("Cannot delete Admin.");
+          }
+        }
+        
       })
       .catch((err) => {
         // Error Handling
@@ -62,8 +76,8 @@ const NewUser = (props) => {
       </div>
 
       {/* LOGIN FORM */}
-      <div className="text-center pb-3 text-2xl">
-        <span>NEW ACCOUNT</span>
+      <div className="text-center pb-3 text-xl">
+        <span>DELETE ACCOUNT</span>
       </div>
 
       <div className="my-2">
@@ -103,10 +117,10 @@ const NewUser = (props) => {
       </div>
 
       <Button className="my-2" type="submit">
-        Create
+        DELETE
       </Button>
     </form>
   );
 };
 
-export default NewUser;
+export default DeleteUser;
