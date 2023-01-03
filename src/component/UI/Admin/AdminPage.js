@@ -1,16 +1,12 @@
 import React from "react";
 import Button from "../Button/Button";
+import Card from "../Card/Card";
 
 const AdminPage = (props) => {
   return (
-    <>
-      <div
-        className="flex flex-auto justify-center py-10
-                   text-5xl font-black "
-      >
-        ADMIN PAGE
-      </div>
-      <ul className="flex flex-auto justify-center pl-0 mx-auto flex-wrap">
+    <Card className="flex flex-col m-auto justify-center text-center">
+      <div className="text-5xl font-black">ADMIN PAGE</div>
+      <ul className="flex flex-auto justify-center pl-0 mx-auto mt-3 flex-wrap">
         {/* NEW USER */}
         <li>
           <Button
@@ -51,10 +47,7 @@ const AdminPage = (props) => {
         </li>
       </ul>
 
-      <div
-        className="flex flex-auto justify-center pt-20
-                   text-4xl font-black"
-      >
+      <div className="text-4xl font-black">
         <Button
           id=""
           onClick={props.onLogout}
@@ -65,7 +58,7 @@ const AdminPage = (props) => {
           message="Logout"
         />
       </div>
-    </>
+    </Card>
   );
 };
 
