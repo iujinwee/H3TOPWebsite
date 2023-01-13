@@ -25,7 +25,7 @@ const Instructions = (props) => {
             delay="0"
             className ='
                         text-2xl leading-10'>
-            <Card className="flex flex-col">
+            <Card className="flex flex-col bg-[rgb(73,15,69)] bg-opacity-60">
 
                 <h1 className='text-amber-200 text-3xl font-bold mb-2 '>{story.Setup}</h1>
                 <p className='mb-16 

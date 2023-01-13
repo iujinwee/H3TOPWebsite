@@ -7,7 +7,7 @@ const ClanCard = (props) => {
     // Control Entire Card
     <div>
       <div className="py-4" id={props.id} key={props.id} />
-      <Card>
+      <Card className="bg-[rgb(73,15,69)] bg-opacity-60">
         <div
           className="container grid lg:grid-cols-4
                     font-outline-0-5"

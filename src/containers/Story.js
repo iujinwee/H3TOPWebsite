@@ -46,7 +46,7 @@ const Story = () => {
         delay="0"
         className="text-2xl leading-10 h-screen"
       >
-        <Card className="flex flex-col mx-auto">
+        <Card className="flex flex-col mx-auto bg-[rgb(73,15,69)] bg-opacity-60">
           <div className="items-center justify-center m-auto">
             <Fade 
               direction="right"

@@ -48,7 +48,7 @@ const Clans = (props) => {
 
   return (
     <div className="pt-20 lg:pt-24" id="clans" keys="clans">
-      <Card className="overflow-hidden">
+      <Card className="overflow-hidden bg-[rgb(73,15,69)] bg-opacity-60">
         <ul className="list-none px-0 md:px-16 lg:px-32">
           <Fade
             direction="bottom"

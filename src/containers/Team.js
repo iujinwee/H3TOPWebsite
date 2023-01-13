@@ -53,7 +53,7 @@ const Team = (props) => {
 
   return (  
     <div className="pt-20 lg:pt-16" id="team" key="team">
-      <Card className='overflow-hidden'>
+      <Card className='overflow-hidden bg-[rgb(73,15,69)] bg-opacity-60'>
         <ul className='list-none px-0 md:px-16 lg:px-32'>
 
           <Fade 

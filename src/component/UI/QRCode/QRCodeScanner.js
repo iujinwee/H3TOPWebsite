@@ -1,9 +1,7 @@
-import React, { useState } from 'react'
+import React from 'react'
 import QRreader from 'react-qr-scanner';
 
-const QRCode = (props) => {
-
-    const [result, setResult] = useState('No Result');
+const QRCodeScanner = (props) => {
 
     const errorHandler = (err) => {
         console.log(err)
@@ -11,8 +9,7 @@ const QRCode = (props) => {
 
     const scanHandler = (data) => { 
         if(data!==null){
-            setResult(data);
-            props.onScan(result);
+            props.onScan(data);
         }
     }
 
@@ -21,6 +18,7 @@ const QRCode = (props) => {
         <QRreader
             delay={100}
             className="h-60 w-80"
+            facingMode="user"
             onError={errorHandler}
             onScan={scanHandler}
         />
@@ -28,4 +26,4 @@ const QRCode = (props) => {
   )
 }
 
-export default QRCode
+export default QRCodeScanner

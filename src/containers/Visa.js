@@ -6,14 +6,16 @@ import Button from "../component/UI/Button/Button";
 
 import { visa } from "../Content";
 import "../component/UI/Countdown/CountdownTimer.css";
-import { doc, getDoc, updateDoc, increment } from "firebase/firestore";
+import { doc, getDoc } from "firebase/firestore";
 import { firestore } from "../firebase";
 import FunctionalButton from "../component/UI/Button/FunctionalButton";
+import QRCode from "../component/UI/QRCode/QRCode";
 
 const Visa = (props) => {
   // RETRIEVE TIME LEFT FROM UID
   const userID = props.userdata.uid;
   const docRef = doc(firestore, "VisaTimer", userID);
+  const [showQR, setShowQR] = useState(false);
 
   // Visa
   const clansClickHandler = () => {
@@ -28,8 +30,8 @@ const Visa = (props) => {
   const [resultTimer, setResultTimer] = useState(-1);
 
   // Refresh Timer
-  function refreshTimer () {
-    const TARGET_DATE = new Date("1/5/2023").getTime(); // DD/MM/YYYY FORMAT
+  function refreshTimer() {
+    const TARGET_DATE = new Date("1/15/2023").getTime(); // DD/MM/YYYY FORMAT
 
     getDoc(docRef).then((res) => {
       const init_duration = res.data().init_duration; // BEGIN WITH 1 HR
@@ -37,26 +39,34 @@ const Visa = (props) => {
 
       setResultTimer(TARGET_DATE - init_duration + bonus_time);
     });
-  };
+  }
 
   // Add Time Handler
   const addTimerHandler = useCallback(() => {
-    updateDoc(docRef, {
-      bonus_time: increment(60 * 1000),
-    });
-    // refreshTimer();
-  }, [docRef]);
+    // Generate QR Code based on login credentials
+    setShowQR(true);
+
+  }, []);
 
   // Refresh whenever time is added or timer is refreshed
   useEffect(() => {
     const timerID = setInterval(refreshTimer, 1000);
-    return function cleanup(){
-      clearInterval(timerID)
-    }
+    return function cleanup() {
+      clearInterval(timerID);
+    };
   });
 
   return (
     <>
+    
+    {showQR && (
+        <QRCode
+          url={docRef}
+          onAcknowledge={() => {
+            setShowQR(false);
+          }}
+        />
+      )}
       <div className="sm:pt-20 lg:pt-3 m-0" id="visa" key="visa" />
       <Fade
         direction="left"
@@ -70,6 +80,7 @@ const Visa = (props) => {
         {visa.message}
       </Fade>
 
+
       {/* // Control size of timer box */}
       <div
         className="xs:pt-0 xs:px-10
@@ -80,7 +91,7 @@ const Visa = (props) => {
         <Card
           id="none"
           className="bg-contain border-zinc-900 border-8 
-                     my-4
+                     my-4 bg-[rgb(50,44,47)] bg-opacity-60
                      flex justify-center align-middle"
         >
           {resultTimer !== -1 ? (
