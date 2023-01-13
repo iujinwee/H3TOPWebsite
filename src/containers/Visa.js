@@ -99,6 +99,7 @@ const Visa = (props) => {
             message="Add Time"
             className="col-start-1 col-span-2"
             onClick={addTimerHandler}
+            onTap={addTimerHandler}
           />
           <FunctionalButton
             message="Logout"

@@ -8,18 +8,18 @@ import { gameplay } from "../../../Content";
 
 const AddTimer = (props) => {
   const [page, setPage] = useState("qrcode");
+  const [scanData, setScanData] = useState("");
 
   const scanHandler = (data) => {
+    setScanData(data);
     setPage("addtime");
-    console.log(data);
   };
 
-  const addHandler = (doc) => {
-    if (!isNaN(doc)) {
-      // Add time to doc
-      console.log(doc);
-      updateDoc(doc, {
-        bonus_time: increment(60 * 1000),
+  const addHandler = (time) => {
+    if (!isNaN(time)) {
+      // Add selected time to doc (docRef)
+      updateDoc(scanData, {
+        bonus_time: increment(time),
       });
     }
   };
