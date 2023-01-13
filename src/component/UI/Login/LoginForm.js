@@ -56,7 +56,7 @@ const LoginForm = (props) => {
         <div>Clan:</div>
         <input
           required
-          className="text-black px-1 w-full"
+          className="text-black px-1 h-7 rounded-md w-full"
           id="clan_id"
           onChange={(event) => {
             setUsername(event.target.value);
@@ -64,11 +64,11 @@ const LoginForm = (props) => {
         />
       </div>
 
-      <div>
+      <div className="my-2">
         <div>Passcode:</div>
         <input
           required
-          className="text-black px-1 h-7 w-full"
+          className="text-black px-1 h-7 rounded-md w-full"
           type={passwordShown ? "text" : "password"}
           id="passcode"
           onChange={(event) => {
