@@ -5,7 +5,7 @@ const FunctionalButton = (props) => {
   return (
     <motion.button
             onClick={props.onClick}
-            onTap={props.onClick}
+            // onTap={props.onClick}
             whileHover={{ scale: 1.1 }}
             whileTap={{ scale: 0.9 }}
             className={`select-none bg-gray-800 bg-opacity-70 

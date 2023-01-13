@@ -103,8 +103,8 @@ const Login = (props) => {
             onLogout={logoutHandler}
             userdata={user}
             onAddTimer={(doc) => {
-              setPage("scanQR");
               setDocRef(doc);
+              setPage("scanQR");
             }}
           />
         )}

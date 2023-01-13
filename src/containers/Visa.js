@@ -29,7 +29,7 @@ const Visa = (props) => {
 
   // Refresh Timer
   function refreshTimer() {
-    const TARGET_DATE = new Date("1/15/2023").getTime(); // DD/MM/YYYY FORMAT
+    const TARGET_DATE = new Date("2/15/2023").getTime(); // DD/MM/YYYY FORMAT
 
     getDoc(docRef).then((res) => {
       const init_duration = res.data().init_duration; // BEGIN WITH 1 HR
@@ -38,12 +38,6 @@ const Visa = (props) => {
       setResultTimer(TARGET_DATE - init_duration + bonus_time);
     });
   }
-
-  // Add Time Handler
-  const addTimerHandler = () => {
-    // Generate QR Code based on login credentials
-    props.onAddTimer(docRef);
-  }; 
 
   // Refresh whenever time is added or timer is refreshed
   useEffect(() => {
@@ -98,8 +92,7 @@ const Visa = (props) => {
           <FunctionalButton
             message="Add Time"
             className="col-start-1 col-span-2"
-            onClick={addTimerHandler}
-            onTap={addTimerHandler}
+            onClick={() => {props.onAddTimer(userID)}}
           />
           <FunctionalButton
             message="Logout"

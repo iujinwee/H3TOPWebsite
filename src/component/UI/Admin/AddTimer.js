@@ -3,8 +3,9 @@ import Button from "../Button/Button";
 import Card from "../Card/Card";
 import AddTimeOptions from "./AddTimeOptions";
 import QRCodeScanner from "../QRCode/QRCodeScanner";
-import { increment, updateDoc } from "firebase/firestore";
+import { doc, increment, updateDoc } from "firebase/firestore";
 import { gameplay } from "../../../Content";
+import { firestore } from "../../../firebase";
 
 const AddTimer = (props) => {
   const [page, setPage] = useState("qrcode");
@@ -15,10 +16,12 @@ const AddTimer = (props) => {
     setPage("addtime");
   };
 
+  const docRef = doc(firestore, "VisaTimer", scanData);
+
   const addHandler = (time) => {
     if (!isNaN(time)) {
       // Add selected time to doc (docRef)
-      updateDoc(scanData, {
+      updateDoc(docRef, {
         bonus_time: increment(time),
       });
     }
