@@ -1,4 +1,4 @@
-import React from 'react'
+import React from 'react';
 import QRreader from 'react-qr-scanner';
 
 const QRCodeScanner = (props) => {
@@ -18,7 +18,7 @@ const QRCodeScanner = (props) => {
         <QRreader
             delay={100}
             className="h-60 w-80"
-            facingMode="rear"
+            // facingMode="rear"
             onError={errorHandler}
             onScan={scanHandler}
         />
