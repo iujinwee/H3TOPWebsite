@@ -10,15 +10,17 @@ import { firestore } from "../../../firebase";
 const AddTimer = (props) => {
   const [page, setPage] = useState("qrcode");
   const [scanData, setScanData] = useState("");
-
+  let docRef;
+  
   const scanHandler = (data) => {
     setScanData(data);
+    docRef = doc(firestore, "VisaTimer", scanData);
     setPage("addtime");
   };
-
-  const docRef = doc(firestore, "VisaTimer", scanData);
-
+  
   const addHandler = (time) => {
+    console.log(time);
+    console.log(docRef);
     if (!isNaN(time)) {
       // Add selected time to doc (docRef)
       updateDoc(docRef, {
@@ -33,10 +35,10 @@ const AddTimer = (props) => {
         className="flex flex-col text-center justify-center items-center pb-5
                   font-black bg-[rgb(73,15,69)] bg-opacity-60"
       >
-        <span className="text-5xl">ADD VISA TIMER</span>
+        <span className="lg:text-5xl md:text-4xl sm:text-3xl">ADD VISA TIMER</span>
 
         {page === "qrcode" && (
-          <span className="text-2xl mt-3">
+          <span className="lg:text-2xl md:text-xl sm:text-base mt-3">
             {gameplay.adminQR}
           </span>
         )}

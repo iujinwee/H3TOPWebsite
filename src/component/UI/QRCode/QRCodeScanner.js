@@ -18,9 +18,7 @@ const QRCodeScanner = (props) => {
         <QRreader
             delay={100}
             className="h-60 w-80"
-            constraints={{
-                facingMode: 'rear'
-            }}
+            facingMode={"Environment"}
             onError={errorHandler}
             onScan={scanHandler}
         />
