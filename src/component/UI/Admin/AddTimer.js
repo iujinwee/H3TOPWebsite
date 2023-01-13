@@ -10,17 +10,18 @@ import { firestore } from "../../../firebase";
 const AddTimer = (props) => {
   const [page, setPage] = useState("qrcode");
   const [scanData, setScanData] = useState("");
-  let docRef;
   
   const scanHandler = (data) => {
+    // Store UID 
     setScanData(data);
-    docRef = doc(firestore, "VisaTimer", scanData);
     setPage("addtime");
   };
   
   const addHandler = (time) => {
-    console.log(time);
-    console.log(docRef);
+
+    // Obtain document reference (docRef)
+    const docRef = doc(firestore, "VisaTimer", scanData.text);
+
     if (!isNaN(time)) {
       // Add selected time to doc (docRef)
       updateDoc(docRef, {

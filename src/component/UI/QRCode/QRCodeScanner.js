@@ -4,7 +4,7 @@ import QRreader from 'react-qr-scanner';
 const QRCodeScanner = (props) => {
 
     const errorHandler = (err) => {
-        console.log(err)
+        alert(err);
     }
 
     const scanHandler = (data) => { 
@@ -18,7 +18,7 @@ const QRCodeScanner = (props) => {
         <QRreader
             delay={100}
             className="h-60 w-80"
-            facingMode={"Environment"}
+            facingMode="rear"
             onError={errorHandler}
             onScan={scanHandler}
         />
