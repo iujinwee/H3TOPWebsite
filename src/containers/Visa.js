@@ -1,4 +1,4 @@
-import React, { useCallback, useEffect, useState } from "react";
+import React, { useEffect, useState } from "react";
 import Card from "../component/UI/Card/Card";
 import CountdownTimer from "../component/UI/Countdown/CountdownTimer";
 import Fade from "../component/Animation/Fade";
@@ -9,13 +9,11 @@ import "../component/UI/Countdown/CountdownTimer.css";
 import { doc, getDoc } from "firebase/firestore";
 import { firestore } from "../firebase";
 import FunctionalButton from "../component/UI/Button/FunctionalButton";
-import QRCode from "../component/UI/QRCode/QRCode";
 
 const Visa = (props) => {
   // RETRIEVE TIME LEFT FROM UID
   const userID = props.userdata.uid;
   const docRef = doc(firestore, "VisaTimer", userID);
-  const [showQR, setShowQR] = useState(false);
 
   // Visa
   const clansClickHandler = () => {
@@ -42,11 +40,10 @@ const Visa = (props) => {
   }
 
   // Add Time Handler
-  const addTimerHandler = useCallback(() => {
+  const addTimerHandler = () => {
     // Generate QR Code based on login credentials
-    setShowQR(true);
-
-  }, []);
+    props.onAddTimer(docRef);
+  }; 
 
   // Refresh whenever time is added or timer is refreshed
   useEffect(() => {
@@ -58,15 +55,7 @@ const Visa = (props) => {
 
   return (
     <>
-    
-    {showQR && (
-        <QRCode
-          url={docRef}
-          onAcknowledge={() => {
-            setShowQR(false);
-          }}
-        />
-      )}
+  
       <div className="sm:pt-20 lg:pt-3 m-0" id="visa" key="visa" />
       <Fade
         direction="left"
@@ -137,7 +126,6 @@ const Visa = (props) => {
         />
       </div>
 
-      {/* <div className="h-1/4"/> */}
     </>
   );
 };

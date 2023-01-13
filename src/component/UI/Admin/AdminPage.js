@@ -4,7 +4,8 @@ import Card from "../Card/Card";
 
 const AdminPage = (props) => {
   return (
-    <Card className="flex flex-col m-auto justify-center text-center">
+    <Card className="flex flex-col m-auto justify-center text-center 
+                   bg-[rgb(73,15,69)] bg-opacity-60">
       <div className="text-5xl font-black">ADMIN PAGE</div>
       <ul className="flex flex-auto justify-center pl-0 mx-auto mt-3 flex-wrap">
         {/* NEW USER */}

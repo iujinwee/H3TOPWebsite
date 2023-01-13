@@ -10,11 +10,13 @@ import { auth } from "../../../firebase";
 import { getAuth, signOut } from "firebase/auth";
 import ErrorMsg from "../Error/ErrorMsg";
 import Admin from "../Admin/Admin";
+import QRCode from "../QRCode/QRCode";
 
 const Login = (props) => {
   const [page, setPage] = useState("loginscreen");
   const [user, loading, error] = useAuthState(auth);
   const [err, setErr] = useState(false);
+  const [docRef, setDocRef] = useState("");
 
   useEffect(() => {
     if (loading) {
@@ -44,7 +46,7 @@ const Login = (props) => {
       })
       .catch((error) => {
         // An error happened.
-        setErr(error)
+        setErr(error);
       });
   };
 
@@ -96,7 +98,25 @@ const Login = (props) => {
           </Fade>
         )}
 
-        {page === "visa" && <Visa onLogout={logoutHandler} userdata={user} />}
+        {page === "visa" && (
+          <Visa
+            onLogout={logoutHandler}
+            userdata={user}
+            onAddTimer={(doc) => {
+              setPage("scanQR");
+              setDocRef(doc);
+            }}
+          />
+        )}
+
+        {page === "scanQR" && (
+          <QRCode
+            url={docRef}
+            onAcknowledge={() => {
+              setPage("visa");
+            }}
+          />
+        )}
 
         {page === "admin" && (
           <Admin
