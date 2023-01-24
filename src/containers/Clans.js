@@ -8,6 +8,8 @@ import CharacterCard from "../component/UI/Characters/CharacterCard";
 import { clans } from "../Content";
 
 import doku from "../images/doku.jpg";
+import { ParallaxBanner, ParallaxBannerLayer } from "react-scroll-parallax";
+import bg from "../images/background.png";
 
 const Clans = (props) => {
   const control = useAnimation();
@@ -47,84 +49,95 @@ const Clans = (props) => {
   }, [control, inView]);
 
   return (
-    <div className="pt-20 lg:pt-24" id="clans" keys="clans">
-      <Card className="overflow-hidden bg-[rgb(73,15,69)] bg-opacity-60">
-        <ul className="list-none px-0 md:px-16 lg:px-32">
-          <Fade
-            direction="bottom"
-            speed="1.5"
-            delay="0.2"
-            className="font-bold text-5xl text-center mb-4 font-outline-1"
-          >
-            {clans.opening}
-          </Fade>
+    <ParallaxBanner className="h-screen">
+      <div id="clans" key="clans" className="relative lg:-top-8 sm:-top-64"/>
+      <div id="clans_start" key="clans_start" className="relative -top-12"/>
+      <ParallaxBannerLayer image={bg} speed={15} />
+      <ParallaxBannerLayer
+        image={bg}
+        speed={20}
+        style={{ "background-position-y": "88%"}}
+      />
+      <ParallaxBannerLayer className="lg:mt-14 sm:mt-2">
+        <Card className="overflow-hidden bg-[rgb(73,15,69)] bg-opacity-60 font-blackopsone 
+                        px-0 sm:pt-4 sm:pb-2">
+          <ul className="list-none px-0 md:px-16 lg:px-32 justify-center m-auto">
+            <Fade
+              direction="bottom"
+              speed="1.5"
+              delay="0.2"
+              className="font-bold lg:text-5xl sm:text-3xl text-center lg:mb-4 sm:mb-2 font-outline-0-5"
+            >
+              {clans.opening}
+            </Fade>
 
-          <Fade
-            direction="bottom"
-            speed="1.2"
-            delay="0.5"
-            className="font-bold text-xl text-center mb-5 font-outline-0-5"
-          >
-            {clans.clanCards}
-          </Fade>
+            <Fade
+              direction="bottom"
+              speed="1.2"
+              delay="0.5"
+              className="font-bold lg:text-xl sm:text-sm text-center lg:mb-12 sm:mb-8 font-outline-0-5 px-10"
+            >
+              {clans.clanCards}
+            </Fade>
 
-          <motion.ul
-            ref={ref}
-            variants={variant}
-            initial="hidden"
-            animate={control}
-            className="list-none pl-0 flex flex-wrap mx-auto lg:w-11/12 justify-center"
-          >
-            {/* Control width */}
+            <motion.ul
+              ref={ref}
+              variants={variant}
+              initial="hidden"
+              animate={control}
+              className="select-none list-none pl-0 flex flex-wrap m-auto justify-center"
+            >
+              {/* Control width */}
 
-            <motion.li variants={delay}>
-              <CharacterCard
-                image={doku}
-                name={clans.Akari.name}
-                tag={clans.Akari.quirk}
-                id={clans.Akari.name}
-              />
-            </motion.li>
+              <motion.li variants={delay}>
+                <CharacterCard
+                  image={doku}
+                  name={clans.Akari.name}
+                  tag={clans.Akari.quirk}
+                  id={clans.Akari.name}
+                />
+              </motion.li>
 
-            <motion.li variants={delay}>
-              <CharacterCard
-                image={doku}
-                name={clans.Bankai.name}
-                tag={clans.Bankai.quirk}
-                id={clans.Bankai.name}
-              />
-            </motion.li>
+              <motion.li variants={delay}>
+                <CharacterCard
+                  image={doku}
+                  name={clans.Bankai.name}
+                  tag={clans.Bankai.quirk}
+                  id={clans.Bankai.name}
+                />
+              </motion.li>
 
-            <motion.li variants={delay}>
-              <CharacterCard
-                image={doku}
-                name={clans.Chakra.name}
-                tag={clans.Chakra.quirk}
-                id={clans.Chakra.name}
-              />
-            </motion.li>
+              <motion.li variants={delay}>
+                <CharacterCard
+                  image={doku}
+                  name={clans.Chakra.name}
+                  tag={clans.Chakra.quirk}
+                  id={clans.Chakra.name}
+                />
+              </motion.li>
 
-            <motion.li variants={delay}>
-              <CharacterCard
-                image={doku}
-                name={clans.Doku.name}
-                tag={clans.Doku.quirk}
-                id={clans.Doku.name}
-              />
-            </motion.li>
+              <motion.li variants={delay}>
+                <CharacterCard
+                  image={doku}
+                  name={clans.Doku.name}
+                  tag={clans.Doku.quirk}
+                  id={clans.Doku.name}
+                />
+              </motion.li>
 
-            <motion.li variants={delay}>
-              <CharacterCard
-                image={doku}
-                name={clans.Enji.name}
-                tag={clans.Enji.quirk}
-                id={clans.Enji.name}
-              />
-            </motion.li>
-          </motion.ul>
-        </ul>
-      </Card>
-    </div>
+              <motion.li variants={delay}>
+                <CharacterCard
+                  image={doku}
+                  name={clans.Enji.name}
+                  tag={clans.Enji.quirk}
+                  id={clans.Enji.name}
+                />
+              </motion.li>
+            </motion.ul>
+          </ul>
+        </Card>
+      </ParallaxBannerLayer>
+    </ParallaxBanner>
   );
 };
 

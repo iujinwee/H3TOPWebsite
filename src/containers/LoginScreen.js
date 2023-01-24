@@ -41,7 +41,7 @@ const LoginScreen = (props) => {
             speed="0.6"
             delay="0.4"
             className="select-none bg-opacity-80 bg-black
-                        py-2 mb-12 
+                        py-2 mb-12 sm:mt-12
                         sm:px-8 md:px-12 lg:px-28
                         rounded-2xl border-double border-8
                         border-red-400 border-opacity-70

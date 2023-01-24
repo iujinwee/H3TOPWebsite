@@ -1,14 +1,22 @@
 import React from 'react'
 import ClanCard from '../component/UI/Card/ClanCard'
 import { clans } from '../Content'
+
 import doku from '../images/doku.jpg'
+
+import akari_bg from  '../images/background.png'
+import bankai_bg from '../images/neon_bg.jpg'
+import chakra_bg from  '../images/neon_bg.jpg'
+import doku_bg from '../images/neon_bg.jpg'
+import enji_bg from '../images/neon_bg.jpg'
 
 
 const ClansDescriptions = () => {
   return (
-    <div key="clan_desc" id="clan_desc" className=''>
+    <div key="clan_desc" id="clan_desc">
         <ClanCard  
             id={clans.Akari.name}
+            bg={akari_bg}
             name={clans.Akari.name}
             quirk={clans.Akari.quirk}
             desc={clans.Akari.quirkdesc}
@@ -20,6 +28,7 @@ const ClansDescriptions = () => {
 
         <ClanCard 
             id={clans.Bankai.name}
+            bg={bankai_bg}
             name={clans.Bankai.name}
             quirk={clans.Bankai.quirk}
             desc={clans.Bankai.quirkdesc}
@@ -31,6 +40,7 @@ const ClansDescriptions = () => {
 
         <ClanCard 
             id={clans.Chakra.name}
+            bg={chakra_bg}
             name={clans.Chakra.name}
             quirk={clans.Chakra.quirk}
             desc={clans.Chakra.quirkdesc}
@@ -42,6 +52,7 @@ const ClansDescriptions = () => {
 
         <ClanCard 
             id={clans.Doku.name}
+            bg={doku_bg}
             name={clans.Doku.name}
             quirk={clans.Doku.quirk}
             desc={clans.Doku.quirkdesc}
@@ -53,6 +64,7 @@ const ClansDescriptions = () => {
 
         <ClanCard 
             id={clans.Enji.name}
+            bg={enji_bg}
             name={clans.Enji.name}
             quirk={clans.Enji.quirk}
             desc={clans.Enji.quirkdesc}

@@ -6,6 +6,9 @@ import Billboard from "../component/UI/Button/Billboard";
 import ReactTypingEffect from "react-typing-effect";
 import { useInView } from "react-intersection-observer";
 import { useAnimation, motion } from "framer-motion";
+import { ParallaxBanner, ParallaxBannerLayer } from "react-scroll-parallax";
+
+import bg from '../images/vaporwave-city-lights.gif'
 
 const Story = () => {
 
@@ -39,22 +42,27 @@ const Story = () => {
 
   return (
     <>
-      <div className="pt-20 m-0" id="story" key="story"/>
+      <div id="story" key="story" className="relative lg:-top-16 sm:-top-64"/>
+      <div id="story_start" key="story_start" className="relative -top-16"/>
+      <ParallaxBanner className="h-screen overflow-x-hidden">
+        <ParallaxBannerLayer image={bg} speed={15} className="bg-top blur-sm w-screen"/>
+        <ParallaxBannerLayer className="pt-8">
+          
       <Fade
         direction="bottom"
         speed="1"
         delay="0"
-        className="text-2xl leading-10 h-screen"
+        className="text-2xl leading-10"
       >
-        <Card className="flex flex-col mx-auto bg-[rgb(73,15,69)] bg-opacity-60">
+        <Card className="flex flex-col m-auto bg-[rgb(45,9,43)] bg-opacity-60 font-audiowide">
           <div className="items-center justify-center m-auto">
             <Fade 
               direction="right"
               speed="1.6"
               delay="0.5"
             >
-              <h1 ref = {ref} className="text-amber-50 text-5xl font-extrabold
-                                            mb-3 tracking-wider font-outline-1">
+              <h1 ref = {ref} className="text-amber-50 lg:text-5xl sm:text-3xl font-black font-blackopsone
+                                            mb-3 tracking-wider font-outline-0-5">
                 {story.Header}
               </h1>
             </Fade>
@@ -67,17 +75,17 @@ const Story = () => {
 
             {typing && <ReactTypingEffect 
                 text={story.MainStory}
-                speed="30"
+                speed="12"
                 eraseDelay={10000000}
                 cursor=" " 
                 displayTextRenderer={(text, i) => {
                   return (
-                    <p className="tracking-tighter lg:tracking-wider   
-                                  text-xl lg:text-2xl font-outline-0-5">
+                    <p className="sm:-tracking-normal lg:tracking-wider     
+                                  sm:text-xs lg:text-2xl font-outline-0-5">
                       {text.split('').map((char, i) => {
                         const key = `${i}`;
                         return (
-                          <span className="lg:leading-relaxed leading-loose"
+                          <span className="lg:leading-loose sm:leading-loose"
                             key={key}
                           >{char}</span>
                         );
@@ -93,8 +101,8 @@ const Story = () => {
 
         </Card>
       </Fade>
-
-      <div className="min-h-[80vh] lg:h-0"/>
+      </ParallaxBannerLayer>
+      </ParallaxBanner>
     </>
   );
 };

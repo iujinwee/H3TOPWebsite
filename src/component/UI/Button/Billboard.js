@@ -16,14 +16,15 @@ const Billboard = (props) => {
             <Fade
                 direction="none"
                 speed="0.6"
-                delay="31"
+                delay="16"
                 className='select-none bg-opacity-80 bg-black
-                            mt-8 px-3 py-2  
+                            lg:mt-0 lg:px-3 lg:py-2  
+                            sm:mt-3 sm:px-5 sm:py-2  
                             rounded-2xl border-solid border-4
                             border-r-amber-300 border-x-lime-300 border-teal-200 border-b-red-300
                             hover:border-double hover:border-purple-500
                             text-red-200 font-medium 
-                            text-2xl lg:text-4xl'>
+                            sm:text-xl lg:text-4xl'>
                 <div className="logo">
                     <b>
                         The G<span>a</span>me i<span>s</span> a<span>b</span>out t<span>o</span> Be<span>g</span>in!

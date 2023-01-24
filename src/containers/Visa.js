@@ -17,7 +17,7 @@ const Visa = (props) => {
 
   // Visa
   const clansClickHandler = () => {
-    const element = document.getElementById("clans");
+    const element = document.getElementById("clans_start");
     if (element) {
       // 👇 Will scroll smoothly to the top of the next section
       element.scrollIntoView({ behavior: "smooth" });
@@ -49,8 +49,7 @@ const Visa = (props) => {
 
   return (
     <>
-  
-      <div className="sm:pt-20 lg:pt-3 m-0" id="visa" key="visa" />
+      <div className="sm:pt-16 lg:pt-0 m-0" id="visa" key="visa" />
       <Fade
         direction="left"
         speed="2"
@@ -58,7 +57,7 @@ const Visa = (props) => {
         className="flex flex-auto justify-center align-middle
                     text-gray-200 text-center
                     text-3xl md:text-4xl lg:text-5xl
-                    font-extrabold font-outline-1"
+                    font-extrabold font-outline-0-5 font-blackopsone"
       >
         {visa.message}
       </Fade>

@@ -3,11 +3,13 @@ import Begin from '../component/UI/Button/Begin'
 import Fade from '../component/Animation/Fade'
 
 import { intro } from '../Content'
+import { ParallaxBanner, ParallaxBannerLayer } from 'react-scroll-parallax'
+import bg from '../images/background.png'
 
 const Home = (props) => {
 
   const startHandler = () => {
-    const element = document.getElementById('story');
+    const element = document.getElementById('story_start');
     if (element) {
       // 👇 Will scroll smoothly to the top of the next section
       element.scrollIntoView({ behavior: 'smooth', block: 'start'});
@@ -17,12 +19,15 @@ const Home = (props) => {
 
   return (
     <>
+      <div id="home" className='relative -top-96'/>
+      <ParallaxBanner className="h-screen bg-top">
+        <ParallaxBannerLayer image={bg} speed={15} className="bg-top"/>
+        <ParallaxBannerLayer>
       <div
-        className='flex flex-col items-center bg-transparent shadow-none mx-auto
-                    font-extrabold justify-center text-center
-                    text-2xl md:text-2xl lg:text-3xl text-black
-                    pt-20 md:pt-16 lg:pt-12
-                    font-blackopsone'>
+        className='pt-40 select-none
+                   font-extrabold text-center text-white
+                   sm:text-2xl md:text-2xl lg:text-3xl 
+                   font-blackopsone'>
         <Fade 
           direction="left" 
           speed = "1.5"
@@ -48,7 +53,7 @@ const Home = (props) => {
           delay = "1">
             {intro.title3}
         </Fade>
-      </div>
+
       
       <Fade
         className='flex flex-col justify-center items-center m-auto pt-10'
@@ -58,8 +63,9 @@ const Home = (props) => {
           <Begin
             onClick={startHandler}/>
       </Fade>
-      
-      <div className='h-1/2'/> 
+      </div>
+      </ParallaxBannerLayer>
+      </ParallaxBanner>
     </>
   )
 }
