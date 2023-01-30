@@ -16,7 +16,6 @@ import marco from "../images/ExcoCards/marco.JPG";
 import rovin from "../images/ExcoCards/rovin.JPG";
 import kenji from "../images/ExcoCards/kenji.JPG";
 import victoria from "../images/ExcoCards/victoria.JPG";
-import { ParallaxBanner } from "react-scroll-parallax";
 
 const Team = (props) => {
   const control = useAnimation();
@@ -61,7 +60,7 @@ const Team = (props) => {
   return (
     <>
       <div className="relative lg:-top-16 sm:-top-64" id="team" key="team" />
-      <div className="bg-team-bg bg-center bg-auto bg-local select-none overflow-x-auto">
+      <div className="bg-main-bg bg-center bg-cover bg-no-repeat select-none overflow-x-auto">
         <Card className="overflow-hidden bg-[rgba(48,48,48,0)] bg-opacity-60 font-blackopsone">
           <ul className="list-none px-0 sm:px-4 md:px-16 lg:px-32">
             <Fade

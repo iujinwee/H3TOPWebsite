@@ -5,18 +5,22 @@ import { clans } from '../Content'
 import doku from '../images/doku.jpg'
 
 import akari_bg from  '../images/background.png'
-import bankai_bg from '../images/neon_bg.jpg'
-import chakra_bg from  '../images/neon_bg.jpg'
-import doku_bg from '../images/neon_bg.jpg'
-import enji_bg from '../images/neon_bg.jpg'
+import bankai_bg from '../images/background.png'
+import chakra_bg from  '../images/background.png'
+import doku_bg from '../images/background.png'
+import enji_bg from '../images/background.png'
 
 
 const ClansDescriptions = () => {
+
+    
+    
   return (
     <div key="clan_desc" id="clan_desc">
         <ClanCard  
             id={clans.Akari.name}
             bg={akari_bg}
+            blurcolor="bg-[rgba(62,14,14,0.41)]"
             name={clans.Akari.name}
             quirk={clans.Akari.quirk}
             desc={clans.Akari.quirkdesc}
@@ -29,6 +33,7 @@ const ClansDescriptions = () => {
         <ClanCard 
             id={clans.Bankai.name}
             bg={bankai_bg}
+            blurcolor="bg-[rgba(62,14,14,0.41)]"
             name={clans.Bankai.name}
             quirk={clans.Bankai.quirk}
             desc={clans.Bankai.quirkdesc}

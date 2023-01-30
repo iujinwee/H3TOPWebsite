@@ -49,7 +49,7 @@ const Clans = (props) => {
   }, [control, inView]);
 
   return (
-    <ParallaxBanner className="h-screen">
+    <ParallaxBanner className="h-screen scale-105">
       <div id="clans" key="clans" className="relative lg:-top-8 sm:-top-64"/>
       <div id="clans_start" key="clans_start" className="relative -top-12"/>
       <ParallaxBannerLayer image={bg} speed={15} />
@@ -58,9 +58,9 @@ const Clans = (props) => {
         speed={20}
         style={{ "background-position-y": "88%"}}
       />
-      <ParallaxBannerLayer className="lg:mt-14 sm:mt-2">
-        <Card className="overflow-hidden bg-[rgb(73,15,69)] bg-opacity-60 font-blackopsone 
-                        px-0 sm:pt-4 sm:pb-2">
+      <ParallaxBannerLayer className="lg:mt-14 sm:mt-2 px-3">
+        <Card className="bg-[rgb(73,15,69)] bg-opacity-60 font-blackopsone 
+                        px-0 sm:pt-4 pb-1">
           <ul className="list-none px-0 md:px-16 lg:px-32 justify-center m-auto">
             <Fade
               direction="bottom"

@@ -19,7 +19,7 @@ const Billboard = (props) => {
                 delay="16"
                 className='select-none bg-opacity-80 bg-black
                             lg:mt-0 lg:px-3 lg:py-2  
-                            sm:mt-3 sm:px-5 sm:py-2  
+                            sm:mt-3 sm:px-3 sm:py-2  
                             rounded-2xl border-solid border-4
                             border-r-amber-300 border-x-lime-300 border-teal-200 border-b-red-300
                             hover:border-double hover:border-purple-500

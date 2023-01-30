@@ -64,7 +64,7 @@ const Login = (props) => {
   };
 
   return (
-    <ParallaxBanner className="h-screen">
+    <ParallaxBanner className="h-screen scale-105">
       <div id="login" key="login" className="relative lg:-top-16 sm:-top-64"/>
       <div id="login_start" key="login_start" className="relative -top-12" />
       <ParallaxBannerLayer

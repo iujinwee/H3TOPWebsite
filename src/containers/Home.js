@@ -20,7 +20,7 @@ const Home = (props) => {
   return (
     <>
       <div id="home" className='relative -top-96'/>
-      <ParallaxBanner className="h-screen bg-top">
+      <ParallaxBanner className="h-screen bg-top scale-105">
         <ParallaxBannerLayer image={bg} speed={15} className="bg-top"/>
         <ParallaxBannerLayer>
       <div

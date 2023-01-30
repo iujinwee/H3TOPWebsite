@@ -43,8 +43,8 @@ const Story = () => {
   return (
     <>
       <div id="story" key="story" className="relative lg:-top-16 sm:-top-64"/>
-      <div id="story_start" key="story_start" className="relative -top-16"/>
-      <ParallaxBanner className="h-screen overflow-x-hidden">
+      <div id="story_start" key="story_start" className="relative -top-20"/>
+      <ParallaxBanner className="h-screen scale-105">
         <ParallaxBannerLayer image={bg} speed={15} className="bg-top blur-sm w-screen"/>
         <ParallaxBannerLayer className="pt-8">
           
@@ -81,7 +81,7 @@ const Story = () => {
                 displayTextRenderer={(text, i) => {
                   return (
                     <p className="sm:-tracking-normal lg:tracking-wider     
-                                  sm:text-xs lg:text-2xl font-outline-0-5">
+                                  sm:text-xs lg:text-xl font-outline-0-5">
                       {text.split('').map((char, i) => {
                         const key = `${i}`;
                         return (

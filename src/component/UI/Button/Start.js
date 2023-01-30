@@ -18,7 +18,7 @@ const Start = (props) => {
                 speed="0.6"
                 delay="0.8"
                 className='select-none bg-opacity-80 bg-black 
-                            mx-auto mt-4 px-3 py-2  
+                            mx-auto sm:mt-0 lg:mt-4 px-3 py-2  
                             rounded-2xl border-solid border-4
                             border-r-amber-300 border-x-lime-300 border-teal-200 border-b-red-300
                             hover:bg-slate-300  
