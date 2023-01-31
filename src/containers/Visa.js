@@ -2,13 +2,13 @@ import React, { useEffect, useState } from "react";
 import Card from "../component/UI/Card/Card";
 import CountdownTimer from "../component/UI/Countdown/CountdownTimer";
 import Fade from "../component/Animation/Fade";
-import Button from "../component/UI/Button/Button";
 
 import { visa } from "../Content";
 import "../component/UI/Countdown/CountdownTimer.css";
 import { doc, getDoc } from "firebase/firestore";
 import { firestore } from "../firebase";
 import FunctionalButton from "../component/UI/Button/FunctionalButton";
+import ClanButton from "../component/UI/Button/ClanButton";
 
 const Visa = (props) => {
   // RETRIEVE TIME LEFT FROM UID
@@ -16,7 +16,7 @@ const Visa = (props) => {
   const docRef = doc(firestore, "VisaTimer", userID);
 
   // Visa
-  const clansClickHandler = () => {
+  const startHandler = () => {
     const element = document.getElementById("clans_start");
     if (element) {
       // 👇 Will scroll smoothly to the top of the next section
@@ -49,7 +49,7 @@ const Visa = (props) => {
 
   return (
     <>
-      <div className="sm:pt-16 lg:pt-0 m-0" id="visa" key="visa" />
+      <div className="sm:pt-16 md:pt-16 lg:pt-20 m-0" id="visa" key="visa" />
       <Fade
         direction="left"
         speed="2"
@@ -104,19 +104,9 @@ const Visa = (props) => {
       {/* CLAN REDIRECT BUTTON */}
       <div
         className="flex flex-col items-center align-middle m-auto
-                      pt-3 mb-24"
+                   lg:pt-3 md:pt-5 sm:pt-5 mb-24"
       >
-        <Button
-          id="clans"
-          onClick={clansClickHandler}
-          message={visa.clans}
-          className="select-none bg-gray-800 bg-opacity-70 
-                    rounded-2xl border-solid border-purple-300 border-2 
-                    hover:border-double hover:border-purple-500
-                    text-sky-50 font-bold 
-                    text-2xl 
-                    px-4 py-4"
-        />
+        <ClanButton onClick={startHandler}/>
       </div>
 
     </>

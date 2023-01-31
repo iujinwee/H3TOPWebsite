@@ -20,7 +20,7 @@ const ClansDescriptions = () => {
         <ClanCard  
             id={clans.Akari.name}
             bg={akari_bg}
-            blurcolor="bg-[rgba(62,14,14,0.41)]"
+            blurcolor="bg-[rgba(62,14,14,0.41)] bg-"
             name={clans.Akari.name}
             quirk={clans.Akari.quirk}
             desc={clans.Akari.quirkdesc}
@@ -33,7 +33,7 @@ const ClansDescriptions = () => {
         <ClanCard 
             id={clans.Bankai.name}
             bg={bankai_bg}
-            blurcolor="bg-[rgba(62,14,14,0.41)]"
+            blurcolor="bg-[rgba(36,62,14,0.41)]"
             name={clans.Bankai.name}
             quirk={clans.Bankai.quirk}
             desc={clans.Bankai.quirkdesc}

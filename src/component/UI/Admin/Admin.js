@@ -8,7 +8,7 @@ const Admin = (props) => {
   const [page, setPage] = useState("adminpage");
 
   return (
-    <div>
+    <div className="lg:mt-20 md:mt-24 sm:mt-10">
       {/* Main Admin Page */}
       {page === "adminpage" && (
         <AdminPage

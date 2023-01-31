@@ -49,7 +49,7 @@ const Clans = (props) => {
   }, [control, inView]);
 
   return (
-    <ParallaxBanner className="h-screen scale-105">
+    <ParallaxBanner className="h-[125vh] scale-105">
       <div id="clans" key="clans" className="relative lg:-top-8 sm:-top-64"/>
       <div id="clans_start" key="clans_start" className="relative -top-12"/>
       <ParallaxBannerLayer image={bg} speed={15} />

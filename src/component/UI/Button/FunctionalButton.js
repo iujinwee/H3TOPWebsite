@@ -9,7 +9,7 @@ const FunctionalButton = (props) => {
             whileHover={{ scale: 1.1 }}
             whileTap={{ scale: 0.9 }}
             className={`select-none bg-gray-800 bg-opacity-70 
-                        rounded-2xl border-solid border-purple-300 border-2 
+                        rounded-2xl border-solid border-purple-300 border-opacity-80 border-2 
                         hover:border-double hover:border-purple-500
                         text-sky-50 font-bold 
                         sm:text-sm md:text-lg lg:text-lg

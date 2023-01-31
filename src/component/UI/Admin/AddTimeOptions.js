@@ -8,8 +8,8 @@ const AddTimeOptions = (props) => {
 
   return (
     <React.Fragment>
-      <div className="mt-4 text-xl">Select Amount of Time To Add.</div>
-      <ul className="flex flex-auto justify-center pl-0 mx-auto flex-wrap my-5">
+      <div className="mt-4 sm:text-base lg:text-xl mb-2">Select Amount of Time To Add.</div>
+      <ul className="flex flex-auto justify-center pl-0 mx-auto flex-wrap lg:my-5 sm:my-1">
         {prompt && (
           <AddTimePrompt
             message={prompt}
@@ -28,10 +28,10 @@ const AddTimeOptions = (props) => {
               setPrompt(1);
               props.onAdd(minute);
             }}
-            className="my-3 mx-3 h-20 w-64 
-                     bg-violet-700 text-white
+            className="my-2.5 mx-6 sm:h-16 lg:h-16 sm:w-40 lg:w-52
+                     bg-violet-800 bg-opacity-60 text-white
                        border-2 border-black rounded-3xl
-                       text-xl font-bold"
+                       sm:text-base md:text-lg lg:text-xl font-bold"
             message="1 MIN"
           />
         </li>
@@ -44,10 +44,10 @@ const AddTimeOptions = (props) => {
               setPrompt(5);
               props.onAdd(5 * minute);
             }}
-            className="my-3 mx-3 h-20 w-64 
-                     bg-violet-700 text-white
+            className="my-2.5 mx-6 sm:h-16 lg:h-16 sm:w-40 lg:w-52
+                     bg-violet-800 bg-opacity-60 text-white
                        border-2 border-black rounded-3xl
-                       text-xl font-bold"
+                       sm:text-base md:text-lg lg:text-xl font-bold"
             message="5 MINS "
           />
         </li>
@@ -60,10 +60,10 @@ const AddTimeOptions = (props) => {
               setPrompt(10);
               props.onAdd(10 * minute);
             }}
-            className="my-3 mx-3 h-20 w-64 
-                     bg-violet-700 text-white
+            className="my-2.5 mx-6 sm:h-16 lg:h-16 sm:w-40 lg:w-52
+                     bg-violet-800 bg-opacity-60 text-white
                        border-2 border-black rounded-3xl
-                       text-xl font-bold"
+                       sm:text-base md:text-lg lg:text-xl font-bold"
             message="10 MINS"
           />
         </li>

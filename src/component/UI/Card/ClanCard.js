@@ -1,4 +1,3 @@
-import { transform } from "framer-motion";
 import React from "react";
 import { ParallaxBanner, ParallaxBannerLayer } from "react-scroll-parallax";
 import Card from "./Card";
@@ -8,19 +7,18 @@ import Card from "./Card";
 const ClanCard = (props) => {
   return (
     // Control Entire Card
-    <ParallaxBanner className="h-screen">
+    <ParallaxBanner className="h-[130vh]">
       <ParallaxBannerLayer
         image={props.bg}
         className="blur-sm"
-        style={{ 'backgroundSize': "180%",
-                'transform': 'scale(1.4, 1.4)',
+        style={{ 'backgroundSize': "cover",
                 'margin': '-6px -6px -6px -6px',
                 'backgroundRepeat': 'no-repeat' }}
-        speed={10}
+        speed={0}
       />
       <ParallaxBannerLayer className={props.blurcolor} />
       <ParallaxBannerLayer>
-        <div className="lg:py-4 sm:py-0" id={props.id} key={props.id} />
+        <div className="relative -top-16 lg:py-4 sm:py-0" id={props.id} key={props.id} />
         <Card className="bg-[rgb(25,1,25)] bg-opacity-60 px-3 py-4">
           <div
             className="container grid lg:grid-cols-4

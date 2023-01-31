@@ -5,7 +5,7 @@ import Button from "../Button/Button";
 
 const QRCode = (props) => {
   return (
-    <div className="justify-center flex mx-auto">
+    <div className="justify-center flex mx-auto sm:pt-16 md:pt-16 lg:pt-16">
       <div
         className=" m-auto text-center 
                 sm:w-72 md:w-80 lg:w-96
@@ -17,7 +17,7 @@ const QRCode = (props) => {
                 text-white"
       >
         <div
-          className="text-white lg:text-2xl md:text-3xl sm:text-2xl text-center 
+          className="text-white lg:text-2xl md:text-3xl sm:text-lg text-center sm:px-4 lg:px-0
                     pb-4 font-semibold"
         >
           {gameplay.scanQR}

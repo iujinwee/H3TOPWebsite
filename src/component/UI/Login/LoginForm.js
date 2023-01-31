@@ -26,6 +26,7 @@ const LoginForm = (props) => {
   };
 
   return (
+    <div className="pt-32">
     <form
       className="m-auto w-80 
                 sm:px-8 md:px-9 lg:px-10 
@@ -91,7 +92,7 @@ const LoginForm = (props) => {
       <Button className="my-2" type="submit">
         Login
       </Button>
-    </form>
+    </form></div>
   );
 };
 

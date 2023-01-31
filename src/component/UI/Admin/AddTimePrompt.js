@@ -13,6 +13,18 @@ const AddTimePrompt = (props) => {
           <div className="mt-8 text-3xl">{`${props.message} min(s) added`} </div>
 
           <ul className="flex flex-auto justify-center pl-0 mx-auto flex-wrap my-4">
+
+            <li>
+              <Button
+                id=""
+                onClick={props.onContinue}
+                className="my-1 mx-3 h-14 w-44
+                     bg-blue-600 bg-opacity-40
+                       border-2 border-black rounded-3xl
+                       text-lg font-semibold"
+                message="Continue"
+              />
+            </li>
             <li>
               <Button
                 id=""
@@ -21,19 +33,7 @@ const AddTimePrompt = (props) => {
                      bg-black
                        border-2 border-black rounded-3xl
                        text-lg font-semibold"
-                message="Exit"
-              />
-            </li>
-
-            <li>
-              <Button
-                id=""
-                onClick={props.onContinue}
-                className="my-1 mx-3 h-14 w-44
-                     bg-black
-                       border-2 border-black rounded-3xl
-                       text-lg font-semibold"
-                message="Continue"
+                message="Scan Another"
               />
             </li>
           </ul>

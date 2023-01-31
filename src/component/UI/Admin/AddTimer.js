@@ -28,15 +28,16 @@ const AddTimer = (props) => {
         bonus_time: increment(time),
       });
     }
+    // setPage("addtime");
   };
 
   return (
-    <>
+    <div className="mt-20">
       <Card
-        className="flex flex-col text-center justify-center items-center pb-5
+        className="flex flex-col text-center justify-center items-center 
                   font-black bg-[rgb(73,15,69)] bg-opacity-60"
       >
-        <span className="lg:text-5xl md:text-4xl sm:text-3xl">ADD VISA TIMER</span>
+        <span className="lg:text-5xl md:text-4xl sm:text-2xl">ADD VISA TIMER</span>
 
         {page === "qrcode" && (
           <span className="lg:text-2xl md:text-xl sm:text-base mt-3">
@@ -58,14 +59,14 @@ const AddTimer = (props) => {
         <Button
           id=""
           onClick={props.onCancel}
-          className="h-14 w-32
+          className="h-14 w-32 mt-2
                      bg-black text-white
                        border-2 border-black rounded-3xl
                        text-xl font-bold"
           message="Back"
         />
       </Card>
-    </>
+    </div>
   );
 };
 

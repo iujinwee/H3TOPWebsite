@@ -77,7 +77,7 @@ const Login = (props) => {
       />
       <ParallaxBannerLayer>
         <div
-          className={`font-audiowide pt-32 h-screen ${
+          className={`font-audiowide ${
             page === "loginform" ? "backdrop-blur-xl" : "backdrop-blur-none"
           }`}
         >

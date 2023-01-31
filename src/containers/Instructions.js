@@ -64,12 +64,6 @@ const Instructions = (props) => {
               </p>
 
               <Start onClick={startHandler} />
-              {/* className='select-none bg-purple-700 bg-opacity-80 
-                  rounded-2xl border-solid border-purple-300 border-2 
-                  hover:border-double hover:border-purple-500
-                  text-3xl font-bold 
-                  mx-auto mt-3 px-5 py-3'
-                  message={story.Start}/> */}
             </Card>
           </Fade>
         </ParallaxBannerLayer>
