@@ -35,8 +35,7 @@ module.exports = {
     fontFamily: {
       'blackopsone': ['Black Ops One', 'sans-serif'],
       'audiowide': ['Audiowide', 'sans-serif'],
-      'orbitron': ['Orbitron', 'sans-serif'],
-
+      'orbitron': ['Orbitron']
     }
   },
   variants: {

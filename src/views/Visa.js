@@ -55,7 +55,7 @@ const Visa = (props) => {
         speed="2"
         delay="0.5"
         className="flex flex-auto justify-center align-middle
-                    text-gray-200 text-center
+                    text-gray-200 text-center px-10
                     sm:text-3xl md:text-4xl lg:text-5xl
                     font-extrabold font-outline-0-5 font-blackopsone"
       >
@@ -72,8 +72,8 @@ const Visa = (props) => {
         <Card
           id="none"
           className="bg-contain border-[rgb(88,14,138)] border-8 border-double
-                     my-4 bg-[rgb(52,46,56)] bg-opacity-60
-                     flex justify-center align-middle font-audiowide"
+                     my-4 bg-[rgb(52,46,56)] bg-opacity-60 
+                     flex justify-center align-middle font-blackopsone font-outline-0-1"
         >
           {resultTimer !== -1 ? (
             <CountdownTimer targetDate={resultTimer} />
