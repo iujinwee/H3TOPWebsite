@@ -20,7 +20,7 @@ const ClansDescriptions = () => {
         <ClanCard  
             id={clans.Akari.name}
             bg={akari_bg}
-            blurcolor="bg-[rgba(62,14,14,0.41)] bg-"
+            blurcolor="bg-[rgba(62,14,14,0.35)]"
             name={clans.Akari.name}
             quirk={clans.Akari.quirk}
             desc={clans.Akari.quirkdesc}
@@ -33,7 +33,7 @@ const ClansDescriptions = () => {
         <ClanCard 
             id={clans.Bankai.name}
             bg={bankai_bg}
-            blurcolor="bg-[rgba(36,62,14,0.41)]"
+            blurcolor="bg-[rgba(36,62,14,0.35)]"
             name={clans.Bankai.name}
             quirk={clans.Bankai.quirk}
             desc={clans.Bankai.quirkdesc}
@@ -46,6 +46,7 @@ const ClansDescriptions = () => {
         <ClanCard 
             id={clans.Chakra.name}
             bg={chakra_bg}
+            blurcolor="bg-[rgba(55,55,100,0.35)]"
             name={clans.Chakra.name}
             quirk={clans.Chakra.quirk}
             desc={clans.Chakra.quirkdesc}
@@ -58,6 +59,7 @@ const ClansDescriptions = () => {
         <ClanCard 
             id={clans.Doku.name}
             bg={doku_bg}
+            blurcolor="bg-[rgba(30,40,40,0.35)]"
             name={clans.Doku.name}
             quirk={clans.Doku.quirk}
             desc={clans.Doku.quirkdesc}
@@ -70,13 +72,14 @@ const ClansDescriptions = () => {
         <ClanCard 
             id={clans.Enji.name}
             bg={enji_bg}
+            blurcolor="bg-[rgba(235,235,235,0.1)]"
             name={clans.Enji.name}
             quirk={clans.Enji.quirk}
             desc={clans.Enji.quirkdesc}
             story={clans.Enji.story}
             image={doku}
-            color1="text-gray-900 font-outline-0-1-w"
-            color2="text-gray-700 font-outline-0-1-w"
+            color1="text-white font-outline-0-1-b"
+            color2="text-gray-200 font-outline-0-1-b"
         />
     </div>
   )

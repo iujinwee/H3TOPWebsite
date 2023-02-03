@@ -1,9 +1,9 @@
 import React from 'react'
 import { motion } from 'framer-motion';
-import './Billboard.css'
+import './NeonButton.css'
 import Fade from '../../Animation/Fade';
 
-const Start = (props) => {
+const NeonButton = (props) => {
 
 
     return (
@@ -16,23 +16,20 @@ const Start = (props) => {
             <Fade
                 direction="none"
                 speed="0.6"
-                delay="0.8"
-                className='select-none bg-opacity-80 bg-black 
-                            mx-auto sm:mt-0 lg:mt-4 px-3 py-2  
+                delay={props.speed}
+                className='select-none bg-opacity-80 bg-black
+                            lg:mt-0 lg:px-3 lg:py-2  
+                            sm:mt-3 sm:px-3 sm:py-2  
                             rounded-2xl border-solid border-4
                             border-r-amber-300 border-x-lime-300 border-teal-200 border-b-red-300
-                            hover:bg-slate-300  
-                            hover:border-double 
-                            text-red-200 font-bold 
-                            text-2xl lg:text-4xl'>
-                <div className="logo">
-                    <b>
-                        St<span>a</span>r<span>t</span>!
-                    </b>
+                            text-red-200 font-medium 
+                            sm:text-xl lg:text-4xl'>
+                <div className="logo lg:text-4xl md:text-3xl sm:text-2xl">
+                    {props.children}
                 </div>
             </Fade>
         </motion.button>
     )
 }
 
-export default Start
+export default NeonButton

@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import Card from "../component/UI/Card/Card";
 import { story } from "../Content.js";
 import Fade from "../component/Animation/Fade";
-import Billboard from "../component/UI/Button/Billboard";
+import NeonButton from "../component/UI/Button/NeonButton";
 import ReactTypingEffect from "react-typing-effect";
 import { useInView } from "react-intersection-observer";
 import { useAnimation, motion } from "framer-motion";
@@ -44,9 +44,9 @@ const Story = () => {
     <>
       <div id="story" key="story" className="relative lg:-top-16 sm:-top-64"/>
       <div id="story_start" key="story_start" className="relative -top-20"/>
-      <ParallaxBanner className="h-screen scale-105">
+      <ParallaxBanner className="h-[110vh] scale-105">
         <ParallaxBannerLayer image={bg} speed={15} className="bg-top blur-sm w-screen"/>
-        <ParallaxBannerLayer className="pt-8">
+        <ParallaxBannerLayer className="sm:pt-8 lg:pt-16">
           
       <Fade
         direction="bottom"
@@ -75,13 +75,13 @@ const Story = () => {
 
             {typing && <ReactTypingEffect 
                 text={story.MainStory}
-                speed="12"
+                speed="8"
                 eraseDelay={10000000}
                 cursor=" " 
                 displayTextRenderer={(text, i) => {
                   return (
                     <p className="sm:-tracking-normal lg:tracking-wider     
-                                  sm:text-xs lg:text-xl font-outline-0-5">
+                                  sm:text-xs md:text-base lg:text-xl font-outline-0-5">
                       {text.split('').map((char, i) => {
                         const key = `${i}`;
                         return (
@@ -96,7 +96,11 @@ const Story = () => {
           </motion.div>
           
         <div className="justify-center items-center"> 
-          <Billboard onClick={startHandler} />
+          <NeonButton onClick={startHandler} speed={16}>
+              <b>
+                  The G<span>a</span>me i<span>s</span> a<span>b</span>out t<span>o</span> Be<span>g</span>in!
+              </b>
+          </NeonButton>
         </div>  
 
         </Card>

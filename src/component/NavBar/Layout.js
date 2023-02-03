@@ -1,11 +1,11 @@
 import React from "react";
-import Home from "../../containers/Home";
-import Clans from "../../containers/Clans";
-import Team from "../../containers/Team";
-import Instructions from "../../containers/Instructions";
-import ClansDescriptions from "../../containers/ClansDescriptions";
+import Home from "../../views/Home";
+import Clans from "../../views/Clans";
+import Team from "../../views/Team";
+import Instructions from "../../views/Instructions";
+import ClansDescriptions from "../../views/ClansDescriptions";
 import Login from "../UI/Login/Login";
-import Story from "../../containers/Story";
+import Story from "../../views/Story";
 
 import { AnimatePresence } from "framer-motion";
 

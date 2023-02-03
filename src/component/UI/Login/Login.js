@@ -1,7 +1,7 @@
 import { motion } from "framer-motion";
 import React, { useEffect, useState } from "react";
-import LoginScreen from "../../../containers/LoginScreen";
-import Visa from "../../../containers/Visa";
+import LoginScreen from "../../../views/LoginScreen";
+import Visa from "../../../views/Visa";
 import LoginForm from "./LoginForm";
 import Fade from "../../Animation/Fade";
 

@@ -4,6 +4,7 @@ import Fade from "../component/Animation/Fade";
 import ReactTypingEffect from "react-typing-effect";
 import { motion, useAnimation } from "framer-motion";
 import { useInView } from "react-intersection-observer";
+import NeonButton from "../component/UI/Button/NeonButton";
 
 const LoginScreen = (props) => {
   const control = useAnimation();
@@ -56,7 +57,7 @@ const LoginScreen = (props) => {
           variants={variant}
           initial="hidden"
           animate={control}
-          className="sm:pt-10 sm:pb-8 md:pt-14 md:pb-6 lg:pt-16 lg:pb-8">
+          className="font-blackopsone sm:pt-10 sm:pb-4 md:pt-14 md:pb-6 lg:pt-16 lg:pb-8">
           {typing && (
             <ReactTypingEffect
               text={visa.login_title2}
@@ -88,23 +89,11 @@ const LoginScreen = (props) => {
           )}
         </motion.div>
 
-        <Fade
-          direction="none"
-          speed="1"
-          delay="5"
-          className="sm:px-5">
-          <button
-            type="button"
-            className="bg-black lg:px-2 lg:py-2 sm:px-8 sm:py-2
-                         lg:text-3xl sm:text-2xl
-                         border-4 border-white rounded-3xl hover:scale-110
-                         transition ease-in duration-200"
-            onClick={() => {props.onClick("login")}}
-          >
-            
-            {visa.login_prompt}
-          </button>
-        </Fade>
+        <NeonButton onClick={()=>{props.onClick()}} speed="5.5">
+          <b>
+            L<span>o</span>gin <span>t</span>o p<span>r</span>oce<span>e</span>d!
+          </b>
+        </NeonButton>
       </div>
     </div>
   );

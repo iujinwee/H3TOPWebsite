@@ -59,8 +59,7 @@ const ExcoCard = (props) => {
               alt={props.name}
             />
             <figcaption
-              className="absolute m-auto align-middle text-center font-black text-red-50
-                                        px-3"
+              className="absolute m-auto align-middle text-center font-black text-red-50 px-3"
               onMouseLeave={onLeaveHandler}
             >
               <div className="sm:text-xl lg:text-3xl font-outline-1">{props.name}</div>

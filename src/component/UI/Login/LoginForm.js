@@ -41,7 +41,7 @@ const LoginForm = (props) => {
       <div className="flex justify-end">
         <FontAwesomeIcon
           icon={solid("xmark-square")}
-          onClick={props.onCancel}
+          onClick={()=>{props.onCancel()}}
           className="scale-125 hover:scale-150 mb-1 
                      pl-20 hover:pl-10 pb-2
                      text-gray-300 h-5 w-5"

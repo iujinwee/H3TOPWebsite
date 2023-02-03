@@ -59,7 +59,7 @@ const Clans = (props) => {
         style={{ "background-position-y": "88%"}}
       />
       <ParallaxBannerLayer className="lg:mt-14 sm:mt-2 px-3">
-        <Card className="bg-[rgb(73,15,69)] bg-opacity-60 font-blackopsone 
+        <Card className="bg-[rgb(22,2,49)] bg-opacity-40 font-blackopsone 
                         px-0 sm:pt-4 pb-1">
           <ul className="list-none px-0 md:px-16 lg:px-32 justify-center m-auto">
             <Fade
@@ -75,7 +75,7 @@ const Clans = (props) => {
               direction="bottom"
               speed="1.2"
               delay="0.5"
-              className="font-bold lg:text-xl sm:text-sm text-center lg:mb-12 sm:mb-8 font-outline-0-5 px-10"
+              className="font-bold lg:text-xl sm:text-xs text-center lg:mb-12 sm:mb-8 font-audiowide font-outline-0-1 px-8"
             >
               {clans.clanCards}
             </Fade>

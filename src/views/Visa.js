@@ -8,7 +8,7 @@ import "../component/UI/Countdown/CountdownTimer.css";
 import { doc, getDoc } from "firebase/firestore";
 import { firestore } from "../firebase";
 import FunctionalButton from "../component/UI/Button/FunctionalButton";
-import ClanButton from "../component/UI/Button/ClanButton";
+import NeonButton from "../component/UI/Button/NeonButton";
 
 const Visa = (props) => {
   // RETRIEVE TIME LEFT FROM UID
@@ -56,12 +56,11 @@ const Visa = (props) => {
         delay="0.5"
         className="flex flex-auto justify-center align-middle
                     text-gray-200 text-center
-                    text-3xl md:text-4xl lg:text-5xl
+                    sm:text-3xl md:text-4xl lg:text-5xl
                     font-extrabold font-outline-0-5 font-blackopsone"
       >
         {visa.message}
       </Fade>
-
 
       {/* // Control size of timer box */}
       <div
@@ -72,26 +71,28 @@ const Visa = (props) => {
       >
         <Card
           id="none"
-          className="bg-contain border-zinc-900 border-8 
-                     my-4 bg-[rgb(50,44,47)] bg-opacity-60
-                     flex justify-center align-middle"
+          className="bg-contain border-[rgb(88,14,138)] border-8 border-double
+                     my-4 bg-[rgb(52,46,56)] bg-opacity-60
+                     flex justify-center align-middle font-audiowide"
         >
           {resultTimer !== -1 ? (
             <CountdownTimer targetDate={resultTimer} />
           ) : (
-            <div className="text-5xl"> LOADING </div>
+            <div className="text-2xl"> LOADING </div>
           )}
         </Card>
 
         {/* LOGOUT BUTTON */}
         <div
           className="grid grid-cols-6
-                     mx-10"
+                     mx-10 mb-2"
         >
           <FunctionalButton
             message="Add Time"
             className="col-start-1 col-span-2"
-            onClick={() => {props.onAddTimer(userID)}}
+            onClick={() => {
+              props.onAddTimer(userID);
+            }}
           />
           <FunctionalButton
             message="Logout"
@@ -106,9 +107,12 @@ const Visa = (props) => {
         className="flex flex-col items-center align-middle m-auto
                    lg:pt-3 md:pt-5 sm:pt-5 mb-24"
       >
-        <ClanButton onClick={startHandler}/>
+        <NeonButton onClick={startHandler}>
+          <b>
+            Le<span>a</span>rn abo<span>u</span>t you<span>r</span> Clan!
+          </b>
+        </NeonButton>
       </div>
-
     </>
   );
 };

@@ -7,7 +7,7 @@ import Card from "./Card";
 const ClanCard = (props) => {
   return (
     // Control Entire Card
-    <ParallaxBanner className="h-[130vh]">
+    <ParallaxBanner className="sm:h-[135vh] lg:h-[100vh] font-audiowide">
       <ParallaxBannerLayer
         image={props.bg}
         className="blur-sm"
@@ -19,10 +19,9 @@ const ClanCard = (props) => {
       <ParallaxBannerLayer className={props.blurcolor} />
       <ParallaxBannerLayer>
         <div className="relative -top-16 lg:py-4 sm:py-0" id={props.id} key={props.id} />
-        <Card className="bg-[rgb(25,1,25)] bg-opacity-60 px-3 py-4">
+        <Card className="bg-[rgb(34,34,35)] bg-opacity-30 px-3 py-4">
           <div
-            className="container grid lg:grid-cols-4
-                    font-outline-0-5"
+            className="container grid lg:grid-cols-4"
           >
             {/* Control size of image */}
             <img
@@ -37,35 +36,34 @@ const ClanCard = (props) => {
             {/* Control Description */}
             <div
               className="rows-start-2 pt-3
-                        lg:col-start-2 lg:col-span-3 lg:pl-8"
+                        lg:col-start-2 lg:col-span-3 lg:pl-8 leading-loose"
             >
-              <div className="font-bold sm:text-3xl md:text-5xl lg:text-6xl">
+              <div className="font-bold sm:text-4xl md:text-5xl lg:text-6xl font-blackopsone font-outline-0-1">
                 <span className={`${props.color1}`}>{props.name}</span>
               </div>
 
-              <div className="font-semibold sm:text-lg md:text-2xl lg:text-2xl lg:mt-4 sm:mt-2">
+              <div className="font-semibold sm:text-base md:text-xl lg:text-xl lg:mt-4 sm:mt-2">
                 <span className={`font-bold ${props.color2}`}>Quirk: </span>
                 <span className="font-outline-0">{props.quirk}</span>
               </div>
 
-              <div className="font-semibold sm:text-lg md:text-2xl lg:text-2xl">
+              <div className="font-semibold sm:text-base md:text-xl lg:text-xl">
                 <span className={`font-bold ${props.color2}`}>
                   Description:{" "}
                 </span>
                 <span
-                  className="font-semibold sm:text-lg md:text-lg lg:text-xl 
-                              font-outline-0"
+                  className="font-semibold sm:text-lg md:text-base lg:text-lg"
                 >
                   {props.desc}
                 </span>
               </div>
 
               <div
-                className="text-sm md:text-lg lg:text-xl
+                className="sm:text-xs md:text-lg lg:text-base
                            lg:mt-4 sm:mt-4 lg:mb-0"
               >
-                <h1 className="text-2xl font-bold">Origins</h1>
-                <span className="flex flex-wrap">{props.story}</span>
+                <h1 className="text-2xl font-blackopsone">Origins</h1>
+                <span className="flex flex-wrap lg:pr-10 sm:-tracking-normal lg:tracking-wider leading-relaxed">{props.story}</span>
               </div>
             </div>
           </div>
