@@ -73,7 +73,7 @@ const Visa = (props) => {
           id="none"
           className="bg-contain border-[rgb(88,14,138)] border-8 border-double
                      my-4 bg-[rgb(52,46,56)] bg-opacity-60 
-                     flex justify-center align-middle font-blackopsone font-outline-0-1"
+                     flex justify-center align-middle"
         >
           {resultTimer !== -1 ? (
             <CountdownTimer targetDate={resultTimer} />

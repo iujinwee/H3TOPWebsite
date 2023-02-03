@@ -3,8 +3,8 @@ import React from 'react';
 const DateTimeDisplay = ({ value, type, isDanger }) => {
   return (
     <div className={isDanger ? 'countdown danger' : 'countdown'}>
-      <p>{value}</p>
-      <span>{type}</span>
+      <p className='font-blackopsone'>{value}</p>
+      <span className='font-blackopsone'>{type}</span>
     </div>
   );
 };
