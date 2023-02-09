@@ -4,7 +4,7 @@ import { useCountdown } from './useCountdown';
 
 const ExpiredNotice = () => {
   return (
-    <div className="expired-notice">
+    <div className="expired-notice font-audiowide">
       <span>Expired!!!</span>
       <p>Please select a future date and time.</p>
     </div>
@@ -13,9 +13,8 @@ const ExpiredNotice = () => {
 
 const ShowCounter = ({ days, hours, minutes, seconds }) => {
   return (
-    <div className="show-counter 
-                    font-outline-0 md:font-outline-0-1 lg:font-outline-0-5">
-      <div className='countdown-link'>
+    <div className="show-counter">
+      <div className='countdown-link font-black'>
         <DateTimeDisplay value={days} type={'Days'} isDanger={days <= 3} />
         <p>:</p>
         <DateTimeDisplay value={hours} type={'Hours'} isDanger={false} />

@@ -27,11 +27,11 @@ const CharacterCard = (props) => {
     //  ${classes.card} ${props.className} > If want to inherit card
 
     // Adjusting padding between cards
-    <div className="flex flex-col px-6 pb-5" key={props.id}>
+    <div className="flex flex-col px-3 pb-3" key={props.id}>
       <ReactCardFlip isFlipped={hover} flipDirection="horizontal">
         {/* Front of Card */}
         <img
-          className="rounded-3xl h-96 w-60 m-auto"
+          className="rounded-3xl lg:h-72 lg:w-48 sm:rounded-2xl sm:h-44 sm:w-28 m-auto"
           src={props.image}
           onMouseMove={onHoverHandler}
           onClick={clickHandler}
@@ -40,18 +40,19 @@ const CharacterCard = (props) => {
 
         {/* Back of Card */}
         <Container className="flex flex-col object-contain m-auto p-0">
-          <figure className="relative h-96 w-60 m-auto">
+          <figure className="relative m-auto">
             <img
-              className="rounded-3xl"
+              className="rounded-3xl lg:h-72 lg:w-48 sm:rounded-2xl sm:h-44 sm:w-28"
               src={props.image}
               onMouseLeave={onLeaveHandler}
               onClick={clickHandler}
               alt={props.name}
             />
             <figcaption
-              className="absolute h-96 w-60 rounded-3xl top-0 mx-auto px-5 pt-40
-                                       backdrop-blur-xl backdrop-opacity-90
-                                     text-black text-2xl text-center font-bold"
+              className="absolute lg:h-72 lg:w-48 rounded-3xl sm:rounded-2xl sm:h-44 sm:w-28 top-0 m-auto 
+                        lg:pt-28 sm:pt-[4.5rem] lg:px-4 sm:px-2
+                        backdrop-blur-xl backdrop-opacity-90
+                      text-black lg:text-2xl sm:text-sm text-center font-bold"
               onMouseLeave={onLeaveHandler}
               onClick={clickHandler}
             >

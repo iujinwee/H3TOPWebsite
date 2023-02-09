@@ -21,7 +21,7 @@ function NavigationBar() {
         collapseOnSelect
         expand="lg"
         variant="dark"
-        className="sticky-top bg-dark w-screen"
+        className="select-none sticky-top bg-black overflow-x-hidden  h-full font-blackopsone"
         id="nav-bar"
         expanded={Expanded}
       >
@@ -72,7 +72,7 @@ function NavigationBar() {
                   to="#story"
                   smooth
                   style={{ color: "inherit", textDecoration: "inherit" }}
-                  onClick={() => setExpanded(false)}
+                  onClick={() => {setExpanded(false);}}
                 >
                   Story
                 </Link>

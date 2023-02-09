@@ -102,11 +102,17 @@ const clans = {
     }
 }
 
+const gameplay = {
+    scanQR: "Scan this QR Code to Extend your Visa!",
+    adminQR: "Scan to Extend Player's Visa"
+}
+
 
 export {
     intro,
     story,
     visa, 
     clans,
-    team
+    team,
+    gameplay
 }

@@ -26,6 +26,7 @@ const LoginForm = (props) => {
   };
 
   return (
+    <div className="pt-32">
     <form
       className="m-auto w-80 
                 sm:px-8 md:px-9 lg:px-10 
@@ -40,7 +41,7 @@ const LoginForm = (props) => {
       <div className="flex justify-end">
         <FontAwesomeIcon
           icon={solid("xmark-square")}
-          onClick={props.onCancel}
+          onClick={()=>{props.onCancel()}}
           className="scale-125 hover:scale-150 mb-1 
                      pl-20 hover:pl-10 pb-2
                      text-gray-300 h-5 w-5"
@@ -56,7 +57,7 @@ const LoginForm = (props) => {
         <div>Clan:</div>
         <input
           required
-          className="text-black px-1"
+          className="text-black px-1 h-7 rounded-md w-full"
           id="clan_id"
           onChange={(event) => {
             setUsername(event.target.value);
@@ -64,11 +65,11 @@ const LoginForm = (props) => {
         />
       </div>
 
-      <div>
+      <div className="my-2">
         <div>Passcode:</div>
         <input
           required
-          className="text-black px-1 h-7 si"
+          className="text-black px-1 h-7 rounded-md w-full"
           type={passwordShown ? "text" : "password"}
           id="passcode"
           onChange={(event) => {
@@ -91,7 +92,7 @@ const LoginForm = (props) => {
       <Button className="my-2" type="submit">
         Login
       </Button>
-    </form>
+    </form></div>
   );
 };
 
