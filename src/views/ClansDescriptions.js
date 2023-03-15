@@ -2,7 +2,11 @@ import React from 'react'
 import ClanCard from '../component/UI/Card/ClanCard'
 import { clans } from '../Content'
 
-import doku from '../images/doku.jpg'
+import akari from '../images/OGCards/akari.jpg'
+import bankai from '../images/OGCards/bankai.png'
+import chakra from '../images/OGCards/chakra.png'
+import doku from '../images/OGCards/doku.jpg'
+import enji from '../images/OGCards/enji.png'
 
 import akari_bg from  '../images/background.png'
 import bankai_bg from '../images/background.png'
@@ -25,7 +29,7 @@ const ClansDescriptions = () => {
             quirk={clans.Akari.quirk}
             desc={clans.Akari.quirkdesc}
             story={clans.Akari.story}
-            image={doku}
+            image={akari}
             color1="text-rose-300"
             color2="text-rose-200 font-outline-0"
         />
@@ -38,7 +42,7 @@ const ClansDescriptions = () => {
             quirk={clans.Bankai.quirk}
             desc={clans.Bankai.quirkdesc}
             story={clans.Bankai.story}
-            image={doku}
+            image={bankai}
             color1="text-emerald-300"
             color2="text-emerald-200 font-outline-0"
         />
@@ -51,7 +55,7 @@ const ClansDescriptions = () => {
             quirk={clans.Chakra.quirk}
             desc={clans.Chakra.quirkdesc}
             story={clans.Chakra.story}
-            image={doku}
+            image={chakra}
             color1="text-sky-300"
             color2="text-sky-200 font-outline-0"
         />
@@ -72,12 +76,12 @@ const ClansDescriptions = () => {
         <ClanCard 
             id={clans.Enji.name}
             bg={enji_bg}
-            blurcolor="bg-[rgba(235,235,235,0.1)]"
+            blurcolor="bg-[rgba(0,0,0,0.5)]"
             name={clans.Enji.name}
             quirk={clans.Enji.quirk}
             desc={clans.Enji.quirkdesc}
             story={clans.Enji.story}
-            image={doku}
+            image={enji}
             color1="text-white font-outline-0-1-b"
             color2="text-gray-200 font-outline-0-1-b"
         />

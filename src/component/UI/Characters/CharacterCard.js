@@ -31,7 +31,7 @@ const CharacterCard = (props) => {
       <ReactCardFlip isFlipped={hover} flipDirection="horizontal">
         {/* Front of Card */}
         <img
-          className="rounded-3xl lg:h-72 lg:w-48 sm:rounded-2xl sm:h-44 sm:w-28 m-auto"
+          className="rounded-xl lg:h-72 lg:w-48 sm:rounded-lg sm:h-44 sm:w-28 m-auto"
           src={props.image}
           onMouseMove={onHoverHandler}
           onClick={clickHandler}

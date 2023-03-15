@@ -1,14 +1,19 @@
 import { React, useEffect } from "react";
 import { motion, useAnimation } from "framer-motion";
 import { useInView } from "react-intersection-observer";
+import { clans } from "../Content";
+import { ParallaxBanner, ParallaxBannerLayer } from "react-scroll-parallax";
 
 import Fade from "../component/Animation/Fade";
 import Card from "../component/UI/Card/Card";
 import CharacterCard from "../component/UI/Characters/CharacterCard";
-import { clans } from "../Content";
 
-import doku from "../images/doku.jpg";
-import { ParallaxBanner, ParallaxBannerLayer } from "react-scroll-parallax";
+import akari from '../images/OGCards/akari.jpg'
+import bankai from '../images/OGCards/bankai.png'
+import chakra from '../images/OGCards/chakra.png'
+import doku from '../images/OGCards/doku.jpg'
+import enji from '../images/OGCards/enji.png'
+
 import bg from "../images/background.png";
 
 const Clans = (props) => {
@@ -91,7 +96,7 @@ const Clans = (props) => {
 
               <motion.li variants={delay}>
                 <CharacterCard
-                  image={doku}
+                  image={akari}
                   name={clans.Akari.name}
                   tag={clans.Akari.quirk}
                   id={clans.Akari.name}
@@ -100,7 +105,7 @@ const Clans = (props) => {
 
               <motion.li variants={delay}>
                 <CharacterCard
-                  image={doku}
+                  image={bankai}
                   name={clans.Bankai.name}
                   tag={clans.Bankai.quirk}
                   id={clans.Bankai.name}
@@ -109,7 +114,7 @@ const Clans = (props) => {
 
               <motion.li variants={delay}>
                 <CharacterCard
-                  image={doku}
+                  image={chakra}
                   name={clans.Chakra.name}
                   tag={clans.Chakra.quirk}
                   id={clans.Chakra.name}
@@ -127,7 +132,7 @@ const Clans = (props) => {
 
               <motion.li variants={delay}>
                 <CharacterCard
-                  image={doku}
+                  image={enji}
                   name={clans.Enji.name}
                   tag={clans.Enji.quirk}
                   id={clans.Enji.name}

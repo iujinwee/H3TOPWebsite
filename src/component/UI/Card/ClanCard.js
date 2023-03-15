@@ -25,8 +25,8 @@ const ClanCard = (props) => {
           >
             {/* Control size of image */}
             <img
-              className="lg:w-60 lg:h-96 sm:h-44 sm:w-28 sm:rounded-2xl lg:rounded-3xl
-                          flex flex-auto justify-center items-center m-auto 
+              className="lg:w-70 lg:h-96 sm:h-[52] sm:w-32 sm:rounded-lg lg:rounded-2xl
+                          flex flex-auto justify-center items-center m-auto select-none
                           rows-start-1 object-cover
                           lg:col-start-1"
               src={props.image}

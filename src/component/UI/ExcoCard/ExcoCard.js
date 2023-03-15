@@ -31,7 +31,7 @@ const ExcoCard = (props) => {
                           sm:h-52 sm:w-32"
         >
           <img
-            className="rounded-3xl border-4 border-[rgb(27,3,25)]"
+            className="rounded-3xl border-4 border-[rgb(0,0,0)] shadow-[0_35px_60px_-20px_rgba(0,0,0,0.6)]"
             src={props.image}
             onMouseMove={onHoverHandler}
             alt={props.name}
@@ -53,7 +53,7 @@ const ExcoCard = (props) => {
                                  sm:h-52 sm:w-32"
           >
             <img
-              className="rounded-3xl border-4 border-[rgb(27,3,25)] blur-sm"
+              className="rounded-3xl border-4 border-[rgb(27,3,25)] blur-sm shadow-[0_35px_60px_-20px_rgba(0,0,0,0.6)]"
               src={props.image}
               onMouseLeave={onLeaveHandler}
               alt={props.name}
