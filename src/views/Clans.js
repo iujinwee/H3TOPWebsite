@@ -8,15 +8,7 @@ import Fade from "../component/Animation/Fade";
 import Card from "../component/UI/Card/Card";
 import CharacterCard from "../component/UI/Characters/CharacterCard";
 
-import akari from '../images/OGCards/akari.jpg'
-import bankai from '../images/OGCards/bankai.png'
-import chakra from '../images/OGCards/chakra.png'
-import doku from '../images/OGCards/doku.jpg'
-import enji from '../images/OGCards/enji.png'
-
-import bg from "../images/background.png";
-
-const Clans = (props) => {
+const Clans = () => {
   const control = useAnimation();
   const [ref, inView] = useInView();
 
@@ -53,6 +45,13 @@ const Clans = (props) => {
     }
   }, [control, inView]);
 
+  const bg = clans.background
+  const akari = clans.clanData.find(clan => clan.id === "akari")
+  const bankai = clans.clanData.find(clan => clan.id === "bankai")
+  const chakra = clans.clanData.find(clan => clan.id === "chakra")
+  const doku = clans.clanData.find(clan => clan.id === "doku")
+  const enji = clans.clanData.find(clan => clan.id === "enji")
+
   return (
     <ParallaxBanner className="h-screen">
       <ParallaxBannerLayer
@@ -75,7 +74,7 @@ const Clans = (props) => {
               direction="bottom"
               speed="1.2"
               delay="0.5"
-              className="font-bold lg:text-xl sm:text-xs text-center lg:mb-12 sm:mb-8 font-audiowide font-outline-0-1 px-8"
+              className="font-bold lg:text-xl sm:text-[13px] text-center lg:mb-12 sm:mb-8 font-audiowide font-outline-0-1 px-8"
             >
               {clans.clanCards}
             </Fade>
@@ -91,47 +90,47 @@ const Clans = (props) => {
 
               <motion.li variants={delay}>
                 <CharacterCard
-                  image={akari}
-                  name={clans.Akari.name}
-                  tag={clans.Akari.quirk}
-                  id={clans.Akari.name}
+                  image={akari.image}
+                  name={akari.name}
+                  tag={akari.quirk}
+                  id={akari.id}
                 />
               </motion.li>
 
               <motion.li variants={delay}>
                 <CharacterCard
-                  image={bankai}
-                  name={clans.Bankai.name}
-                  tag={clans.Bankai.quirk}
-                  id={clans.Bankai.name}
+                  image={bankai.image}
+                  name={bankai.name}
+                  tag={bankai.quirk}
+                  id={bankai.id}
                 />
               </motion.li>
 
               <motion.li variants={delay}>
                 <CharacterCard
-                  image={chakra}
-                  name={clans.Chakra.name}
-                  tag={clans.Chakra.quirk}
-                  id={clans.Chakra.name}
+                  image={chakra.image}
+                  name={chakra.name}
+                  tag={chakra.quirk}
+                  id={chakra.id}
                 />
               </motion.li>
 
               <motion.li variants={delay}>
                 <CharacterCard
-                  image={doku}
-                  name={clans.Doku.name}
-                  tag={clans.Doku.quirk}
-                  id={clans.Doku.name}
+                  image={doku.image}
+                  name={doku.name}
+                  tag={doku.quirk}
+                  id={doku.id}
                 />
               </motion.li>
 
               <motion.li variants={delay}>
                 <CharacterCard
                   className="scale-105"
-                  image={enji}
-                  name={clans.Enji.name}
-                  tag={clans.Enji.quirk}
-                  id={clans.Enji.name}
+                  image={enji.image}
+                  name={enji.name}
+                  tag={enji.quirk}
+                  id={enji.id}
                 />
               </motion.li>
             </motion.ul>

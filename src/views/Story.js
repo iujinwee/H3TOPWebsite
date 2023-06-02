@@ -29,16 +29,17 @@ const Story = () => {
 
   const renderText = (text) => {
     return (
-      <p className="sm:-tracking-normal lg:tracking-wider     
-                    sm:text-xs md:text-base lg:text-xl font-outline-0-5">
-        {text.split('').map((char, i) => {
-          const key = `${i}`;
-          return (
-            <span className="lg:leading-loose sm:leading-loose"
-              key={key}
-            >{char}</span>
-          );
-        })}
+      <p 
+        className="sm:-tracking-normal lg:tracking-wider     
+        sm:text-[13px] sm:leading-7 md:text-base lg:text-xl font-outline-0-5">
+          {text.split('').map((char, i) => {
+            const key = `${i}`;
+            return (
+              <span className="lg:leading-loose sm:leading-loose"
+                key={key}
+              >{char}</span>
+            );
+          })}
       </p>
     );
   }
@@ -54,7 +55,7 @@ const Story = () => {
     <>
       <ParallaxBanner className="h-screen">
         <ParallaxBannerLayer image={bg} className="blur-sm scale-110"/>
-        <ParallaxBannerLayer className="sm:pt-28 sm:pb-10 lg:pt-32 overflow-auto">
+        <ParallaxBannerLayer className="sm:pt-24 sm:pb-8 lg:pt-32 overflow-auto">
           <Fade
             direction="bottom"
             speed="1"
@@ -98,7 +99,7 @@ const Story = () => {
                         return (
                           <li
                             className={`text-center mx-auto 
-                              sm:text-xs text-lg font-saudiowide
+                              sm:text-[13px] sm:leading-5 text-lg font-saudiowide
                               sm:p-1 lg:p-2 ${clan.color}
                               sm:-tracking-normal lg:tracking-wider`}>
                             {clan.name}
@@ -124,7 +125,7 @@ const Story = () => {
                   </motion.div>
 
                   <div className="justify-center items-center"> 
-                    <NeonButton onClick={() => {setSetting("prompt")}} speed={11}>
+                    <NeonButton onClick={() => {setSetting("prompt")}} speed={12}>
                         <b className="sm:text-lg md:text-xl text-2xl">
                             <div> C<span>o</span>nt<span>i</span>nu<span>e</span></div>
                         </b>

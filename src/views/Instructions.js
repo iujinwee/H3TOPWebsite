@@ -34,7 +34,7 @@ const Instructions = () => {
             <Card
               className="flex flex-col bg-[#160731] bg-opacity-70 
                          sm:-tracking-normal lg:tracking-wider
-                         sm:text-xs lg:text-xl font-outline-0-5
+                         sm:text-[13px] lg:text-xl font-outline-0-5
                          lg:leading-loose sm:leading-loose"
             >
               <h1 className="font-black font-blackopsone pb-2 pt-1 sm:text-xl lg:text-3xl">
