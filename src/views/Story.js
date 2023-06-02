@@ -7,22 +7,16 @@ import ReactTypingEffect from "react-typing-effect";
 import { useInView } from "react-intersection-observer";
 import { useAnimation, motion } from "framer-motion";
 import { ParallaxBanner, ParallaxBannerLayer } from "react-scroll-parallax";
-
+import akari from '../images/OGCards/akari.jpg'
 import bg from '../images/vaporwave-city-lights.gif'
+import { Link } from "react-router-dom";
 
 const Story = () => {
 
   const control = useAnimation()
   const [typing, setTyping] = useState(false)
   const [ref, inView] = useInView()
-
-  const startHandler = () => {
-    const element = document.getElementById("instructions");
-    if (element) {
-      // 👇 Will scroll smoothly to the top of the next section
-      element.scrollIntoView({ behavior: "smooth" });
-    }
-  };
+  const [setting, setSetting] = useState("prologue")
 
   const variant = {
     hidden: {
@@ -58,56 +52,111 @@ const Story = () => {
 
   return (
     <>
-      <div id="story" key="story" className="relative lg:-top-16 sm:-top-64"/>
-      <div id="story_start" key="story_start" className="relative -top-20"/>
-      <ParallaxBanner className="h-[110vh] scale-105">
-        <ParallaxBannerLayer image={bg} speed={15} className="bg-top blur-sm w-screen"/>
-        <ParallaxBannerLayer className="sm:pt-8 lg:pt-16">
-          
-      <Fade
-        direction="bottom"
-        speed="1"
-        delay="0"
-        className="text-2xl leading-10"
-      >
-        <Card className="flex flex-col m-auto bg-[rgb(45,9,43)] bg-opacity-60 font-audiowide">
-          <div className="items-center justify-center m-auto">
-            <Fade 
-              direction="right"
-              speed="1.6"
-              delay="0.5"
-            >
-              <h1 ref = {ref} className="text-amber-50 lg:text-5xl sm:text-3xl font-black font-blackopsone
-                                            mb-3 tracking-wider font-outline-0-5">
-                {story.Header}
-              </h1>
-            </Fade>
-          </div>
+      <ParallaxBanner className="h-screen">
+        <ParallaxBannerLayer image={bg} className="blur-sm scale-110"/>
+        <ParallaxBannerLayer className="sm:pt-28 sm:pb-10 lg:pt-32 overflow-auto">
+          <Fade
+            direction="bottom"
+            speed="1"
+            delay="0"
+            className="text-2xl leading-10"
+          >
+            <Card className="flex flex-col m-auto bg-[rgb(45,9,43)] bg-opacity-60 font-audiowide">
+              {/* Title */}
+              <div className="items-center justify-center m-auto">
+                <Fade 
+                  direction="right"
+                  speed="1.6"
+                  delay="0.3"
+                >
+                  <h1 ref = {ref} className="text-amber-50 lg:text-5xl sm:text-3xl font-black font-blackopsone
+                                                mb-3 tracking-wider font-outline-0-5">
+                    {story.Header}
+                  </h1>
+                </Fade>
+              </div>
 
-          <motion.div 
-              variants={variant}
-              initial="hidden"
-              animate={control}>
+              {setting === "prologue" &&  
+                <div>
+                  <motion.div 
+                      variants={variant}
+                      initial="hidden"
+                      animate={control}>
 
-            {typing && <ReactTypingEffect 
-                text={story.MainStory}
-                speed="10"
-                eraseDelay={10000000}
-                cursor=" " 
-                displayTextRenderer={renderText} />}
-          </motion.div>
-          
-        <div className="justify-center items-center"> 
-          <NeonButton onClick={startHandler} speed={16}>
-              <b className="sm:text-lg md:text-xl text-2xl">
-                  <div> The G<span>a</span>me i<span>s</span> a<span>b</span>out </div>
-                  <div> t<span>o</span> Be<span>g</span>in! </div>
-              </b>
-          </NeonButton>
-        </div>  
+                    {typing && <ReactTypingEffect 
+                        text={story.MainStory.title}
+                        speed="10"
+                        eraseDelay={10000000}
+                        cursor=" " 
+                        displayTextRenderer={renderText} />}
+                  </motion.div>
 
-        </Card>
-      </Fade>
+                <Fade speed="20" delay="5.3">
+                  <ul className="my-3 mx-auto">
+                    {story.MainStory.clans.map(
+                      (clan)=>{
+                        return (
+                          <li
+                            className={`text-center mx-auto 
+                              sm:text-xs text-lg font-saudiowide
+                              sm:p-1 lg:p-2 ${clan.color}
+                              sm:-tracking-normal lg:tracking-wider`}>
+                            {clan.name}
+                          </li>)
+                      }
+                    )}
+                  </ul>
+                </Fade>
+
+                  <motion.div 
+                    className="sm:mb-0 mb-4"
+                    variants={variant}
+                    initial="hidden"
+                    animate={control}>
+
+                    {typing && <ReactTypingEffect 
+                        text={story.MainStory.subtitle}
+                        speed="10"
+                        typingDelay={7200}
+                        eraseDelay={10000000}
+                        cursor=" " 
+                        displayTextRenderer={renderText} />}
+                  </motion.div>
+
+                  <div className="justify-center items-center"> 
+                    <NeonButton onClick={() => {setSetting("prompt")}} speed={11}>
+                        <b className="sm:text-lg md:text-xl text-2xl">
+                            <div> C<span>o</span>nt<span>i</span>nu<span>e</span></div>
+                        </b>
+                    </NeonButton>
+                  </div>  
+                </div>
+              }
+
+              {setting === "prompt" &&  
+                <div>
+                  <motion.div className="sm:mb-0 md:mb-2 lg:mb-4">
+                    {typing && <ReactTypingEffect 
+                        typingDelay={1000}                    
+                        text={story.MainStory.prompt}
+                        speed="10"
+                        eraseDelay={10000000}
+                        cursor=" " 
+                        displayTextRenderer={renderText} />}
+                  </motion.div>
+                  
+                  <Link to="/instructions" className="justify-center items-center"> 
+                    <NeonButton speed={10.2}>
+                        <b className="sm:text-lg md:text-xl text-2xl">
+                            <div> The G<span>a</span>me i<span>s</span> a<span>b</span>out </div>
+                            <div> t<span>o</span> Be<span>g</span>in! </div>
+                        </b>
+                    </NeonButton>
+                  </Link>  
+                </div>
+              }
+            </Card>
+          </Fade>
       </ParallaxBannerLayer>
       </ParallaxBanner>
     </>

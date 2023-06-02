@@ -1,38 +1,33 @@
 import { useState } from "react";
-import Container from "react-bootstrap/Container";
+import { SocialIcon } from "react-social-icons";
+import { NavItem } from "react-bootstrap";
+import { Link } from "react-router-dom";
 import Nav from "react-bootstrap/Nav";
 import Navbar from "react-bootstrap/Navbar";
 import Logo from "../../images/h3logo.png";
-import { SocialIcon } from "react-social-icons";
 import styles from "./NavBar.module.css";
-import { HashLink as Link } from "react-router-hash-link";
-import { NavItem } from "react-bootstrap";
-import { useLocation } from "react-router-dom";
 
 function NavigationBar() {
-  const router = useLocation();
   const [Expanded, setExpanded] = useState(false);
 
   return (
-    <>
-
+    <div className="absolute w-full z-20">
       {/* Control Background of navbar */}
       <Navbar
         collapseOnSelect
         expand="lg"
         variant="dark"
-        className="select-none sticky-top bg-black overflow-x-hidden  h-full font-blackopsone"
+        className="select-none bg-black font-blackopsone"
         id="nav-bar"
         expanded={Expanded}
       >
         {/* Control height of navbar */}
-        <Container className="m-auto px-0 py-2 container">
           <Navbar.Brand href="/" className="ml-3">
             <img
               className="inline-block align-middle"
               src={Logo}
-              width="50"
-              height="50"
+              width="60"
+              height="60"
               alt="Hall 3"
             />
             <span className="font-semibold align-middle ">H3 TOP'23</span>
@@ -48,12 +43,10 @@ function NavigationBar() {
             <Nav className="justify-center items-center m-auto
                             font-bold text-gray-400 text-sm">
               <NavItem
-                className={`py-1 lg:px-4 hover:text-gray-500 ${
-                  router.hash === "#home" ? "text-gray-200" : "text-inherit"
-                }`}
+                className={`py-1 lg:px-4 hover:text-gray-500`}
               >
                 <Link
-                  to="#home"
+                  to="/"
                   smooth
                   style={{ color: "inherit", textDecoration: "inherit" }}
                   
@@ -64,12 +57,10 @@ function NavigationBar() {
               </NavItem>
 
               <NavItem
-                className={`py-1 px-4 hover:text-gray-500 ${
-                  router.hash === "#story" ? "text-gray-300" : "text-inherit"
-                }`}
+                className={`py-1 px-4 hover:text-gray-500`}
               >
                 <Link
-                  to="#story"
+                  to="/story"
                   smooth
                   style={{ color: "inherit", textDecoration: "inherit" }}
                   onClick={() => {setExpanded(false);}}
@@ -79,12 +70,10 @@ function NavigationBar() {
               </NavItem>
 
               <NavItem
-                className={`py-1 px-4 hover:text-gray-500 ${
-                  router.hash === "#visa" ? "text-gray-300" : "text-inherit"
-                }`}
+                className={`py-1 px-4 hover:text-gray-500`}
               >
                 <Link
-                  to="#login"
+                  to="/login"
                   smooth
                   style={{ color: "inherit", textDecoration: "inherit" }}
                   onClick={() => setExpanded(false)}
@@ -94,12 +83,10 @@ function NavigationBar() {
               </NavItem>
 
               <NavItem
-                className={`py-1 px-4 hover:text-gray-500 ${
-                  router.hash === "#clans" ? "text-gray-300" : "text-inherit"
-                }`}
+                className={`py-1 px-4 hover:text-gray-500`}
               >
                 <Link
-                  to="#clans"
+                  to="/clans"
                   smooth
                   style={{ color: "inherit", textDecoration: "inherit"}}
                   onClick={() => {setExpanded(false); }}
@@ -109,12 +96,10 @@ function NavigationBar() {
               </NavItem>
 
               <NavItem
-                className={`py-1 px-4 hover:text-gray-500 ${
-                  router.hash === "#team" ? "text-gray-300" : "text-inherit"
-                }`}
+                className={`py-1 px-4 hover:text-gray-500`}
               >
                 <Link
-                  to="#team"
+                  to="/team"
                   smooth
                   style={{ color: "inherit", textDecoration: "inherit" }}
                   onClick={() => setExpanded(false)}
@@ -124,12 +109,10 @@ function NavigationBar() {
               </NavItem>
 
               <NavItem
-                className={`py-1 px-4 hover:text-gray-500 ${
-                  router.hash === "#albums" ? "text-gray-300" : "text-inherit"
-                }`}
+                className={`py-1 px-4 hover:text-gray-500`}
               >
                 <Link
-                  to="#albums"
+                  to="/albums"
                   smooth
                   style={{ color: "inherit", textDecoration: "inherit" }}
                   onClick={() => setExpanded(false)}
@@ -164,9 +147,8 @@ function NavigationBar() {
               />
             </div>
           </Navbar.Collapse>
-        </Container>
       </Navbar>
-    </>
+    </div>
   );
 }
 

@@ -3,6 +3,7 @@ import { Button } from "react-bootstrap";
 import { getAuth, signInWithEmailAndPassword } from "firebase/auth";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { solid } from "@fortawesome/fontawesome-svg-core/import.macro"; // <-- import styles to be used
+import Form from "../Form/Form";
 
 const LoginForm = (props) => {
   const [passwordShown, setPasswordShown] = useState(false);
@@ -26,73 +27,61 @@ const LoginForm = (props) => {
   };
 
   return (
-    <div className="pt-32">
-    <form
-      className="m-auto w-80 
-                sm:px-8 md:px-9 lg:px-10 
-                sm:pb-8 md:pb-9 lg:pb-10 
-                sm:pt-7 md:pt-8 lg:pt-9
-                bg-slate-800 opacity-80
-                border-2 border-black rounded-3xl
-                text-white"
-      onSubmit={submitHandler}
-    >
-      {/* CANCEL ICON */}
-      <div className="flex justify-end">
-        <FontAwesomeIcon
-          icon={solid("xmark-square")}
-          onClick={()=>{props.onCancel()}}
-          className="scale-125 hover:scale-150 mb-1 
-                     pl-20 hover:pl-10 pb-2
-                     text-gray-300 h-5 w-5"
-        />
-      </div>  
+    <Form 
+      submitHandler = {submitHandler}
+      onCancel = {props.onCancel}
+      containerClassName="top-10"
+      headerClassName="bg-indigo-900"
+      className="bg-indigo-800"
+      header={<h1>Login Page</h1>}
+      content={
+        <div className="flex flex-col mx-3 my-2 text-right">
+          <div className="flex flex-row mb-3">
+            <div className="mr-4 w-40">Clan ID:</div>
+            <input
+              required
+              className="text-black px-1 h-7 rounded-md w-full"
+              id="clan_id"
+              onChange={(event) => {
+                setUsername(event.target.value);
+              }}
+            />
+          </div>
 
-      {/* LOGIN FORM */}
-      <div className="text-center pb-3 text-2xl">
-        <span>LOGIN</span>
-      </div>
+          <div className="mb-3 flex flex-row">
+            <div className="mr-4 w-40">Passcode:</div>
+            <input
+              required
+              className="text-black px-1 h-7 rounded-md w-full"
+              type={passwordShown ? "text" : "password"}
+              id="passcode"
+              onChange={(event) => {
+                setPassword(event.target.value);
+              }}
+            />
+          </div>
 
-      <div className="my-2">
-        <div>Clan:</div>
-        <input
-          required
-          className="text-black px-1 h-7 rounded-md w-full"
-          id="clan_id"
-          onChange={(event) => {
-            setUsername(event.target.value);
-          }}
-        />
-      </div>
-
-      <div className="my-2">
-        <div>Passcode:</div>
-        <input
-          required
-          className="text-black px-1 h-7 rounded-md w-full"
-          type={passwordShown ? "text" : "password"}
-          id="passcode"
-          onChange={(event) => {
-            setPassword(event.target.value);
-          }}
-        />
-      </div>
-
-      <div className="my-2">
-        <input
-          type="checkbox"
-          onClick={() => {
-            setPasswordShown(!passwordShown);
-          }}
-          className="text-black"
-        />
-        <span className="px-2 align-middle text-sm">Show Password</span>
-      </div>
-
-      <Button className="my-2" type="submit">
-        Login
-      </Button>
-    </form></div>
+          <div className="text-right">
+            <input
+              type="checkbox"
+              onClick={() => {
+                setPasswordShown(!passwordShown);
+              }}
+              className="text-black"
+            />
+            <span className="px-2 align-middle text-sm">Show Password</span>
+          </div>
+        </div>
+      }
+      footer={
+          <Button 
+            className="border-slate-300 hover:border-slate-300
+              bg-indigo-900 hover:bg-indigo-700 mb-3" 
+            type="submit">
+          Login
+        </Button>
+      }
+    />
   );
 };
 

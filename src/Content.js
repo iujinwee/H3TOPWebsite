@@ -9,7 +9,33 @@ const story = {
     display: true,
     Start: "Start",
     Header: "Storyline",
-    MainStory: "One thunderous stormy night causes a blackout across the city, which has never happened before. Five civilians wake up from their slumber and are horrified by the absolute darkness and silence that suddenly enveloped their once vibrant city. They realise that their electronic devices no longer work and are extremely confused. They explore their individual streets with flashlights and realise that other homes are deserted and there are no other civilians. The 5 of them eventually find each other at the centre of the city as there is a giant, neon billboard flashing an eerie announcement:",
+    MainStory:{
+        title: "The year is 2300. Our world is now home to 5 distinct tribes and each tribe is responsible for an aspect required for the society to function:",
+        clans: [
+            {
+                name: "Akari - Medical",
+                color: "text-red-300",
+            },
+            {
+                name: "Bankai - Agriculture", 
+                color: "text-green-300",
+            },
+            {
+                name: "Chakra - Water",
+                color: "text-blue-300"
+            },
+            {
+                name:"Doku - Technology",
+                color: "text-slate-400"
+            },
+            {
+                name: "Enji - Military", 
+                color: "text-red-400"
+            }
+        ],
+        subtitle: "The tribes are always suspicious of each other as they are concerned that resources are not shared equally amongst citizens. The tribes are at the brink of war as resources have become scarce and each tribe wants to lay claim and colonise every sector to ensure equal distribution.",
+        prompt: "One stormy night cuts out the power to the entire city and the tribe leaders are suddenly awoken by the roaring thunder, to realise that all citizens are unconscious. The leaders blame each other for the blackout, suspecting it as a ruse for one tribe to take over the entire city. Terrified, the leaders search the city to find the cause, only to discover a giant eerie announcement illuminating the sky. The night sky was peppered with spades, clubs, hearts and diamonds with the words..."
+    },
     MainStoryCont: " “The Game is about to begin!” ",
     Setup: "Game Start! ",
     StoryTwist: "Suddenly getting transported into an unknown universe, a mysterious man behind the screen traps players in his “games”. The players are given “visas” which last for a day, and in order to extend their visa and survive, they have to participate in the games.",

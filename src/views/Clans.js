@@ -54,16 +54,11 @@ const Clans = (props) => {
   }, [control, inView]);
 
   return (
-    <ParallaxBanner className="h-[125vh] scale-105">
-      <div id="clans" key="clans" className="relative lg:-top-8 sm:-top-64"/>
-      <div id="clans_start" key="clans_start" className="relative -top-12"/>
-      <ParallaxBannerLayer image={bg} speed={15} />
+    <ParallaxBanner className="h-screen">
       <ParallaxBannerLayer
         image={bg}
-        speed={20}
-        style={{ "background-position-y": "88%"}}
       />
-      <ParallaxBannerLayer className="lg:mt-14 sm:mt-2 px-3">
+      <ParallaxBannerLayer className="h-screen overflow-auto lg:mt-40 sm:mt-16 px-3 pb-12">
         <Card className="bg-[rgb(22,2,49)] bg-opacity-40 font-blackopsone 
                         px-0 sm:pt-4 pb-1">
           <ul className="list-none px-0 md:px-16 lg:px-32 justify-center m-auto">
@@ -132,6 +127,7 @@ const Clans = (props) => {
 
               <motion.li variants={delay}>
                 <CharacterCard
+                  className="scale-105"
                   image={enji}
                   name={clans.Enji.name}
                   tag={clans.Enji.quirk}

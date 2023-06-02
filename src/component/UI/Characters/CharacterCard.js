@@ -27,7 +27,7 @@ const CharacterCard = (props) => {
     //  ${classes.card} ${props.className} > If want to inherit card
 
     // Adjusting padding between cards
-    <div className="flex flex-col px-3 pb-3" key={props.id}>
+    <div className={`flex flex-col px-3 pb-3 ${props.className}`} key={props.id}>
       <ReactCardFlip isFlipped={hover} flipDirection="horizontal">
         {/* Front of Card */}
         <img

@@ -6,6 +6,7 @@ import Card from "../component/UI/Card/Card";
 import Fade from "../component/Animation/Fade";
 import ExcoCard from "../component/UI/ExcoCard/ExcoCard";
 import { team } from "../Content";
+import bg from '../images/background.png'
 
 import audree from "../images/ExcoCards/audree.JPG";
 import eugene from "../images/ExcoCards/eugene.JPG";
@@ -16,6 +17,7 @@ import marco from "../images/ExcoCards/marco.JPG";
 import rovin from "../images/ExcoCards/rovin.JPG";
 import kenji from "../images/ExcoCards/kenji.JPG";
 import victoria from "../images/ExcoCards/victoria.JPG";
+import { ParallaxBanner, ParallaxBannerLayer } from "react-scroll-parallax";
 
 const Team = (props) => {
   const control = useAnimation();
@@ -52,15 +54,14 @@ const Team = (props) => {
     if (inView) {
       control.start("show");
     }
-    // } else{
-    //   control.start("hidden")
-    // }
   }, [control, inView]);
 
   return (
-    <>
-      <div className="relative lg:-top-16 sm:-top-64" id="team" key="team" />
-      <div className="bg-main-bg bg-center bg-cover bg-no-repeat select-none overflow-x-auto">
+    <ParallaxBanner className="h-screen">
+      <ParallaxBannerLayer
+        image={bg}
+      />
+      <ParallaxBannerLayer className="h-screen overflow-auto lg:mt-16 sm:mt-10">
         <Card className="overflow-hidden bg-[rgba(48,48,48,0)] bg-opacity-60 font-blackopsone shadow-none">
           <ul className="list-none px-0 sm:px-4 md:px-16 lg:px-32">
             <Fade
@@ -160,8 +161,9 @@ const Team = (props) => {
             </motion.ul>
           </ul>
         </Card>
-      </div>
-    </>
+      </ParallaxBannerLayer>
+      
+    </ParallaxBanner>
   );
 };
 

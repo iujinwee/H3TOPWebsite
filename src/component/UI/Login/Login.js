@@ -64,87 +64,81 @@ const Login = (props) => {
   };
 
   return (
-    <ParallaxBanner className="h-screen scale-105">
-      <div id="login" key="login" className="relative lg:-top-16 sm:-top-64"/>
-      <div id="login_start" key="login_start" className="relative -top-12" />
+    <ParallaxBanner className="h-screen">
       <ParallaxBannerLayer
         image={bg}
-        speed={20}
-        style={{
-          "background-position-y": "0%",
-          "@media (max-width: 768px) backgroundSize": "93%",
-        }}
       />
-      <ParallaxBannerLayer>
-        <div
-          className={`font-audiowide ${
-            page === "loginform" ? "backdrop-blur-xl" : "backdrop-blur-none"
-          }`}
-        >
-          <motion.div variants={variant} initial="hidden" animate="show">
-            {page === "loginscreen" && (
-              <LoginScreen
-                onClick={() => {
-                  setPage("loginform");
-                }}
-              />
-            )}
+      <ParallaxBannerLayer 
+        className={`pt-40 h-screen font-audiowide flex flex-col ${
+          page === "loginform" ? "backdrop-blur-md" : "backdrop-blur-none"
+      }`}>
+        <motion.div 
+          variants={variant} 
+          initial="hidden" 
+          animate="show" 
+          className="relative">
+          {page === "loginscreen" && (
+            <LoginScreen
+              onClick={() => {
+                setPage("loginform");
+              }}
+            />
+          )}
 
-            {err && (
-              <ErrorMsg
-                message={err}
-                acknowledge={() => {
-                  setErr(false);
-                }}
-              />
-            )}
+          {err && (
+            <ErrorMsg
+              message={err}
+              acknowledge={() => {
+                setErr(false);
+              }}
+            />
+          )}
 
-            {page === "loginform" && (
-              <Fade direction="none" speed="0.01" delay="0" className="">
-                <LoginForm
-                  onErr={(error) => {
-                    setErr(error);
-                  }}
-                  onCancel={() => {
-                    setPage("loginscreen");
-                  }}
-                />
-              </Fade>
-            )}
-
-            {page === "visa" && (
-              <Visa
-                onLogout={logoutHandler}
-                userdata={user}
-                onAddTimer={(doc) => {
-                  setDocRef(doc);
-                  setPage("scanQR");
-                }}
-              />
-            )}
-
-            {page === "scanQR" && (
-              <QRCode
-                url={docRef}
-                onAcknowledge={() => {
-                  setPage("visa");
-                }}
-              />
-            )}
-
-            {page === "admin" && (
-              <Admin
+          {page === "loginform" && (
+            <Fade direction="none" speed="0.01" delay="0" className="">
+              <LoginForm
                 onErr={(error) => {
                   setErr(error);
                 }}
-                onLogout={() => {
-                  logoutHandler();
+                onCancel={() => {
                   setPage("loginscreen");
                 }}
               />
-            )}
-          </motion.div>
-        </div>
+            </Fade>
+          )}
+
+          {page === "visa" && (
+            <Visa
+              onLogout={logoutHandler}
+              userdata={user}
+              onAddTimer={(doc) => {
+                setDocRef(doc);
+                setPage("scanQR");
+              }}
+            />
+          )}
+
+          {page === "scanQR" && (
+            <QRCode
+              url={docRef}
+              onAcknowledge={() => {
+                setPage("visa");
+              }}
+            />
+          )}
+
+          {page === "admin" && (
+            <Admin
+              onErr={(error) => {
+                setErr(error);
+              }}
+              onLogout={() => {
+                logoutHandler();
+                setPage("loginscreen");
+              }}
+            />
+          )}
+        </motion.div>
       </ParallaxBannerLayer>
     </ParallaxBanner>
   );

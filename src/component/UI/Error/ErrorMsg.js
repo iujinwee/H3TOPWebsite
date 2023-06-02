@@ -1,6 +1,6 @@
 import React from 'react'
 import { Button } from 'react-bootstrap'
-import Card from '../Card/Card'
+import Form from '../Form/Form';
 
 const ErrorMsg = (props) => {
 
@@ -30,21 +30,16 @@ const ErrorMsg = (props) => {
     }
 
   return (
-    <div className='fixed z-50 flex justify-center items-center 
-                    w-screen mt-20'>
-        <div className=''>
-        <Card className="bg-black opacity-100">
-            <div className='text-center m-auto'>
-                <div className='pb-3'>
-                    {message}
-                </div>
-                <Button onClick={() => {props.acknowledge()}}>
+    <Form
+        onCancel={()=>{props.acknowledge()}}
+        header={<h1>Login Error!</h1>}
+        content={<p>{message}</p>}
+        footer={
+            <Button className='border-slate-300 bg-indigo-900 mb-3'
+                onClick={() => {props.acknowledge()}}>
                     OK
-                </Button>
-            </div>
-        </Card>
-        </div>
-    </div>
+            </Button>}
+    />
   )
 }
 
