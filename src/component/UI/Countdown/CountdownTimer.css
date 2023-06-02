@@ -5,13 +5,14 @@
   }
   
   .expired-notice > span {
-    font-size: 2.5rem;
+    font-size: 1.8rem;
     font-weight: bold;
     color: red;
+    margin-top: 3rem;
   }
   
   .expired-notice > p {
-    font-size: 1.5rem;
+    font-size: 1rem;
   }
   
   .show-counter {
@@ -24,7 +25,7 @@
     justify-content: center;
     align-items: center;
     font-weight: 900;
-    font-size: 4.5rem;;
+    font-size: 4.5rem;
     line-height:  2.75rem;
     padding: 0rem;
     border: 4px transparent #ebebeb;
@@ -69,7 +70,7 @@
       justify-content: center;
       align-items: center;
       font-weight: 900;
-      font-size: 4.5rem;;
+      font-size: 4.5rem;
       line-height:2.75rem;
       padding: 1rem;
       border: 4px transparent #ebebeb;
@@ -90,6 +91,17 @@
 /* Phone */
 @media screen and (max-width: 640px){
   
+  .expired-notice > span {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: red;
+  }
+  
+  .expired-notice > p {
+    font-size: 1rem;
+    margin: auto;
+  }
+
   .show-counter {
     padding: 0rem;
   }
@@ -99,7 +111,7 @@
     justify-content: center;
     align-items: center;
     font-weight: 900;
-    font-size: 2rem;;
+    font-size: 2rem;
     line-height: 1.75rem;
     padding: 0rem;
     border: 4px transparent #ebebeb;
@@ -112,6 +124,6 @@
     text-transform: uppercase;
     font-size: 0.7rem;
     line-height: 0rem;
-    padding: 0.2rem 0rem 1rem 0rem;
+    padding: 0.5rem 0rem 0.5rem 0rem;
   }
 }

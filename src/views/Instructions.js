@@ -61,7 +61,7 @@ const Instructions = (props) => {
               <p className="pb-2">{story.ObjectiveContent}</p>
 
               <NeonButton onClick={startHandler} speed="0.8">
-                <b className="font-outline-0">
+                <b className="font-outline-0 lg:text-3xl">
                   St<span>a</span>r<span>t</span>!
                 </b>
               </NeonButton>

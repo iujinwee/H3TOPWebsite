@@ -29,7 +29,7 @@ const Visa = (props) => {
 
   // Refresh Timer
   function refreshTimer() {
-    const TARGET_DATE = new Date("2/15/2023").getTime(); // DD/MM/YYYY FORMAT
+    const TARGET_DATE = new Date("2/15/2024").getTime(); // DD/MM/YYYY FORMAT
 
     getDoc(docRef).then((res) => {
       const init_duration = res.data().init_duration; // BEGIN WITH 1 HR
@@ -55,7 +55,7 @@ const Visa = (props) => {
         speed="2"
         delay="0.5"
         className="flex flex-auto justify-center align-middle
-                    text-gray-200 text-center px-10
+                    text-gray-200 text-center px-10 
                     sm:text-3xl md:text-4xl lg:text-5xl
                     font-extrabold font-outline-0-5 font-blackopsone"
       >
@@ -65,13 +65,13 @@ const Visa = (props) => {
       {/* // Control size of timer box */}
       <div
         className="xs:pt-0 xs:px-10
-                    sm:pt-0 sm:px-0
+                    sm:pt-2 sm:px-4
                     md:pt-0 md:px-16
                     lg:pt-0 lg:px-32"
       >
         <Card
           id="none"
-          className="bg-contain border-[rgb(88,14,138)] border-8 border-double
+          className="bg-contain border-[rgb(0,0,0)] border-2
                      my-4 bg-[rgb(52,46,56)] bg-opacity-60 
                      flex justify-center align-middle"
         >

@@ -33,6 +33,22 @@ const Story = () => {
     }
   }
 
+  const renderText = (text) => {
+    return (
+      <p className="sm:-tracking-normal lg:tracking-wider     
+                    sm:text-xs md:text-base lg:text-xl font-outline-0-5">
+        {text.split('').map((char, i) => {
+          const key = `${i}`;
+          return (
+            <span className="lg:leading-loose sm:leading-loose"
+              key={key}
+            >{char}</span>
+          );
+        })}
+      </p>
+    );
+  }
+
   useEffect(() => {
     if (inView) {
       control.start("show");
@@ -78,27 +94,14 @@ const Story = () => {
                 speed="10"
                 eraseDelay={10000000}
                 cursor=" " 
-                displayTextRenderer={(text, i) => {
-                  return (
-                    <p className="sm:-tracking-normal lg:tracking-wider     
-                                  sm:text-xs md:text-base lg:text-xl font-outline-0-5">
-                      {text.split('').map((char, i) => {
-                        const key = `${i}`;
-                        return (
-                          <span className="lg:leading-loose sm:leading-loose"
-                            key={key}
-                          >{char}</span>
-                        );
-                      })}
-                    </p>
-                  );
-                }} />}
+                displayTextRenderer={renderText} />}
           </motion.div>
           
         <div className="justify-center items-center"> 
           <NeonButton onClick={startHandler} speed={16}>
-              <b>
-                  The G<span>a</span>me i<span>s</span> a<span>b</span>out t<span>o</span> Be<span>g</span>in!
+              <b className="sm:text-lg md:text-xl text-2xl">
+                  <div> The G<span>a</span>me i<span>s</span> a<span>b</span>out </div>
+                  <div> t<span>o</span> Be<span>g</span>in! </div>
               </b>
           </NeonButton>
         </div>  
