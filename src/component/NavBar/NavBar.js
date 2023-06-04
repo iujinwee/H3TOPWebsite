@@ -11,7 +11,7 @@ function NavigationBar() {
   const [Expanded, setExpanded] = useState(false);
 
   return (
-    <div className="absolute w-full z-20">
+    <div className="fixed w-full z-20">
       {/* Control Background of navbar */}
       <Navbar
         collapseOnSelect
@@ -22,7 +22,7 @@ function NavigationBar() {
         expanded={Expanded}
       >
         {/* Control height of navbar */}
-          <Navbar.Brand href="/" className="ml-3">
+          <Navbar.Brand href="/" className="ml-3 hover:scale-105">
             <img
               className="inline-block align-middle"
               src={Logo}
@@ -35,7 +35,7 @@ function NavigationBar() {
 
           <Navbar.Toggle
             aria-controls="responsive-navbar-nav"
-            className="mr-6"
+            className="mr-6 "
             onClick={() => {setExpanded(Expanded?false:"expanded")}}
           />
 
@@ -43,7 +43,7 @@ function NavigationBar() {
             <Nav className="justify-center items-center m-auto
                             font-bold text-gray-400 text-sm">
               <NavItem
-                className={`py-1 lg:px-4 hover:text-gray-500`}
+                className={`py-1 lg:px-4 hover:text-gray-500 hover:scale-110`}
               >
                 <Link
                   to="/"
@@ -57,7 +57,7 @@ function NavigationBar() {
               </NavItem>
 
               <NavItem
-                className={`py-1 px-4 hover:text-gray-500`}
+                className={`py-1 px-4 hover:text-gray-500 hover:scale-110`}
               >
                 <Link
                   to="/story"
@@ -70,7 +70,7 @@ function NavigationBar() {
               </NavItem>
 
               <NavItem
-                className={`py-1 px-4 hover:text-gray-500`}
+                className={`py-1 px-4 hover:text-gray-500 hover:scale-110`}
               >
                 <Link
                   to="/login"
@@ -83,7 +83,7 @@ function NavigationBar() {
               </NavItem>
 
               <NavItem
-                className={`py-1 px-4 hover:text-gray-500`}
+                className={`py-1 px-4 hover:text-gray-500 hover:scale-110`}
               >
                 <Link
                   to="/clans"
@@ -96,7 +96,20 @@ function NavigationBar() {
               </NavItem>
 
               <NavItem
-                className={`py-1 px-4 hover:text-gray-500`}
+                className={`py-1 px-4 hover:text-gray-500 hover:scale-110`}
+              >
+                <Link
+                  to="/leaderboard"
+                  smooth
+                  style={{ color: "inherit", textDecoration: "inherit" }}
+                  onClick={() => setExpanded(false)}
+                >
+                  Leaderboard
+                </Link>
+              </NavItem>
+
+              <NavItem
+                className={`py-1 px-4 hover:text-gray-500 hover:scale-110`}
               >
                 <Link
                   to="/team"
@@ -107,22 +120,9 @@ function NavigationBar() {
                   Our Team
                 </Link>
               </NavItem>
-
-              <NavItem
-                className={`py-1 px-4 hover:text-gray-500`}
-              >
-                <Link
-                  to="/albums"
-                  smooth
-                  style={{ color: "inherit", textDecoration: "inherit" }}
-                  onClick={() => setExpanded(false)}
-                >
-                  Albums
-                </Link>
-              </NavItem>
             </Nav>
 
-            <div className="flex flex-row justify-end">
+            <div className="flex flex-row justify-end mr-3 mt-2">
               <span
                 className="font-semibold text-slate-200 
                            flex items-center justify-center"
@@ -130,7 +130,7 @@ function NavigationBar() {
                 Join Us!
               </span>
               <SocialIcon
-                className={`ml-3 rounded-full ${styles.instagram}`}
+                className={`ml-3 rounded-xl hover:scale-110 ${styles.instagram}`}
                 bgColor="transparent"
                 fgColor="white"
                 style={{ height: 35, width: 35 }}
@@ -138,7 +138,7 @@ function NavigationBar() {
                 target="_blank"
               />
               <SocialIcon
-                className="ml-3"
+                className="ml-2 hover:scale-110"
                 bgColor="#229ED9"
                 fgColor="white"
                 style={{ height: 35, width: 35 }}

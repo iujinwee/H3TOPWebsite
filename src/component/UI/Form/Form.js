@@ -6,12 +6,12 @@ const Form = (props) => {
   
   return (
     <form
-      className={`text-white border-black border-2 bg-slate-800
+      className={`text-white border-black border-2 bg-slate-800 rounded-xl
         m-auto absolute inset-x-1 z-10 sm:w-10/12 w-3/12 text-center 
         ${props.containerClassName}`}
       onSubmit={props.submitHandler}
       >
-      <div className={`bg-purple-900 text-base py-3 ${props.headerClassName}`}>
+      <div className={`bg-indigo-700 bg-opacity-50 text-base py-3 rounded-xl ${props.headerClassName}`}>
         {props.header}
         <FontAwesomeIcon
           icon={solid("xmark-square")}

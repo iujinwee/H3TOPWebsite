@@ -9,20 +9,12 @@ import { doc, getDoc } from "firebase/firestore";
 import { firestore } from "../firebase";
 import FunctionalButton from "../component/UI/Button/FunctionalButton";
 import NeonButton from "../component/UI/Button/NeonButton";
+import { Link } from "react-router-dom";
 
 const Visa = (props) => {
   // RETRIEVE TIME LEFT FROM UID
   const userID = props.userdata.uid;
   const docRef = doc(firestore, "VisaTimer", userID);
-
-  // Visa
-  const startHandler = () => {
-    const element = document.getElementById("clans_start");
-    if (element) {
-      // 👇 Will scroll smoothly to the top of the next section
-      element.scrollIntoView({ behavior: "smooth" });
-    }
-  };
 
   // Save Timer Data
   const [resultTimer, setResultTimer] = useState(-1);
@@ -107,11 +99,13 @@ const Visa = (props) => {
         className="flex flex-col items-center align-middle m-auto
                    lg:pt-3 md:pt-5 sm:pt-5 mb-24"
       >
-        <NeonButton onClick={startHandler}>
-          <b>
-            Le<span>a</span>rn abo<span>u</span>t you<span>r</span> Clan!
-          </b>
-        </NeonButton>
+        <Link to="/clans">
+          <NeonButton>
+            <b>
+              Le<span>a</span>rn abo<span>u</span>t you<span>r</span> Clan!
+            </b>
+          </NeonButton>
+        </Link>
       </div>
     </>
   );

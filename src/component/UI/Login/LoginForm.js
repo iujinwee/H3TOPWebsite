@@ -30,7 +30,7 @@ const LoginForm = (props) => {
       onCancel = {props.onCancel}
       containerClassName="top-10"
       headerClassName="bg-indigo-900"
-      className="bg-indigo-800"
+      className="bg-indigo-800 bg-opacity-60"
       header={<h1>Login Page</h1>}
       content={
         <div className="flex flex-col mx-3 my-2 text-right">

@@ -6,20 +6,13 @@ import { ParallaxBanner, ParallaxBannerLayer } from "react-scroll-parallax";
 import bg from "../images/background.png";
 import { Link } from 'react-router-dom'
 const Home = (props) => {
-  // const startHandler = () => {
-  //   if (element) {
-  //     // 👇 Will scroll smoothly to the top of the next section
-  //     element.scrollIntoView({ behavior: "smooth", block: "start" });
-  //   }
-  // };
-
   return (
     <>
       <ParallaxBanner className="h-screen">
         <ParallaxBannerLayer image={bg}/>
-        <ParallaxBannerLayer>
+        <ParallaxBannerLayer className="h-screen overflow-auto">
           <div
-            className="pt-60 select-none
+            className="pt-56 select-none
                    font-extrabold text-center text-white
                    sm:text-2xl md:text-2xl lg:text-3xl 
                    font-blackopsone"

@@ -1,15 +1,14 @@
 import React, { useEffect, useState } from "react";
-import Card from "../component/UI/Card/Card";
 import { story } from "../Content.js";
-import Fade from "../component/Animation/Fade";
-import NeonButton from "../component/UI/Button/NeonButton";
-import ReactTypingEffect from "react-typing-effect";
 import { useInView } from "react-intersection-observer";
 import { useAnimation, motion } from "framer-motion";
 import { ParallaxBanner, ParallaxBannerLayer } from "react-scroll-parallax";
-import akari from '../images/OGCards/akari.jpg'
-import bg from '../images/vaporwave-city-lights.gif'
 import { Link } from "react-router-dom";
+import Card from "../component/UI/Card/Card";
+import Fade from "../component/Animation/Fade";
+import NeonButton from "../component/UI/Button/NeonButton";
+import ReactTypingEffect from "react-typing-effect";
+import bg from '../images/vaporwave-city-lights.gif'
 
 const Story = () => {
 
@@ -98,6 +97,7 @@ const Story = () => {
                       (clan)=>{
                         return (
                           <li
+                            key={clan.name}
                             className={`text-center mx-auto 
                               sm:text-[13px] sm:leading-5 text-lg font-saudiowide
                               sm:p-1 lg:p-2 ${clan.color}

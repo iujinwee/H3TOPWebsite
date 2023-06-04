@@ -7,6 +7,7 @@ import ClansDescriptions from "../../views/ClansDescriptions";
 import Login from "../UI/Login/Login";
 import Story from "../../views/Story";
 import { Route, Routes } from "react-router-dom";
+import Leaderboard from "../../views/Leaderboard";
 
 const Layout = () => {
   return (
@@ -17,6 +18,7 @@ const Layout = () => {
       <Route path="/login" element={<Login/>}/>
       <Route path="/clans" element={<Clans/>}/>
       <Route path={`/clans/:id`} element={<ClansDescriptions/>}/>
+      <Route path="/leaderboard" element={<Leaderboard/>}/>
       <Route path="/team" element={<Team/>}/>
     </Routes>
   );

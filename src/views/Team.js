@@ -45,7 +45,7 @@ const Team = (props) => {
       opacity: 1,
       y: 0,
       transition: {
-        duration: 0.8,
+        duration: 0.9,
       },
     },
   };
@@ -77,7 +77,7 @@ const Team = (props) => {
             <Fade
               direction="bottom"
               speed="1.2"
-              delay="0.5"
+              delay="0.7"
               hidden="true"
               className="font-bold text-2xl text-center mb-4 font-outline-0-5"
             >

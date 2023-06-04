@@ -7,8 +7,10 @@ import Layout from "./component/NavBar/Layout";
 function App() {
   return (
     <Router>
-      <NavBar />
-      <Layout />
+      <div className="relative">
+        <NavBar />
+        <Layout />
+      </div>
     </Router>
   );
 }

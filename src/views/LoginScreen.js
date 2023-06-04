@@ -61,7 +61,7 @@ const LoginScreen = (props) => {
             eraseSpeed="70"
             eraseDelay={10000000}
             cursor=" "
-            displayTextRenderer={(text, i) => {
+            displayTextRenderer={(text) => {
               return (
                 <p
                   className="tracking-tighter lg:tracking-wider   
