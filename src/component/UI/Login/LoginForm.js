@@ -14,23 +14,22 @@ const LoginForm = (props) => {
 
     const auth = getAuth();
     signInWithEmailAndPassword(auth, username, password)
-      .then((userCredentials) => {        
-      })
+      .then((userCredentials) => {})
       .catch((err) => {
         // Error Handling
         props.onErr(err.code);
       });
 
+    setPasswordShown(false);
     event.target.reset();
   };
 
   return (
-    <Form 
-      submitHandler = {submitHandler}
-      onCancel = {props.onCancel}
+    <Form
+      submitHandler={submitHandler}
+      onCancel={props.onCancel}
       containerClassName="top-10"
-      headerClassName="bg-indigo-900"
-      className="bg-indigo-800 bg-opacity-60"
+      headerClassName="bg-[rgb(63,22,32)]"
       header={<h1>Login Page</h1>}
       content={
         <div className="flex flex-col mx-3 my-2 text-right">
@@ -72,10 +71,12 @@ const LoginForm = (props) => {
         </div>
       }
       footer={
-          <Button 
-            className="border-slate-300 hover:border-slate-300
-              bg-indigo-900 hover:bg-indigo-700 mb-3" 
-            type="submit">
+        <Button
+          className="border-slate-500 hover:border-slate-500 border-collapse
+            bg-[rgb(63,22,32)] bg-opacity-70 sm:active:bg-black
+            hover:scale-110 hover:bg-[rgb(80,28,41)] sm:hover:bg-opacity-90 mb-3"
+          type="submit"
+        >
           Login
         </Button>
       }

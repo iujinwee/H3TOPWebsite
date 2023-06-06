@@ -5,11 +5,10 @@ import Button from "../Button/Button";
 
 const QRCode = (props) => {
   return (
-    <div className="justify-center flex mx-auto sm:pt-16 md:pt-16 lg:pt-16">
       <div
-        className=" m-auto text-center 
+        className="mx-auto -mt-8 text-center 
                 sm:w-72 md:w-80 lg:w-96
-                sm:px-8 md:px-9 lg:px-10 
+                sm:px-8 md:px-9 lg:px-20
                 sm:pb-8 md:pb-9 lg:pb-10 
                 sm:pt-7 md:pt-8 lg:pt-9
                 bg-slate-800 opacity-95
@@ -38,7 +37,6 @@ const QRCode = (props) => {
           message="OK"
         />
       </div>
-    </div>
   );
 };
 

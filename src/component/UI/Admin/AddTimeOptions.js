@@ -8,7 +8,9 @@ const AddTimeOptions = (props) => {
 
   return (
     <React.Fragment>
-      <div className="mt-4 sm:text-base lg:text-xl mb-2">Select Amount of Time To Add.</div>
+      <div className="mt-4 sm:text-base lg:text-xl mb-2">
+        Select Amount of Time To Add.
+      </div>
       <ul className="flex flex-auto justify-center pl-0 mx-auto flex-wrap lg:my-5 sm:my-1">
         {prompt && (
           <AddTimePrompt
@@ -28,8 +30,8 @@ const AddTimeOptions = (props) => {
               setPrompt(1);
               props.onAdd(minute);
             }}
-            className="my-2.5 mx-6 sm:h-16 lg:h-16 sm:w-40 lg:w-52
-                     bg-violet-800 bg-opacity-60 text-white
+            className="my-2.5 mx-6 sm:h-14 lg:h-16 sm:w-40 lg:w-52
+                     bg-[rgb(63,22,32)] bg-opacity-70  text-white
                        border-2 border-black rounded-3xl
                        sm:text-base md:text-lg lg:text-xl font-bold"
             message="1 MIN"
@@ -44,8 +46,8 @@ const AddTimeOptions = (props) => {
               setPrompt(5);
               props.onAdd(5 * minute);
             }}
-            className="my-2.5 mx-6 sm:h-16 lg:h-16 sm:w-40 lg:w-52
-                     bg-violet-800 bg-opacity-60 text-white
+            className="my-2.5 mx-6 sm:h-14 lg:h-16 sm:w-40 lg:w-52
+                     bg-[rgb(63,22,32)] bg-opacity-70  text-white
                        border-2 border-black rounded-3xl
                        sm:text-base md:text-lg lg:text-xl font-bold"
             message="5 MINS "
@@ -60,8 +62,8 @@ const AddTimeOptions = (props) => {
               setPrompt(10);
               props.onAdd(10 * minute);
             }}
-            className="my-2.5 mx-6 sm:h-16 lg:h-16 sm:w-40 lg:w-52
-                     bg-violet-800 bg-opacity-60 text-white
+            className="my-2.5 mx-6 sm:h-14 lg:h-16 sm:w-40 lg:w-52
+            bg-[rgb(63,22,32)] bg-opacity-70  text-white
                        border-2 border-black rounded-3xl
                        sm:text-base md:text-lg lg:text-xl font-bold"
             message="10 MINS"

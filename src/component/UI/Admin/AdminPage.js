@@ -6,21 +6,21 @@ const AdminPage = (props) => {
   return (
     <Card
       className="flex flex-col m-auto justify-center text-center 
-                   bg-[rgb(73,15,69)] bg-opacity-60"
+                bg-[rgb(63,22,32)] bg-opacity-60"
     >
-      <div className="lg:text-5xl md:text-4xl sm:text-3xl font-black">
+      <div className="lg:text-4xl md:text-3xl sm:text-2xl font-black">
         ADMIN PAGE
       </div>
-      <ul className="flex flex-auto justify-center pl-0 mx-auto mt-3 flex-wrap lg:text-xl md:text-xl sm:text-lg">
+      <ul className="flex flex-auto justify-center pl-0 mx-auto mt-3 flex-wrap lg:text-lg md:text-lg sm:text-sm">
         {/* NEW USER */}
         <li>
           <Button
             id=""
             onClick={props.newUser}
-            className="lg:my-3 sm:my-2 mx-3 h-20 w-56
-                     bg-violet-700 bg-opacity-60 text-white
-                       border-2 border-black rounded-3xl
-                       font-bold"
+            className="my-2 mx-4 sm:h-16 sm:w-48 lg:h-20 lg:w-56 
+                      bg-[rgb(63,22,32)] bg-opacity-70 
+                        hover:scale-105 hover:bg-[rgb(80,28,41)] text-white
+                        border-2 border-black rounded-3xl font-bold"
             message="Create New User"
           />
         </li>
@@ -30,10 +30,10 @@ const AdminPage = (props) => {
           <Button
             id=""
             onClick={props.deleteUser}
-            className="lg:my-3 sm:my-2 mx-3 h-20 w-56
-                     bg-violet-700 bg-opacity-60 text-white
-                       border-2 border-black rounded-3xl
-                       font-bold"
+            className="my-2 mx-4 sm:h-16 sm:w-48 lg:h-20 lg:w-56 
+                      bg-[rgb(63,22,32)] bg-opacity-70 
+                        hover:scale-105 hover:bg-[rgb(80,28,41)] text-white
+                        border-2 border-black rounded-3xl font-bold"
             message="Delete User"
           />
         </li>
@@ -43,22 +43,22 @@ const AdminPage = (props) => {
           <Button
             id=""
             onClick={props.addTimer}
-            className="lg:my-3 sm:my-2 mx-3 h-20 w-56
-                     bg-violet-700 bg-opacity-60 text-white
-                       border-2 border-black rounded-3xl
-                       font-bold"
+            className="my-2 mx-4 sm:h-16 sm:w-48 lg:h-20 lg:w-56 
+                      bg-[rgb(63,22,32)] bg-opacity-70 
+                        hover:scale-105 hover:bg-[rgb(80,28,41)] text-white
+                        border-2 border-black rounded-3xl font-bold"
             message="Add Time"
           />
         </li>
       </ul>
 
-      <div className="text-4xl font-black">
+      <div className="font-black">
         <Button
           id=""
           onClick={props.onLogout}
-          className="lg:my-3 sm:my-1 mx-3 h-16 w-40
-                     bg-black text-white
-                       rounded-3xl text-xl font-bold"
+          className="mt-3 mx-4 sm:h-12 sm:w-28 lg:h-12 lg:w-40
+                    bg-black hover:scale-105 hover:bg-[rgb(80,28,41)] text-white
+                      border-2 border-black rounded-2xl font-bold"
           message="Logout"
         />
       </div>

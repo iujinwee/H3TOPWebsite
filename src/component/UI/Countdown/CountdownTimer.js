@@ -4,7 +4,7 @@ import { useCountdown } from './useCountdown';
 
 const ExpiredNotice = () => {
   return (
-    <div className="expired-notice font-blackopsone outline-8 p-0 m-0">
+    <div className="expired-notice font-blackopsone outline-8">
       <span>Time's Up!!!</span>
       <p>Seek a gamemaster to regain another life.</p>
     </div>

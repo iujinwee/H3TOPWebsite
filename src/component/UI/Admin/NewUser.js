@@ -10,6 +10,7 @@ const NewUser = (props) => {
   const [passwordShown, setPasswordShown] = useState(false);
   const [password, setPassword] = useState("");
   const [username, setUsername] = useState("");
+  const [name, setName] = useState("");
 
   // Check Sign in for user
   const submitHandler = async (event) => {
@@ -23,7 +24,15 @@ const NewUser = (props) => {
 
         // Create document for new user
         setDoc(doc(firestore, "VisaTimer", user.uid), {
-          name: user.email,
+          id: user.uid,
+          email: user.email,
+          clanName: name,
+          amazingRace: 0,
+          captureTheFlag: 0,
+          monsterHunt: 0,
+          initiationRun: 0,
+          xfiles: 0,
+          totalScore: 0,
           init_duration: 86400000,
           bonus_time: 0,
         });
@@ -67,7 +76,19 @@ const NewUser = (props) => {
       </div>
 
       <div className="my-2">
-        <div>Clan:</div>
+        <div>Clan Name:</div>
+        <input
+          required
+          className="text-black px-1"
+          id="clan_name"
+          onChange={(event) => {
+            setName(event.target.value);
+          }}
+        />
+      </div>
+
+      <div className="my-2">
+        <div>Clan Email:</div>
         <input
           required
           className="text-black px-1"

@@ -20,8 +20,7 @@ const NeonButton = (props) => {
                             sm:mt-3 sm:px-3 sm:py-2  
                             rounded-2xl border-solid border-4
                             border-r-amber-300 border-x-lime-300 border-teal-200 border-b-red-300
-                            text-red-200 font-medium 
-                            sm:text-xl lg:text-4xl` }>
+                            text-red-200 font-medium` }>
                 <div className="logo lg:text-4xl md:text-3xl sm:text-2xl">
                     {props.children}
                 </div>

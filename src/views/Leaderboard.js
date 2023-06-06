@@ -4,11 +4,14 @@ import Board from "../component/UI/Board/Board"
 
 const Leaderboard = () => {
   return (
-    <ParallaxBannerLayer className="h-screen">
+    <ParallaxBannerLayer className="h-screen w-screen">
       <ParallaxBannerLayer
         image={bg}
       />
-      <ParallaxBannerLayer>
+      <ParallaxBannerLayer 
+        className="h-screen overflow-auto 
+          flex justify-center items-center text-center
+          mx-4">  
         <Board/>
       </ParallaxBannerLayer>
     </ParallaxBannerLayer>
