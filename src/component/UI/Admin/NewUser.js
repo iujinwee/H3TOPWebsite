@@ -11,6 +11,7 @@ const NewUser = (props) => {
   const [password, setPassword] = useState("");
   const [username, setUsername] = useState("");
   const [name, setName] = useState("");
+  const [player, setPlayer] = useState(false);
 
   // Check Sign in for user
   const submitHandler = async (event) => {
@@ -29,11 +30,9 @@ const NewUser = (props) => {
           clanName: name,
           amazingRace: 0,
           captureTheFlag: 0,
-          monsterHunt: 0,
-          initiationRun: 0,
-          xfiles: 0,
           totalScore: 0,
           init_duration: 86400000,
+          isPlayer: player,
           bonus_time: 0,
         });
 
@@ -121,6 +120,16 @@ const NewUser = (props) => {
           className="text-black"
         />
         <span className="px-2 align-middle text-sm">Show Password</span>
+      </div>
+
+      <div>
+        <input
+          type="checkbox"
+          onClick={() => {
+            setPlayer(!player);
+          }}
+          />
+        <span className="px-2 align-middle text-sm">Player</span>
       </div>
 
       <Button className="my-2" type="submit">
