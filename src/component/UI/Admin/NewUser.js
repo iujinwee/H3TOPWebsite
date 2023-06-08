@@ -30,10 +30,10 @@ const NewUser = (props) => {
           clanName: name,
           amazingRace: 0,
           captureTheFlag: 0,
+          woh3: 0,
           totalScore: 0,
           init_duration: 86400000,
           isPlayer: player,
-          bonus_time: 0,
         });
 
         alert("New Account Created");
@@ -122,7 +122,7 @@ const NewUser = (props) => {
         <span className="px-2 align-middle text-sm">Show Password</span>
       </div>
 
-      <div>
+      <div className="mb-2">
         <input
           type="checkbox"
           onClick={() => {

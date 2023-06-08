@@ -11,7 +11,7 @@ const AddTimePrompt = (props) => {
       >
         <div className="align-middle m-auto text-white">
           <div className="mt-8 sm:text-xl lg:text-3xl">
-            {`${props.message} min(s) added`}{" "}
+            {`${props.message} mins added`}{" "}
           </div>
 
           <ul className="flex flex-auto justify-center pl-0 mx-auto flex-wrap my-4">

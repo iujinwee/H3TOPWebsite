@@ -48,7 +48,7 @@ const Visa = (props) => {
           speed="2"
           delay="0.5"
           className="flex flex-auto justify-center align-middle
-                      text-gray-200 text-center px-10 
+                      text-gray-200 text-center px-10
                       sm:text-3xl md:text-4xl lg:text-5xl
                       font-extrabold font-outline-0-1 font-blackopsone"
         >

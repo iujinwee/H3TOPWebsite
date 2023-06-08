@@ -8,7 +8,7 @@ const Admin = (props) => {
   const [page, setPage] = useState("adminpage");
 
   return (
-    <div className="lg:mt-20 md:mt-24 sm:mt-10">
+    <div className="lg:mt-20 md:mt-24 sm:-mt-10 overflow-auto">
       {/* Main Admin Page */}
       {page === "adminpage" && (
         <AdminPage

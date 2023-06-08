@@ -78,7 +78,7 @@ const Board = (props) => {
   return (
     <div className="w-full max-w-screen-lg overflow-x-auto">
       <table
-          className="w-full bg-indigo-100 bg-opacity-30 font-blackopsone sm:text-[13px] tracking-wider
+          className="w-full bg-indigo-100 bg-opacity-30 font-blackopsone sm:text-[14px] tracking-wider
             ">
           <thead className="bg-indigo-800 text-white bg-opacity-50">
             {table.getHeaderGroups().map(headerGroup => (
@@ -108,13 +108,13 @@ const Board = (props) => {
                             if (index === 0) {
                               return (
                                   <td className="px-2 py-2 border-[2px] border-opacity-60 border-yellow-200">
-                                    { data[1] }
+                                    { isNaN(data[1]) ? data[1] :  data[1] / 60000}
                                   </td>
                               )
                             }
                             return (
                                 <td className="px-2 py-2 border-[1px] border-opacity-30 border-indigo-200">
-                                  { data[1] }
+                                  { isNaN(data[1]) ? data[1] :  data[1] / 60000}
                                 </td>
                             )
                           }

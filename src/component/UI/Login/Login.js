@@ -69,7 +69,7 @@ const Login = (props) => {
         image={bg}
       />
       <ParallaxBannerLayer 
-        className={`pt-40 h-screen font-audiowide flex flex-col ${
+        className={`pt-40 h-screen font-audiowide overflow-auto flex flex-col ${
           page === "loginform" ? "backdrop-blur-md" : "backdrop-blur-none"
       }`}>
         <motion.div 
