@@ -31,6 +31,7 @@ const NewUser = (props) => {
           amazingRace: 0,
           captureTheFlag: 0,
           woh3: 0,
+          sideQuests: 0,
           totalScore: 0,
           init_duration: 86400000,
           isPlayer: player,

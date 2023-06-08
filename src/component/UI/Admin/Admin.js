@@ -12,6 +12,7 @@ const Admin = (props) => {
       {/* Main Admin Page */}
       {page === "adminpage" && (
         <AdminPage
+          superAdmin={false}
           newUser={() => {
             setPage("newuser");
           }}

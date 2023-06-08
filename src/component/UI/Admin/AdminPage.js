@@ -13,7 +13,7 @@ const AdminPage = (props) => {
       </div>
       <ul className="flex flex-auto justify-center pl-0 mx-auto mt-3 flex-wrap lg:text-lg md:text-lg sm:text-sm">
         {/* NEW USER */}
-        <li>
+        {props.superAdmin && <li>
           <Button
             id=""
             onClick={props.newUser}
@@ -23,28 +23,28 @@ const AdminPage = (props) => {
                         border-2 border-black rounded-3xl font-bold"
             message="Create New User"
           />
-        </li>
+        </li>}
 
         {/* DELETE USER */}
-        <li>
+        {props.superAdmin && <li>
           <Button
             id=""
             onClick={props.deleteUser}
-            className="my-2 mx-4 sm:h-16 sm:w-48 lg:h-20 lg:w-56 
-                      bg-[rgb(63,22,32)] bg-opacity-70 
+            className="my-2 mx-4 sm:h-16 sm:w-48 lg:h-20 lg:w-56
+                      bg-[rgb(63,22,32)] bg-opacity-70
                         hover:scale-105 hover:bg-[rgb(80,28,41)] text-white
                         border-2 border-black rounded-3xl font-bold"
             message="Delete User"
           />
-        </li>
+        </li>}
 
         {/* ADD TIME */}
-        <li>
+       <li>
           <Button
             id=""
             onClick={props.addTimer}
-            className="my-2 mx-4 sm:h-16 sm:w-48 lg:h-20 lg:w-56 
-                      bg-[rgb(63,22,32)] bg-opacity-70 
+            className="my-2 mx-4 sm:h-16 sm:w-48 lg:h-20 lg:w-56
+                      bg-[rgb(63,22,32)] bg-opacity-70
                         hover:scale-105 hover:bg-[rgb(80,28,41)] text-white
                         border-2 border-black rounded-3xl font-bold"
             message="Add Time"
