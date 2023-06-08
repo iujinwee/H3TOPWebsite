@@ -26,9 +26,9 @@ const Visa = (props) => {
 
     getDoc(docRef).then((res) => {
       const init_duration = res.data().init_duration; // BEGIN WITH 1 HR
-      const bonus_time = res.data().bonus_time;
+      const totalScore = res.data().totalScore;
 
-      setResultTimer(TARGET_DATE - init_duration + bonus_time);
+      setResultTimer(TARGET_DATE - init_duration + totalScore);
     });
   }
 
