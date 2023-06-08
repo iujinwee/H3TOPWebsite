@@ -15,7 +15,7 @@ import { ParallaxBanner, ParallaxBannerLayer } from "react-scroll-parallax";
 
 import bg from "../../../images/background.png";
 
-const Login = (props) => {
+const Login = () => {
   const [page, setPage] = useState("loginscreen");
   const [user, loading, error] = useAuthState(auth);
   const [err, setErr] = useState(false);

@@ -6,7 +6,7 @@ import { useEffect, useState } from "react"
 import {ColumnHelper} from "@tanstack/react-table";
 import {RowData} from "@tanstack/react-table";
 
-const Board = (props) => {
+const Board = () => {
   const [db, setDb] = useState([])
 
   const columnHelper: ColumnHelper<RowData> = createColumnHelper()
@@ -103,7 +103,7 @@ const Board = (props) => {
               if(row.isPlayer){
                  return (
                       <tr key={ index } className="text-white h-10">
-                        { Object.entries(row).map((data, val) => {
+                        { Object.entries(row).map((data) => {
                           if (data[0] !== "isPlayer") {
                             if (index === 0) {
                               return (

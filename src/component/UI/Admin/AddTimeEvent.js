@@ -1,4 +1,3 @@
-import AddTimePrompt from "./AddTimePrompt";
 import Button from "../Button/Button";
 import React from "react";
 
