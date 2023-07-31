@@ -108,13 +108,13 @@ const Board = () => {
                             if (index === 0) {
                               return (
                                   <td className="px-2 py-2 border-[2px] border-opacity-60 border-yellow-200">
-                                    { isNaN(data[1]) ? data[1] :  data[1] / 60000}
+                                    { isNaN(data[1]) ? data[1] :  data[1] }
                                   </td>
                               )
                             }
                             return (
                                 <td className="px-2 py-2 border-[1px] border-opacity-30 border-indigo-200">
-                                  { isNaN(data[1]) ? data[1] :  data[1] / 60000}
+                                  { isNaN(data[1]) ? data[1] :  data[1] }
                                 </td>
                             )
                           }

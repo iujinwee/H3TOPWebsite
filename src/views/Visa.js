@@ -22,13 +22,13 @@ const Visa = (props) => {
 
   // Refresh Timer
   function refreshTimer() {
-    const TARGET_DATE = new Date("2/15/2024").getTime(); // DD/MM/YYYY FORMAT
+    const TARGET_DATE = new Date("08/03/2023").getTime(); // DD/MM/YYYY FORMAT
 
     getDoc(docRef).then((res) => {
       const init_duration = res.data().init_duration; // BEGIN WITH 1 HR
       const totalScore = res.data().totalScore;
 
-      setResultTimer(TARGET_DATE - init_duration + totalScore);
+      setResultTimer(TARGET_DATE - init_duration + totalScore * 60000);
     });
   }
 
